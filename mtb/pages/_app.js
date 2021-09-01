@@ -1,6 +1,10 @@
 import { css, Global } from '@emotion/react';
 import Head from 'next/head';
 
+const contentWrapper = css`
+  padding-bottom: 2.5rem;
+`;
+
 function MyApp({ Component, pageProps }) {
   return (
     <>
@@ -24,7 +28,7 @@ function MyApp({ Component, pageProps }) {
         `}
       />
       <Head />
-      <Component {...pageProps} />
+      <Component css={contentWrapper} {...pageProps} />
     </>
   );
 }
