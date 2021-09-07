@@ -10,4 +10,4 @@ export const mediumText = '1.25rem';
 export const largeText = '1.5rem';
 
 export const h1 = '42px';
-export const h2 = '24px';
+export const h2 = '36px';

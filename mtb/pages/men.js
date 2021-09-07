@@ -1,11 +1,21 @@
 import { css } from '@emotion/react';
 import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
 import Layout from '../components/Layout';
-import { h1, lightGrey, mediumText } from '../styles/sharedStyles';
+import NeustartVision from '../public/images/neustartvision.png';
+import {
+  h1,
+  h2,
+  lightGrey,
+  mediumBlue,
+  mediumText,
+  normalText,
+} from '../styles/sharedStyles';
 
 const pageContainer = css`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   align-items: center;
   margin-top: 40px;
@@ -55,6 +65,67 @@ const quoteStyles = css`
   line-height: 1.5;
 `;
 
+const itemContainer = css`
+  display: flex;
+  flex-direction: row;
+  height: 50vh;
+  width: 80vw;
+  //background-color: orange;
+  margin-bottom: 40px;
+`;
+
+const itemTextRight = css`
+  padding-left: 10px;
+  margin-left: 10px;
+  font-size: ${normalText};
+  //background-color: blue;
+  letter-spacing: 1.5px;
+  line-height: 2;
+  height: 100%;
+  width: 50%;
+`;
+
+const itemPhoto = css`
+  align-content: center;
+  //background-color: red;
+  height: 100%;
+  width: 50%;
+`;
+
+const containerHeadingLeft = css`
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  font-size: ${h2};
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 80%;
+  letter-spacing: 1.5px;
+`;
+
+const buttonStylesBlue = css`
+  display: inline-block;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: white;
+  background-color: ${mediumBlue};
+  font-size: ${normalText};
+  font-weight: 400;
+  border-radius: 8px;
+  padding: 16px 40px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  :hover {
+    border: none;
+    transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    cursor: pointer;
+  }
+`;
+
 export default function OfferMen() {
   return (
     <Layout>
@@ -71,7 +142,27 @@ export default function OfferMen() {
           beschreiben.”
         </div>
       </div>
-      <section css={pageContainer}>ICH BIN EIN TEXT</section>
+      <section css={pageContainer}>
+        <div css={containerHeadingLeft}>neustart & Vision</div>
+        <div css={itemContainer}>
+          <div css={itemPhoto}>
+            <Image
+              src={NeustartVision}
+              alt="Älterer Herr mit Brille sitzt auf weißen Sofa und sieht sich Unterlagen an "
+            ></Image>
+          </div>
+          <div css={itemTextRight}>
+            Sie haben eine gute Ausbildung und verdienen auch (sehr) gut. Sie
+            wurden aber aus diversen Gründen „aus der Bahn geschmissen“ und
+            stehen dann „unter Schock“. Sie waren beruflich anerkannt, viele
+            haben/hatten eine leitende Position und sie selbst wurden um Rat
+            gefragt.
+          </div>
+        </div>
+        <Link href="/calendly/">
+          <a css={buttonStylesBlue}>Termin buchen</a>
+        </Link>
+      </section>
     </Layout>
   );
 }

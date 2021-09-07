@@ -4,7 +4,13 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Signature from '../public/images/signature.png';
-import { h1, h2, mediumBlue, normalText } from '../styles/sharedStyles';
+import {
+  h1,
+  h2,
+  largeText,
+  mediumBlue,
+  normalText,
+} from '../styles/sharedStyles';
 
 const pageContainer = css`
   position: relative;
@@ -38,7 +44,7 @@ const heroHeadingContainer = css`
 `;
 
 const heroSubheadingContainer = css`
-  font-size: ${h2};
+  font-size: ${largeText};
   font-weight: 400;
   margin-top: 50px;
   //background-color: red;
