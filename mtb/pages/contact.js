@@ -4,7 +4,13 @@ import { FiPhone } from 'react-icons/fi';
 import { GoLocation } from 'react-icons/go';
 import { HiOutlineMailOpen } from 'react-icons/hi';
 import Layout from '../components/Layout';
-import { darkBlue, h1, lightGrey, mediumText } from '../styles/sharedStyles';
+import {
+  darkBlue,
+  h1,
+  lightGrey,
+  mediumText,
+  normalText,
+} from '../styles/sharedStyles';
 
 const pageContainer = css`
   display: flex;
@@ -41,7 +47,7 @@ const heroHeading = css`
 const leftContainer = css`
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 60%;
   height: 100vh;
   align-items: center;
   padding-top: 40px;
@@ -52,10 +58,50 @@ const rightContainer = css`
   flex-direction: column;
   background-color: ${darkBlue};
   color: white;
-  width: 50%;
+  width: 40%;
   height: 100vh;
   align-items: center;
   padding-top: 40px;
+`;
+
+const contactInfosContainer = css`
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  background-color: orange;
+  margin-bottom: 40px;
+`;
+
+const iconContainer = css`
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: green;
+
+  p {
+    margin-left: 20px;
+    text-transform: uppercase;
+  }
+`;
+
+const contactInfosTextStyles = css`
+  display: flex;
+  font-size: ${normalText};
+  color: white;
+  margin: 20px;
+  color: white;
+  letter-spacing: 1.5px;
+  line-height: 1.5;
+`;
+
+const horizontalLine = css`
+  border: solid 1px white;
+  width: 80%;
+  color: white;
+  height: 1px;
+  margin-left: 20px;
 `;
 
 export default function Press() {
@@ -70,8 +116,32 @@ export default function Press() {
       <section css={pageContainer}>
         <div css={leftContainer}>SENDGRID</div>
         <div css={rightContainer}>
-          <GoLocation size={32} /> <HiOutlineMailOpen size={32} />{' '}
-          <FiPhone size={32} />
+          <div css={contactInfosContainer}>
+            <div css={iconContainer}>
+              <GoLocation size={32} />
+              <p>Adresse</p>
+            </div>
+            <div css={horizontalLine} />
+            <div css={contactInfosTextStyles}>Testweg 12, 1000 Salzburg</div>
+          </div>
+          <div css={contactInfosContainer}>
+            <div css={iconContainer}>
+              <HiOutlineMailOpen size={32} />
+              <p>Email</p>
+            </div>
+            <div css={horizontalLine} />
+            <div css={contactInfosTextStyles}>
+              marliestheresbrunner@gmail.com
+            </div>
+          </div>
+          <div css={contactInfosContainer}>
+            <div css={iconContainer}>
+              <FiPhone size={32} />
+              <p>Telefon</p>
+            </div>
+            <div css={horizontalLine} />
+            <div css={contactInfosTextStyles}>0664 000 0000</div>
+          </div>
         </div>
       </section>
     </Layout>
