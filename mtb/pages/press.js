@@ -1,11 +1,25 @@
 import { css } from '@emotion/react';
+import axios from 'axios';
+import fileDownload from 'js-file-download';
 import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
 import Layout from '../components/Layout';
-import { h1, lightGrey, mediumText } from '../styles/sharedStyles';
+import DieBesten from '../public/images/diebesten.png';
+import SalzburgerNachrichten from '../public/images/salzburgernachrichten.png';
+import {
+  h1,
+  largeText,
+  lightGrey,
+  mediumBlue,
+  mediumText,
+  normalText,
+} from '../styles/sharedStyles';
 
 const pageContainer = css`
   display: flex;
   flex-direction: row;
+  justify-content: center;
   width: 100%;
   align-items: center;
   margin-top: 40px;
@@ -36,7 +50,84 @@ const heroHeading = css`
   letter-spacing: 1.5px;
 `;
 
+const itemContainer = css`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 35%;
+  height: auto;
+  margin-left: 80px;
+  margin-right: 80px;
+`;
+
+const itemHeading = css`
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 25px;
+  font-size: ${largeText};
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+`;
+
+const buttonStylesBlue = css`
+  display: inline-block;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: white;
+  background-color: ${mediumBlue};
+  font-size: ${normalText};
+  font-weight: 400;
+  border-radius: 8px;
+  padding: 16px 40px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  :hover {
+    border: none;
+    transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    cursor: pointer;
+  }
+`;
+
 export default function Press() {
+  const dieBesten = 'http://localhost:3000/public/diebesten.pdf';
+
+  function forceDownload(blob, filename) {
+    // blob is a file-like object of immutable, raw data, can be read as text or binary data
+    // Create an invisible anchor element
+    const anchor = document.createElement('a');
+    anchor.style.display = 'none';
+    anchor.href = window.URL.createObjectURL(blob);
+    anchor.setAttribute('download', filename);
+    document.body.appendChild(anchor);
+
+    // Trigger the download by simulating click
+    anchor.click();
+
+    // Clean up
+    window.URL.revokeObjectURL(anchor.href);
+    document.body.removeChild(anchor);
+  }
+
+  function handleDownload(url, filename) {
+    // If no filename is set, use filename from URL
+    if (!filename) filename = url.match(/\/([^/#?]+)[^/]*$/)[1]; // some weird regex code?
+
+    fetch(url, {
+      headers: new Headers({
+        Origin: window.location.origin,
+      }),
+      mode: 'cors', // request mode value, cors allows cross-origin requests
+    })
+      .then((response) => response.blob())
+      .then((blob) => forceDownload(blob, filename))
+      .catch((e) => console.error(e));
+  }
   return (
     <Layout>
       <Head>
@@ -45,7 +136,33 @@ export default function Press() {
       <div css={heroContainer}>
         <div css={heroHeading}>Presse</div>
       </div>
-      <section css={pageContainer}>ICH BIN EIN TEXT</section>
+      <section css={pageContainer}>
+        <div css={itemContainer}>
+          <div css={itemHeading}>Die besten - Karrieremagazin</div>
+          <Image
+            src={DieBesten}
+            alt="Ausschnitt aus Artikel in Die Besten das Karrieremagazin mit Mag. Marlies Theres Brunner"
+          ></Image>
+          <button
+            css={buttonStylesBlue}
+            onClick={() => {
+              handleDownload(dieBesten, 'Diebesten.pdf');
+            }}
+          >
+            Jetzt lesen
+          </button>
+        </div>
+        <div css={itemContainer}>
+          <div css={itemHeading}>Salzburger Nachrichten</div>
+          <Image
+            src={SalzburgerNachrichten}
+            alt="Ausschnitt aus Artikel in den Salzburger Nachrichten mit Mag. Marlies Theres Brunner"
+          ></Image>
+          <Link href="/men/">
+            <a css={buttonStylesBlue}>Jetzt lesen</a>
+          </Link>
+        </div>
+      </section>
     </Layout>
   );
 }

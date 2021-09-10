@@ -1,14 +1,16 @@
 import { css } from '@emotion/react';
 import Head from 'next/head';
+import { FiPhone } from 'react-icons/fi';
+import { GoLocation } from 'react-icons/go';
+import { HiOutlineMailOpen } from 'react-icons/hi';
 import Layout from '../components/Layout';
-import { h1, lightGrey, mediumText } from '../styles/sharedStyles';
+import { darkBlue, h1, lightGrey, mediumText } from '../styles/sharedStyles';
 
 const pageContainer = css`
   display: flex;
   flex-direction: row;
   width: 100%;
   align-items: center;
-  margin-top: 40px;
 `;
 
 const heroContainer = css`
@@ -36,6 +38,26 @@ const heroHeading = css`
   letter-spacing: 1.5px;
 `;
 
+const leftContainer = css`
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100vh;
+  align-items: center;
+  padding-top: 40px;
+`;
+
+const rightContainer = css`
+  display: flex;
+  flex-direction: column;
+  background-color: ${darkBlue};
+  color: white;
+  width: 50%;
+  height: 100vh;
+  align-items: center;
+  padding-top: 40px;
+`;
+
 export default function Press() {
   return (
     <Layout>
@@ -45,7 +67,13 @@ export default function Press() {
       <div css={heroContainer}>
         <div css={heroHeading}>Kontakt</div>
       </div>
-      <section css={pageContainer}>ICH BIN EIN TEXT</section>
+      <section css={pageContainer}>
+        <div css={leftContainer}>SENDGRID</div>
+        <div css={rightContainer}>
+          <GoLocation size={32} /> <HiOutlineMailOpen size={32} />{' '}
+          <FiPhone size={32} />
+        </div>
+      </section>
     </Layout>
   );
 }
