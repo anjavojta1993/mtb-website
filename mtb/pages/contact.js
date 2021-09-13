@@ -8,6 +8,7 @@ import {
   darkBlue,
   h1,
   lightGrey,
+  mediumBlue,
   mediumText,
   normalText,
 } from '../styles/sharedStyles';
@@ -77,11 +78,13 @@ const iconContainer = css`
   margin-left: 20px;
   display: flex;
   flex-direction: row;
+  align-items: center;
   width: 100%;
   background-color: green;
 
   p {
     margin-left: 20px;
+    padding-top: 10px;
     text-transform: uppercase;
   }
 `;
@@ -104,7 +107,50 @@ const horizontalLine = css`
   margin-left: 20px;
 `;
 
-export default function Press() {
+const formContainer = css``;
+
+const buttonStylesBlue = css`
+  display: inline-block;
+  border: none;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: white;
+  background-color: ${mediumBlue};
+  font-size: ${normalText};
+  font-weight: 400;
+  border-radius: 8px;
+  padding: 16px 40px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  :hover {
+    border: none;
+    transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    cursor: pointer;
+  }
+`;
+
+export default function Contact() {
+  async function handleOnSubmit(e) {
+    console.log(e.currentTarget, 'event currenttarget');
+    e.preventDefault();
+
+    const formData = {};
+
+    Array.from(e.currentTarget.elements).forEach((field) => {
+      if (!field.name) return;
+      formData[field.name] = field.value;
+    });
+
+    await fetch('/api/mail', {
+      method: 'POST',
+      body: JSON.stringify(formData),
+    });
+    e.target.reset();
+  }
+
   return (
     <Layout>
       <Head>
@@ -114,7 +160,30 @@ export default function Press() {
         <div css={heroHeading}>Kontakt</div>
       </div>
       <section css={pageContainer}>
-        <div css={leftContainer}>SENDGRID</div>
+        <div css={leftContainer}>
+          <form css={formContainer} onSubmit={handleOnSubmit}>
+            <div>
+              <input id="name" placeholder="Name" type="text" name="name" />
+            </div>
+            <div>
+              <input
+                placeholder="Email address"
+                id="email"
+                type="text"
+                name="email"
+              />
+            </div>
+
+            <div>
+              <textarea
+                placeholder="Your message here"
+                id="message"
+                name="message"
+              />
+            </div>
+            <button css={buttonStylesBlue}>Senden</button>
+          </form>
+        </div>
         <div css={rightContainer}>
           <div css={contactInfosContainer}>
             <div css={iconContainer}>
