@@ -5,8 +5,10 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Layout from '../components/Layout';
+import DieBestenArtikel from '../public/diebesten.pdf';
 import DieBesten from '../public/images/diebesten.png';
 import SalzburgerNachrichten from '../public/images/salzburgernachrichten.png';
+import SalzburgerNachrichtenArtikel from '../public/salzburgernachrichten.pdf';
 import {
   h1,
   largeText,
@@ -74,6 +76,7 @@ const itemHeading = css`
 
 const buttonStylesBlue = css`
   display: inline-block;
+  border: none;
   text-align: center;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -95,7 +98,7 @@ const buttonStylesBlue = css`
 `;
 
 export default function Press() {
-  const dieBesten = 'http://localhost:3000/public/diebesten.pdf';
+  const dieBesten = '/diebesten.pdf';
 
   function forceDownload(blob, filename) {
     // blob is a file-like object of immutable, raw data, can be read as text or binary data
@@ -146,7 +149,7 @@ export default function Press() {
           <button
             css={buttonStylesBlue}
             onClick={() => {
-              handleDownload(dieBesten, 'Diebesten.pdf');
+              handleDownload(DieBestenArtikel, 'Diebesten.pdf');
             }}
           >
             Jetzt lesen
@@ -158,9 +161,17 @@ export default function Press() {
             src={SalzburgerNachrichten}
             alt="Ausschnitt aus Artikel in den Salzburger Nachrichten mit Mag. Marlies Theres Brunner"
           ></Image>
-          <Link href="/men/">
-            <a css={buttonStylesBlue}>Jetzt lesen</a>
-          </Link>
+          <button
+            css={buttonStylesBlue}
+            onClick={() => {
+              handleDownload(
+                SalzburgerNachrichtenArtikel,
+                'SalzburgerNachrichten.pdf',
+              );
+            }}
+          >
+            Jetzt lesen
+          </button>
         </div>
       </section>
     </Layout>

@@ -1,0 +1,14 @@
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.(png|svg|jpg|gif|pdf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
+    ],
+  },
+};
