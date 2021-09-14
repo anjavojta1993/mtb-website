@@ -107,7 +107,36 @@ const horizontalLine = css`
   margin-left: 20px;
 `;
 
-const formContainer = css``;
+const formContainer = css`
+  display: flex;
+  flex-direction: column;
+  //background-color: red;
+  width: 60%;
+`;
+
+const inputStyles = css`
+  display: block;
+  width: 100%;
+  background-color: ${lightGrey};
+  font-family: Spartan;
+  font-size: ${normalText};
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  height: 40px;
+`;
+
+const textareaStyles = css`
+  display: block;
+  width: 100%;
+  background-color: ${lightGrey};
+  font-family: Spartan;
+  font-size: ${normalText};
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  height: 200px;
+`;
 
 const buttonStylesBlue = css`
   display: inline-block;
@@ -116,6 +145,8 @@ const buttonStylesBlue = css`
   margin-top: 50px;
   margin-bottom: 50px;
   color: white;
+  width: 30%;
+  align-items: center;
   background-color: ${mediumBlue};
   font-size: ${normalText};
   font-weight: 400;
@@ -163,25 +194,21 @@ export default function Contact() {
         <div css={leftContainer}>
           <form css={formContainer} onSubmit={handleOnSubmit}>
             <div>
-              <input id="name" placeholder="Name" type="text" name="name" />
+              <label htmlFor>Name</label>
+              <input css={inputStyles} id="name" type="text" name="name" />
             </div>
             <div>
-              <input
-                placeholder="Email address"
-                id="email"
-                type="text"
-                name="email"
-              />
+              <label htmlFor>Email Adresse</label>
+              <input css={inputStyles} id="email" type="text" name="email" />
             </div>
 
             <div>
-              <textarea
-                placeholder="Your message here"
-                id="message"
-                name="message"
-              />
+              <label htmlFor>Deine Nachricht</label>
+              <textarea css={textareaStyles} id="message" name="message" />
             </div>
-            <button css={buttonStylesBlue}>Senden</button>
+            <div>
+              <button css={buttonStylesBlue}>Senden</button>
+            </div>
           </form>
         </div>
         <div css={rightContainer}>
