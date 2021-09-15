@@ -65,6 +65,10 @@ const iconContainer = css`
     cursor: pointer;
     color: black;
   }
+  a:link {
+    cursor: pointer;
+    color: black;
+  }
 `;
 
 export default function Footer() {
