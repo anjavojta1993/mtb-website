@@ -43,7 +43,6 @@ const logoContainer = css`
   //background-color: red;
 `;
 
-const logoStyles = css``;
 export default function Header() {
   return (
     <header css={headerStyles}>

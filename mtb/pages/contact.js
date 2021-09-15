@@ -48,7 +48,7 @@ const heroHeading = css`
 const leftContainer = css`
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 50%;
   height: 100vh;
   align-items: center;
   padding-top: 40px;
@@ -59,7 +59,7 @@ const rightContainer = css`
   flex-direction: column;
   background-color: ${darkBlue};
   color: white;
-  width: 40%;
+  width: 50%;
   height: 100vh;
   align-items: center;
   padding-top: 40px;
@@ -111,7 +111,7 @@ const formContainer = css`
   display: flex;
   flex-direction: column;
   //background-color: red;
-  width: 60%;
+  width: 70%;
 `;
 
 const inputStyles = css`
