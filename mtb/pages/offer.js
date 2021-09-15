@@ -2,6 +2,7 @@ import { css } from '@emotion/react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import { FiPhone } from 'react-icons/fi';
 import Layout from '../components/Layout';
 import Coaching from '../public/images/coaching.png';
 import FrauenFördern from '../public/images/frauenfördern.png';
@@ -93,8 +94,8 @@ const itemHeading = css`
 const buttonStylesBlue = css`
   display: inline-block;
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   color: white;
   background-color: ${mediumBlue};
   font-size: ${normalText};
@@ -146,6 +147,7 @@ const itemContainerAppointment = css`
   height: 80vh;
   margin-left: 80px;
   margin-right: 80px;
+  margin-bottom: 50px;
 `;
 
 const itemHeadingAppointment = css`
@@ -176,11 +178,12 @@ const containerHeadingAppointment = css`
   width: 100%;
   justify-content: center;
   height: 20%;
-  padding: 80px;
+  padding: 50px;
   text-transform: uppercase;
+  //background-color: green;
 `;
 
-const testimonialContainer = css`
+const methodenContainer = css`
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -188,6 +191,19 @@ const testimonialContainer = css`
   height: auto;
   align-items: flex-start;
   background-color: ${darkBlue};
+  color: white;
+`;
+
+const iconContainer = css`
+  display: flex;
+  align-items: center;
+  //background-color: green;
+  padding: 0;
+  margin: 0;
+
+  span {
+    margin-left: 20px;
+  }
 `;
 
 export default function Offer() {
@@ -229,7 +245,7 @@ export default function Offer() {
         </div>
       </section>
       <div css={containerHeading}>Methoden</div>
-      <div css={testimonialContainer}>ICH BIN EIN TEXT</div>
+      <div css={methodenContainer}>WAS DARF HIER REIN? ODER GANZ WEG?</div>
       <div css={containerHeadingAppointment}>Termin buchen</div>
       <div css={appointmentContainer}>
         <div css={itemContainerAppointment}>
@@ -241,7 +257,11 @@ export default function Offer() {
           <div css={itemAppointmentStyles}>
             Gerne können wir unverbindlich über Ihr Anliegen sprechen.
           </div>
-          <a css={buttonStylesBlue}>0664 1111111</a>
+          <div css={buttonStylesBlue}>
+            <div css={iconContainer}>
+              <FiPhone size={22} /> <span>0664 1111111</span>
+            </div>
+          </div>
         </div>
         <div css={itemContainerAppointment}>
           <Image

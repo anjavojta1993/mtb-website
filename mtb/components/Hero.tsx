@@ -52,7 +52,7 @@ const heroSubheadingContainer = css`
 `;
 
 const signatureStyles = css`
-  display: inline-block;
+  display: block;
   margin-top: 70px;
 `;
 

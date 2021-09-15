@@ -53,6 +53,7 @@ const rightContainer = css`
   justify-content: center;
   width: 50%;
   padding: 10px;
+  padding-right: 40px;
   height: 80vh;
   align-items: center;
   margin-bottom: 50px;
@@ -80,12 +81,27 @@ const singleTestimonialContainer = css`
   margin: 10px;
 `;
 
-const testimonialHeading = css`
+const testimonialPosition = css`
   color: white;
+  height: 50px;
+  width: 100%;
+  justify-content: center;
+  //background-color: green;
   font-size: ${mediumText};
   font-weight: 700;
   text-align: center;
   display: flex;
+  margin-bottom: 10px;
+`;
+
+const testimonialHeading = css`
+  color: white;
+  //background-color: green;
+  font-size: ${mediumText};
+  font-weight: 700;
+  text-align: center;
+  display: flex;
+  margin-bottom: 10px;
 `;
 
 const containerHeading = css`
@@ -104,13 +120,13 @@ const containerHeading = css`
 const portraitContainer = css`
   width: auto;
   height: auto;
-  margin: 10px;
+  margin: 20px;
 `;
 
 const testimonialText = css`
   color: white;
   font-size: ${normalText};
-  margin: 10px;
+  margin: 20px;
   text-align: center;
   line-height: 1.5;
 `;
@@ -202,7 +218,11 @@ export default function About() {
           occaecat cupidatat non proident, sunt in culpa qui officia deserunt
           mollit anim id est laborum." fugiat nulla pariatur. Excepteur sint
           occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id .
+          mollit anim id . <br /> <br />
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
         </div>
       </section>
       <div css={containerHeading}>REFERENZEN</div>
@@ -216,7 +236,7 @@ export default function About() {
               alt="Portrait von Ing. Mag. Anton Ullmann"
             ></Image>
           </div>
-          <div css={testimonialHeading}>
+          <div css={testimonialPosition}>
             Head of Strategy Development, Salzburg AG
           </div>
           <div css={testimonialText}>
@@ -236,7 +256,7 @@ export default function About() {
               alt="Portrait von Mag. Ingrid Langthaler"
             ></Image>
           </div>
-          <div css={testimonialHeading}>
+          <div css={testimonialPosition}>
             FH Salzburg, Career Center & Unternehmenskooperationen
           </div>
           <div css={testimonialText}>
@@ -253,7 +273,10 @@ export default function About() {
             {' '}
             <Image src={Brecka} alt="Portrait von Gerhard Brecka"></Image>
           </div>
-          <div css={testimonialHeading}>COO, Polo AG</div>
+          <div css={testimonialPosition}>
+            COO, <br />
+            Polo AG
+          </div>
           <div css={testimonialText}>
             „Frau Marlies Brunner hat mir in einer Zeit des beruflichen Umbruchs
             durch ihre langjährige Erfahrung und Empathie vom ersten Gespräch an
@@ -273,7 +296,9 @@ export default function About() {
             {' '}
             <Image src={Collini} alt="Portrait von Julia Collini"></Image>
           </div>
-          <div css={testimonialHeading}>BWL-Masterstudentin</div>
+          <div css={testimonialPosition}>
+            BWL-Masterstudentin, <br /> Privatuni Seeburg
+          </div>
           <div css={testimonialText}>
             “Ich möchte mich bei Frau Mag. Brunner ganz herzlich bedanken. Ich
             bin schon seit Jahren Klientin bei ihr, und habe von dem
@@ -292,7 +317,7 @@ export default function About() {
               alt="Portrait von Gerhard Schallhammer"
             ></Image>
           </div>
-          <div css={testimonialHeading}>
+          <div css={testimonialPosition}>
             Vetrieb, Kloeckner Metals Austria GmbH & Co KG
           </div>
           <div css={testimonialText}>
@@ -311,8 +336,8 @@ export default function About() {
               alt="Portrait von Mag. Brigitte Maria Gruber"
             ></Image>
           </div>
-          <div css={testimonialHeading}>
-            Geschäftsführerin & Akademieleiterin, Frauenfachakademie
+          <div css={testimonialPosition}>
+            Geschäftsführerin & Leiterin, Frauenfachakademie
           </div>
           <div css={testimonialText}>
             "Bei unserem WEITBLICK!-Mentoring haben wir Frau Mag. Brunner als

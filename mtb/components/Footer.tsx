@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { SiLinkedin } from 'react-icons/si';
 import Logo from '../public/images/logo.png';
-import { normalText } from '../styles/sharedStyles';
+import { lightGrey, normalText } from '../styles/sharedStyles';
 
 const footerStyles = css`
   display: flex;
@@ -11,13 +11,13 @@ const footerStyles = css`
   height: 50px;
   width: 100vw;
   font-size: ${normalText};
-  background-color: red;
+  background-color: ${lightGrey};
 `;
 
 const navBarContainer = css`
   display: flex;
   //justify-content: space-around;
-  background-color: yellow;
+  //background-color: yellow;
   width: 100%;
   height: 50%;
 `;
@@ -30,7 +30,7 @@ const navBar = css`
   margin-right: 10px;
   letter-spacing: 1px;
   text-decoration: none;
-  background-color: blue;
+  //background-color: blue;
 
   :first-of-type {
     margin-left: 10%;
@@ -57,7 +57,7 @@ const iconContainer = css`
   justify-content: flex-end;
   height: 100%;
   width: 30%;
-  background-color: green;
+  //background-color: green;
   text-decoration: none;
 
   a:hover {
