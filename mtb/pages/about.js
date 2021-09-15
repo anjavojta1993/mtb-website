@@ -208,7 +208,7 @@ export default function About() {
           aliquip ex ea commodo consequat. Duis aute irure dolor in
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum." fugiat nulla
+          culpa qui officia deserunt mollit anim id est laborum. fugiat nulla
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
           dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -217,7 +217,7 @@ export default function About() {
           commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
           velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
           occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum." fugiat nulla pariatur. Excepteur sint
+          mollit anim id est laborum. fugiat nulla pariatur. Excepteur sint
           occaecat cupidatat non proident, sunt in culpa qui officia deserunt
           mollit anim id . <br /> <br />
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -279,13 +279,13 @@ export default function About() {
             Polo AG
           </div>
           <div css={testimonialText}>
-          &quot;Frau Marlies Brunner hat mir in einer Zeit des beruflichen Umbruchs
-            durch ihre langjährige Erfahrung und Empathie vom ersten Gespräch an
-            sehr viel Zuversicht gegeben. Sie hat mir klar aufgezeigt, welche
-            Aktivitäten und Maßnahmen mir die entsprechende Aufmerksamkeit bei
-            den Personalsuchenden sichert und wie ich aus den zahlreichen
-            Bewerbungen heraussteche. Et voilá – es hat prompt funktioniert.
-            Vielen Dank Marlies für deine Unterstützung!&quot;
+            &quot;Frau Marlies Brunner hat mir in einer Zeit des beruflichen
+            Umbruchs durch ihre langjährige Erfahrung und Empathie vom ersten
+            Gespräch an sehr viel Zuversicht gegeben. Sie hat mir klar
+            aufgezeigt, welche Aktivitäten und Maßnahmen mir die entsprechende
+            Aufmerksamkeit bei den Personalsuchenden sichert und wie ich aus den
+            zahlreichen Bewerbungen heraussteche. Et voilá – es hat prompt
+            funktioniert. Vielen Dank Marlies für deine Unterstützung!&quot;
           </div>
         </div>
       </div>
@@ -301,8 +301,8 @@ export default function About() {
             BWL-Masterstudentin, <br /> Privatuni Seeburg
           </div>
           <div css={testimonialText}>
-          &quot;Ich möchte mich bei Frau Mag. Brunner ganz herzlich bedanken. Ich
-            bin schon seit Jahren Klientin bei ihr, und habe von dem
+            &quot;Ich möchte mich bei Frau Mag. Brunner ganz herzlich bedanken.
+            Ich bin schon seit Jahren Klientin bei ihr, und habe von dem
             Karrierecoaching definitiv in meinem Berufs- und Privatleben,
             besonders auch als Frau, profitiert. Durch das Coaching konnte ich
             durch das fachspezifische Wissen von Frau Mag. Brunner viel Neues
@@ -322,7 +322,7 @@ export default function About() {
             Vetrieb, Kloeckner Metals Austria GmbH & Co KG
           </div>
           <div css={testimonialText}>
-          &quot;In dieser schnelllebigen Zeit ist es wichtig, die richtigen
+            &quot;In dieser schnelllebigen Zeit ist es wichtig, die richtigen
             Entscheidungen zu treffen. Frau Brunner ist hierbei die beste Wahl!
             Mit viel Fachwissen, Erfahrung, Gespühr führt sie zum richtigen Weg
             und hilft dabei, nie den Mut zu verlieren! Vor allem das war
@@ -341,8 +341,8 @@ export default function About() {
             Geschäftsführerin & Leiterin, Frauenfachakademie
           </div>
           <div css={testimonialText}>
-          &quot;Bei unserem WEITBLICK!-Mentoring haben wir Frau Mag. Brunner als
-            äußerst wertvolle Begleiterin und Mentorin schätzen gelernt. Mit
+            &quot;Bei unserem WEITBLICK!-Mentoring haben wir Frau Mag. Brunner
+            als äußerst wertvolle Begleiterin und Mentorin schätzen gelernt. Mit
             Expertise und Empathie beflügelt sie Frauen auf ihrem Weg zu mehr
             Klarheit und kraftvollem Selbstbewusstsein. Dafür sagen wir herzlich
             DANKE!&quot;
