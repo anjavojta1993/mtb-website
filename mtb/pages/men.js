@@ -137,12 +137,12 @@ export default function OfferMen() {
       </div>
       <div css={quoteContainer}>
         <div css={quoteStyles}>
-          "Die Situation nicht als Rückschlag werten sondern als “erneut Anlauf
-          nehmen” beschreiben.”
+        &quot;Die Situation nicht als Rückschlag werten sondern als “erneut Anlauf
+          nehmen” beschreiben.&quot;
         </div>
       </div>
       <section css={pageContainer}>
-        <div css={containerHeadingLeft}>neustart & Vision</div>
+        <div css={containerHeadingLeft}>neustart &amp; Vision</div>
         <div css={itemContainer}>
           <div css={itemPhoto}>
             <Image

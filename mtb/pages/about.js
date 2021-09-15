@@ -187,8 +187,8 @@ export default function About() {
       </div>
       <div css={quoteContainer}>
         <div css={quoteStyles}>
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt.”
+          &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt.&quot;
         </div>
       </div>
       <section css={pageContainer}>
@@ -241,11 +241,11 @@ export default function About() {
             Head of Strategy Development, Salzburg AG
           </div>
           <div css={testimonialText}>
-            "Frau Brunner schärft den ganzheitlichen, objektiven Blick auf die
-            eigene Persönlichkeit und ihr Entwicklungspotential. Dabei
+            &quot;Frau Brunner schärft den ganzheitlichen, objektiven Blick auf
+            die eigene Persönlichkeit und ihr Entwicklungspotential. Dabei
             unterstützt sie die klare Fokussierung auf alle nützlichen
             individuellen Stärken, welche man dann zu 100% mit geballter Kraft
-            auf die 'Strasse' bringt. Fantastisch!"
+            auf die &quot;Strasse&quot; bringt. Fantastisch!&quot;
           </div>
         </div>
         <div css={singleTestimonialContainer}>
@@ -258,14 +258,14 @@ export default function About() {
             ></Image>
           </div>
           <div css={testimonialPosition}>
-            FH Salzburg, Career Center & Unternehmenskooperationen
+            FH Salzburg, Career Center &amp; Unternehmenskooperationen
           </div>
           <div css={testimonialText}>
-            “Marlies Brunner weiß aus langjähriger Erfahrung wie eine Bewerbung
-            erfolgreich wird. Das besondere ist, dass sie beide Seiten kennt -
-            die der Bewerber*in und die des Unternehmens. Von ihren praxisnahen
-            Tipps konnten Studierende der FH Salzburg in den Beratungsgesprächen
-            bisher sehr profitieren.”
+            &quot;Marlies Brunner weiß aus langjähriger Erfahrung wie eine
+            Bewerbung erfolgreich wird. Das besondere ist, dass sie beide Seiten
+            kennt - die der Bewerber*in und die des Unternehmens. Von ihren
+            praxisnahen Tipps konnten Studierende der FH Salzburg in den
+            Beratungsgesprächen bisher sehr profitieren.&quot;
           </div>
         </div>
         <div css={singleTestimonialContainer}>
@@ -279,13 +279,13 @@ export default function About() {
             Polo AG
           </div>
           <div css={testimonialText}>
-            „Frau Marlies Brunner hat mir in einer Zeit des beruflichen Umbruchs
+          &quot;Frau Marlies Brunner hat mir in einer Zeit des beruflichen Umbruchs
             durch ihre langjährige Erfahrung und Empathie vom ersten Gespräch an
             sehr viel Zuversicht gegeben. Sie hat mir klar aufgezeigt, welche
             Aktivitäten und Maßnahmen mir die entsprechende Aufmerksamkeit bei
             den Personalsuchenden sichert und wie ich aus den zahlreichen
             Bewerbungen heraussteche. Et voilá – es hat prompt funktioniert.
-            Vielen Dank Marlies für deine Unterstützung!“
+            Vielen Dank Marlies für deine Unterstützung!&quot;
           </div>
         </div>
       </div>
@@ -301,12 +301,12 @@ export default function About() {
             BWL-Masterstudentin, <br /> Privatuni Seeburg
           </div>
           <div css={testimonialText}>
-            “Ich möchte mich bei Frau Mag. Brunner ganz herzlich bedanken. Ich
+          &quot;Ich möchte mich bei Frau Mag. Brunner ganz herzlich bedanken. Ich
             bin schon seit Jahren Klientin bei ihr, und habe von dem
             Karrierecoaching definitiv in meinem Berufs- und Privatleben,
             besonders auch als Frau, profitiert. Durch das Coaching konnte ich
             durch das fachspezifische Wissen von Frau Mag. Brunner viel Neues
-            lernen und umsetzen und dieses in meinem Alltag anwenden.”
+            lernen und umsetzen und dieses in meinem Alltag anwenden.&quot;
           </div>
         </div>
         <div css={singleTestimonialContainer}>
@@ -322,11 +322,11 @@ export default function About() {
             Vetrieb, Kloeckner Metals Austria GmbH & Co KG
           </div>
           <div css={testimonialText}>
-            “In dieser schnelllebigen Zeit ist es wichtig, die richtigen
+          &quot;In dieser schnelllebigen Zeit ist es wichtig, die richtigen
             Entscheidungen zu treffen. Frau Brunner ist hierbei die beste Wahl!
             Mit viel Fachwissen, Erfahrung, Gespühr führt sie zum richtigen Weg
             und hilft dabei, nie den Mut zu verlieren! Vor allem das war
-            besonders wichtig - Danke!”
+            besonders wichtig - Danke!&quot;
           </div>
         </div>
         <div css={singleTestimonialContainer}>
@@ -341,11 +341,11 @@ export default function About() {
             Geschäftsführerin & Leiterin, Frauenfachakademie
           </div>
           <div css={testimonialText}>
-            "Bei unserem WEITBLICK!-Mentoring haben wir Frau Mag. Brunner als
+          &quot;Bei unserem WEITBLICK!-Mentoring haben wir Frau Mag. Brunner als
             äußerst wertvolle Begleiterin und Mentorin schätzen gelernt. Mit
             Expertise und Empathie beflügelt sie Frauen auf ihrem Weg zu mehr
             Klarheit und kraftvollem Selbstbewusstsein. Dafür sagen wir herzlich
-            "DANKE"!
+            DANKE!&quot;
           </div>
         </div>
       </div>

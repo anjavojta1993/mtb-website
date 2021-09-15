@@ -170,8 +170,8 @@ export default function OfferWomen() {
       </div>
       <div css={quoteContainer}>
         <div css={quoteStyles}>
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt.”
+          &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt.&quot;
         </div>
       </div>
       <section css={pageContainer}>
@@ -192,7 +192,7 @@ export default function OfferWomen() {
           </div>
         </div>
         <div css={horizontalLine} />
-        <div css={containerHeadingRight}>Realität & Vision</div>
+        <div css={containerHeadingRight}>Realität &amp; Vision</div>
         <div css={itemContainer}>
           <div css={itemTextLeft}>
             Hier gibt es neben dem genannten Wunsch, wieder ins Berufsleben
@@ -208,7 +208,9 @@ export default function OfferWomen() {
           </div>
         </div>
         <div css={horizontalLine} />
-        <div css={containerHeadingLeft}>Rückschau & Realität & Vision</div>
+        <div css={containerHeadingLeft}>
+          Rückschau &amp; Realität &amp; Vision
+        </div>
         <div css={itemContainer}>
           <div css={itemPhoto}>
             <Image
