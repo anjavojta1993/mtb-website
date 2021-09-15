@@ -32,7 +32,7 @@ const leftContainer = css`
   justify-content: center;
   height: 80vh;
   align-items: center;
-  background-color: green;
+  //background-color: green;
   margin-bottom: 50px;
 `;
 
@@ -44,7 +44,7 @@ const leftContainerHeading = css`
   align-items: center;
   font-size: ${mediumText};
   font-weight: 700;
-  background-color: purple;
+  //background-color: purple;
 `;
 
 const rightContainer = css`
@@ -53,11 +53,11 @@ const rightContainer = css`
   justify-content: center;
   width: 50%;
   padding: 10px;
-  padding-right: 40px;
+  padding-right: 80px;
   height: 80vh;
   align-items: center;
   margin-bottom: 50px;
-  background-color: yellow;
+  //background-color: yellow;
 `;
 
 const testimonialContainer = css`
@@ -68,6 +68,7 @@ const testimonialContainer = css`
   height: auto;
   align-items: flex-start;
   background-color: ${darkBlue};
+  padding-top: 20px;
 `;
 
 const singleTestimonialContainer = css`
@@ -169,7 +170,7 @@ const quoteStyles = css`
   padding: 10px;
   align-content: center;
   font-size: ${mediumText};
-  background-color: blue;
+  //background-color: blue;
   text-align: center;
   letter-spacing: 1.5px;
   line-height: 1.5;

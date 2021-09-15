@@ -1,5 +1,7 @@
 import { css } from '@emotion/react';
 import Head from 'next/head';
+import Link from 'next/link';
+import { useState } from 'react';
 import { FiPhone } from 'react-icons/fi';
 import { GoLocation } from 'react-icons/go';
 import { HiOutlineMailOpen } from 'react-icons/hi';
@@ -48,10 +50,19 @@ const heroHeading = css`
 const leftContainer = css`
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 60%;
   height: 100vh;
   align-items: center;
   padding-top: 40px;
+  //background-color: green;
+
+  span {
+    width: 100vw;
+    text-align: center;
+    align-items: center;
+    margin-top: 50px;
+    font-size: ${mediumText};
+  }
 `;
 
 const rightContainer = css`
@@ -59,7 +70,7 @@ const rightContainer = css`
   flex-direction: column;
   background-color: ${darkBlue};
   color: white;
-  width: 50%;
+  width: 40%;
   height: 100vh;
   align-items: center;
   padding-top: 40px;
@@ -70,7 +81,7 @@ const contactInfosContainer = css`
   flex-direction: column;
   height: auto;
   width: 100%;
-  background-color: orange;
+  //background-color: orange;
   margin-bottom: 40px;
 `;
 
@@ -79,8 +90,8 @@ const iconContainer = css`
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 100%;
-  background-color: green;
+  width: 80%;
+  //background-color: green;
 
   p {
     margin-left: 20px;
@@ -97,11 +108,12 @@ const contactInfosTextStyles = css`
   color: white;
   letter-spacing: 1.5px;
   line-height: 1.5;
+  margin-left: 70px;
 `;
 
 const horizontalLine = css`
   border: solid 1px white;
-  width: 80%;
+  width: 90%;
   color: white;
   height: 1px;
   margin-left: 20px;
@@ -120,8 +132,8 @@ const inputStyles = css`
   background-color: ${lightGrey};
   font-family: Spartan;
   font-size: ${normalText};
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   border: 1px solid black;
   height: 40px;
 `;
@@ -132,16 +144,19 @@ const textareaStyles = css`
   background-color: ${lightGrey};
   font-family: Spartan;
   font-size: ${normalText};
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   border: 1px solid black;
   height: 200px;
 `;
 
 const buttonStylesBlue = css`
-  display: inline-block;
+  display: flex;
+  align-self: center;
+  background-color: yellow;
   border: none;
   text-align: center;
+  justify-content: center;
   margin-top: 50px;
   margin-bottom: 50px;
   color: white;
@@ -163,8 +178,39 @@ const buttonStylesBlue = css`
   }
 `;
 
+const buttonStylesMessage = css`
+  display: flex;
+  align-self: center;
+  background-color: yellow;
+  border: none;
+  text-align: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: white;
+  width: 40%;
+  align-items: center;
+  background-color: ${mediumBlue};
+  font-size: ${normalText};
+  font-weight: 400;
+  border-radius: 8px;
+  padding: 16px 40px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  :hover {
+    border: none;
+    transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    cursor: pointer;
+  }
+`;
+
 export default function Contact() {
+  const [loading, setLoading] = useState(false);
+
   async function handleOnSubmit(e) {
+    setLoading(true);
     console.log(e.currentTarget, 'event currenttarget');
     e.preventDefault();
 
@@ -191,26 +237,38 @@ export default function Contact() {
         <div css={heroHeading}>Kontakt</div>
       </div>
       <section css={pageContainer}>
-        <div css={leftContainer}>
-          <form css={formContainer} onSubmit={handleOnSubmit}>
-            <div>
-              <label htmlFor>Name</label>
-              <input css={inputStyles} id="name" type="text" name="name" />
-            </div>
-            <div>
-              <label htmlFor>Email Adresse</label>
-              <input css={inputStyles} id="email" type="text" name="email" />
-            </div>
+        {!loading ? (
+          <div css={leftContainer}>
+            <form css={formContainer} onSubmit={handleOnSubmit}>
+              <div>
+                <label htmlFor>Name</label>
+                <input css={inputStyles} id="name" type="text" name="name" />
+              </div>
+              <div>
+                <label htmlFor>Email Adresse</label>
+                <input css={inputStyles} id="email" type="text" name="email" />
+              </div>
 
-            <div>
-              <label htmlFor>Deine Nachricht</label>
-              <textarea css={textareaStyles} id="message" name="message" />
-            </div>
-            <div>
+              <div>
+                <label htmlFor>Deine Nachricht</label>
+                <textarea css={textareaStyles} id="message" name="message" />
+              </div>
               <button css={buttonStylesBlue}>Senden</button>
-            </div>
-          </form>
-        </div>
+            </form>
+          </div>
+        ) : (
+          <div css={leftContainer}>
+            <span>
+              Danke für Ihre Nachricht. <br />
+              Ich melde mich so bald wie möglich bei Ihnen!{' '}
+            </span>
+            <Link href="/contact/">
+              <a css={buttonStylesMessage} onClick={() => setLoading(false)}>
+                Neue Nachricht
+              </a>
+            </Link>
+          </div>
+        )}
         <div css={rightContainer}>
           <div css={contactInfosContainer}>
             <div css={iconContainer}>
@@ -218,7 +276,9 @@ export default function Contact() {
               <p>Adresse</p>
             </div>
             <div css={horizontalLine} />
-            <div css={contactInfosTextStyles}>Testweg 12, 1000 Salzburg</div>
+            <div css={contactInfosTextStyles}>
+              Michael-Walz-Gasse 37, 5020 Salzburg
+            </div>
           </div>
           <div css={contactInfosContainer}>
             <div css={iconContainer}>

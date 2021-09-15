@@ -59,7 +59,7 @@ const quoteStyles = css`
   padding: 10px;
   align-content: center;
   font-size: ${mediumText};
-  background-color: blue;
+  //background-color: blue;
   text-align: center;
   letter-spacing: 1.5px;
   line-height: 1.5;

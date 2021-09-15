@@ -27,13 +27,14 @@ const navBar = css`
   align-items: center;
   justify-content: center;
   //text-transform: uppercase;
-  margin-right: 10px;
+
   letter-spacing: 1px;
   text-decoration: none;
   //background-color: blue;
 
   :first-of-type {
     margin-left: 10%;
+    margin-right: 20px;
   }
 
   p {
