@@ -27,24 +27,17 @@ const navBar = css`
   align-items: center;
   justify-content: center;
   //text-transform: uppercase;
-
   letter-spacing: 1px;
   text-decoration: none;
   //background-color: blue;
-
   :first-of-type {
     margin-left: 10%;
     margin-right: 20px;
   }
 
-  p {
-    justify-content: center;
-    text-align: center;
-    pointer-events: none;
-  }
-
   p:hover {
     cursor: none;
+    text-decoration: none;
   }
 
   :hover {
@@ -60,17 +53,14 @@ const iconContainer = css`
   width: 30%;
   //background-color: green;
   text-decoration: none;
-
   a:hover {
     cursor: pointer;
     color: black;
   }
-
   a:visited {
     cursor: pointer;
     color: black;
   }
-
   a:active {
     cursor: pointer;
     color: black;
@@ -87,7 +77,9 @@ export default function Footer() {
         <Link href="/datenschutz">
           <a css={navBar}>Datenschutzerklärung</a>
         </Link>
-        <p css={navBar}>&copy; Marlies Theres Brunner</p>
+        <div css={navBar}>
+          <p>&copy; Marlies Theres Brunner</p>
+        </div>
         <div css={iconContainer}>
           <Link href="https://www.linkedin.com/in/marlies-theres-brunner-97761118/">
             <a target="blank">

@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Logo from '../public/images/logo.png';
+import Logo from '../public/images/logo.jpg';
 import { normalText } from '../styles/sharedStyles';
 
 const headerStyles = css`
@@ -31,6 +31,7 @@ const navBar = css`
 
   :hover {
     cursor: pointer;
+    border-bottom: 1px solid black;
   }
 `;
 
@@ -49,8 +50,6 @@ export default function Header() {
       <div css={logoContainer}>
         <Image
           src={Logo}
-          height="110px"
-          width="320px"
           alt="Blauer Kreis mit Initialien MTB und Systemischer Coach"
         />
       </div>

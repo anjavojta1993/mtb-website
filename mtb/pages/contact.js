@@ -109,6 +109,31 @@ const contactInfosTextStyles = css`
   letter-spacing: 1.5px;
   line-height: 1.5;
   margin-left: 70px;
+  text-decoration: none;
+
+  a:hover {
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+  }
+
+  a:visited {
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+  }
+
+  a:active {
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+  }
+
+  a:link {
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+  }
 `;
 
 const horizontalLine = css`
@@ -250,7 +275,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor>Deine Nachricht</label>
+                <label htmlFor>Ihre Nachricht</label>
                 <textarea css={textareaStyles} id="message" name="message" />
               </div>
               <button css={buttonStylesBlue}>Senden</button>
@@ -287,7 +312,9 @@ export default function Contact() {
             </div>
             <div css={horizontalLine} />
             <div css={contactInfosTextStyles}>
-              marliestheresbrunner@gmail.com
+              <Link href="mailto:marliestheresbrunner@gmail.com">
+                <a>marliestheresbrunner@gmail.com</a>
+              </Link>
             </div>
           </div>
           <div css={contactInfosContainer}>

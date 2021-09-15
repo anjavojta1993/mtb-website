@@ -20,11 +20,6 @@ function MyApp({ Component, pageProps }) {
             font-family: 'Spartan', sans-serif;
             color: black;
           }
-          a {
-            :hover {
-              border-bottom: 1px solid black;
-            }
-          }
         `}
       />
       <Head />
