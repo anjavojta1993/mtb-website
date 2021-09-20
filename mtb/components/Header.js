@@ -11,12 +11,22 @@ const headerStyles = css`
   display: flex;
   align-items: center;
   height: 120px;
-  width: 100vw;
+  width: 100%;
   font-size: ${normalText};
   //background-color: green;
+  z-index: 2000;
 
   @media (max-width: 768px) {
-    padding: 32px 24px;
+    display: flex;
+    width: 100%;
+    height: 120px;
+    z-index: 2000;
+    //position: fixed;
+    background-color: white;
+  }
+
+  @media (max-width: 540px) {
+    position: fixed;
   }
 `;
 
@@ -24,9 +34,15 @@ const logoContainer = css`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30%;
+  width: auto;
   height: 100%;
+  margin-left: 30px;
   //background-color: red;
+
+  @media (max-width: 768px) {
+    margin-left: 10px;
+    position: fixed;
+  }
 `;
 
 export default function Header(props) {

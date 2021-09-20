@@ -7,9 +7,10 @@ import { mediumBlue, normalText } from '../styles/sharedStyles';
 const navBarContainer = (open) => css`
   display: flex;
   justify-content: space-around;
-  //background-color: yellow;
+  background-color: yellow;
   width: 70%;
   list-style: none;
+  margin-left: 50px;
   z-index: 1200;
 
   padding: 0;

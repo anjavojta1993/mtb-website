@@ -12,6 +12,14 @@ const footerStyles = css`
   width: 100vw;
   font-size: ${normalText};
   background-color: ${lightGrey};
+
+  @media (max-width: 768px) {
+    height: 200px;
+    width: 100vw;
+    font-size: ${normalText};
+    background-color: ${lightGrey};
+    flex-wrap: wrap;
+  }
 `;
 
 const navBarContainer = css`
@@ -20,6 +28,12 @@ const navBarContainer = css`
   //background-color: yellow;
   width: 100%;
   height: 50%;
+
+  @media (max-width: 768px) {
+    font-size: ${normalText};
+    background-color: ${lightGrey};
+    flex-wrap: wrap;
+  }
 `;
 
 const navBar = css`
@@ -42,6 +56,12 @@ const navBar = css`
 
   :hover {
     cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column nowrap;
   }
 `;
 
