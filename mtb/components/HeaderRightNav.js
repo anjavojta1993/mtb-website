@@ -23,10 +23,6 @@ const navBarContainer = (open) => css`
     letter-spacing: 1px;
     text-decoration: none;
 
-    @media (max-width: 1125px) {
-      padding-bottom: 16px;
-    }
-
     :visited {
       cursor: pointer;
       color: black;
@@ -43,10 +39,22 @@ const navBarContainer = (open) => css`
       cursor: pointer;
       border-bottom: 1px solid black;
     }
+
+    @media (max-width: 1125px) {
+      padding-bottom: 16px;
+
+      :hover {
+        cursor: pointer;
+        font-weight: bold;
+        border: none;
+      }
+    }
   }
 
   @media (max-width: 1125px) {
     flex-flow: column nowrap;
+    justify-content: flex-start;
+    padding: 10px;
     background-color: ${mediumBlue};
     position: fixed;
     top: 0;
@@ -54,7 +62,7 @@ const navBarContainer = (open) => css`
     height: 100vh;
     width: 210px;
     margin-top: 0;
-    padding-top: 3rem;
+    padding-top: 5rem;
     transform: ${open ? 'translateX(0)' : 'translateX(100%)'};
     transition: transform 0.3s ease-in-out;
   }

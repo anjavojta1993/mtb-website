@@ -34,14 +34,17 @@ const logoContainer = css`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: auto;
   height: 100%;
+  width: 25%;
   margin-left: 30px;
+  background-image: url('images/logo.jpg');
+  background-repeat: no-repeat;
   //background-color: red;
 
-  @media (max-width: 768px) {
-    margin-left: 10px;
-    position: fixed;
+  @media (max-width: 1208px) {
+    margin-top: 20px;
+    margin-left: 30px;
+    background-image: url('images/logo_responsive.jpg');
   }
 `;
 
@@ -50,10 +53,10 @@ export default function Header(props) {
   return (
     <header css={headerStyles}>
       <div css={logoContainer}>
-        <Image
+        {/* <Image
           src={Logo}
           alt="Blauer Kreis mit Initialien MTB und Systemischer Coach"
-        />
+        /> */}
       </div>
       <HeaderRightNav open={open} />
       <HeaderBurger open={open} setOpen={setOpen} />

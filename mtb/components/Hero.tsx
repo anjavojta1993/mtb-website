@@ -25,7 +25,7 @@ const pageContainer = css`
   background-position: center;
 
   @media (max-width: 540px) {
-    position: absolute;
+    position: relative;
     width: 100vw;
     height: 100vh;
     align-items: center;
@@ -55,10 +55,9 @@ const heroContainer = css`
     //background-color: green;
   }
   @media (max-width: 540px) {
-    position: relative;
-    top: 30%;
-    left: 4%;
-    width: 100%;
+    position: absolute;
+    top: 35%;
+    width: 80%;
     height: 80%;
   }
 `;
@@ -148,9 +147,9 @@ const buttonStylesBlue = css`
     font-size: 0.75rem;
     font-weight: 400;
     border-radius: 8px;
-    padding: 8px 20px;
+    padding: 8px 10px;
     letter-spacing: 2px;
-    text-transform: uppercase;
+    text-transform: none;
 
     :hover {
       border: none;
@@ -191,9 +190,9 @@ const buttonStylesLight = css`
     font-weight: 400;
     border: 1px solid black;
     border-radius: 8px;
-    padding: 8px 20px;
+    padding: 8px 10px;
     letter-spacing: 2px;
-    text-transform: uppercase;
+    text-transform: none;
 
     :hover {
       transform: scale(1.1, 1.1);

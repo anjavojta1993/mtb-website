@@ -28,40 +28,49 @@ const navBarContainer = css`
   //background-color: yellow;
   width: 100%;
   height: 50%;
+  margin-left: 10%;
 
-  @media (max-width: 768px) {
-    font-size: ${normalText};
-    background-color: ${lightGrey};
-    flex-wrap: wrap;
-  }
-`;
-
-const navBar = css`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  //text-transform: uppercase;
-  letter-spacing: 1px;
-  text-decoration: none;
-  //background-color: blue;
-  :first-of-type {
-    margin-left: 10%;
-    margin-right: 20px;
+  li {
+    list-style: none;
+    margin: auto;
   }
 
-  p:hover {
-    cursor: none;
-    text-decoration: none;
-  }
-
-  :hover {
-    cursor: pointer;
-  }
-
-  @media (max-width: 768px) {
+  a {
     display: flex;
-    justify-content: space-around;
-    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    //text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    background-color: blue;
+    margin-right: 20px;
+
+    p:hover {
+      cursor: none;
+      text-decoration: none;
+    }
+
+    :hover {
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    :visited {
+      cursor: pointer;
+      color: black;
+    }
+    :active {
+      cursor: pointer;
+      color: black;
+    }
+    :link {
+      cursor: pointer;
+      color: black;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
   }
 `;
 
@@ -96,21 +105,21 @@ export default function Footer() {
     <div css={footerStyles}>
       <div css={navBarContainer}>
         <Link href="/impressum">
-          <a css={navBar}>Impressum</a>
+          <a>
+            <li>Impressum</li>
+          </a>
         </Link>
         <Link href="/datenschutz">
-          <a css={navBar}>Datenschutzerklärung</a>
+          <a>
+            <li>Datenschutzerklärung</li>
+          </a>
         </Link>
-        <div css={navBar}>
-          <p>&copy; Marlies Theres Brunner</p>
-        </div>
-        <div css={iconContainer}>
-          <Link href="https://www.linkedin.com/in/marlies-theres-brunner-97761118/">
-            <a target="blank">
-              <SiLinkedin size={26} />
-            </a>
-          </Link>
-        </div>
+        <Link href="https://www.linkedin.com/in/marlies-theres-brunner-97761118/">
+          <a target="blank">
+            <SiLinkedin size={26} />
+          </a>
+        </Link>
+        <li>&copy; Marlies Theres Brunner</li>
       </div>
     </div>
   );
