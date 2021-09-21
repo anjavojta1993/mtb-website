@@ -22,7 +22,7 @@ const pageContainer = css`
   flex-direction: row;
   width: 100%;
   align-items: center;
-  margin-top: 40px;
+  //margin-top: 40px;
 `;
 
 const leftContainer = css`
@@ -143,6 +143,12 @@ const heroContainer = css`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
+  @media (max-width: 768px) {
+    position: absolute;
+    margin-top: 120px;
+    height: 30vh;
+  }
 `;
 
 const heroHeading = css`
@@ -155,6 +161,13 @@ const heroHeading = css`
   font-weight: 700;
   color: white;
   letter-spacing: 1.5px;
+  background-color: yellow;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    align-self: center;
+    align-items: center;
+  }
 `;
 
 const quoteContainer = css`

@@ -25,8 +25,9 @@ const pageContainer = css`
   background-position: center;
 
   @media (max-width: 540px) {
-    position: relative;
-    width: 100vw;
+    position: absolute;
+    margin-top: 120px;
+    width: 100%;
     height: 100vh;
     align-items: center;
     justify-content: center;
@@ -44,7 +45,6 @@ const heroContainer = css`
   left: 10%;
   width: 60%;
   height: 80%;
-  //background-color: green;
 
   @media (max-width: 1280px) {
     position: absolute;
@@ -55,8 +55,8 @@ const heroContainer = css`
     //background-color: green;
   }
   @media (max-width: 540px) {
-    position: absolute;
-    top: 35%;
+    position: relative;
+    top: 0%;
     width: 80%;
     height: 80%;
   }
@@ -70,6 +70,7 @@ const heroHeadingContainer = css`
   letter-spacing: 1.5px;
   line-height: 1.5;
   width: 700px;
+  z-index: 2;
 
   @media (max-width: 768px) {
     font-size: 1.5rem;

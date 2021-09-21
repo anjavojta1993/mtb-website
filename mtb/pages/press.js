@@ -38,6 +38,12 @@ const heroContainer = css`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
+  @media (max-width: 768px) {
+    position: absolute;
+    margin-top: 120px;
+    height: 30vh;
+  }
 `;
 
 const heroHeading = css`

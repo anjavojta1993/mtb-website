@@ -34,6 +34,12 @@ const heroContainer = css`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
+  @media (max-width: 768px) {
+    position: absolute;
+    margin-top: 120px;
+    height: 30vh;
+  }
 `;
 
 const heroHeading = css`
@@ -46,6 +52,12 @@ const heroHeading = css`
   font-weight: 700;
   color: white;
   letter-spacing: 1.5px;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    align-self: center;
+    align-items: center;
+  }
 `;
 
 const quoteContainer = css`
@@ -54,6 +66,11 @@ const quoteContainer = css`
   align-items: center;
   background-color: ${lightGrey};
   height: 20vh;
+
+  @media (max-width: 768px) {
+    position: absolute;
+    margin-top: 500px;
+  }
 `;
 
 const quoteStyles = css`

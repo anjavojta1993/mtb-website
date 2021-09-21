@@ -13,7 +13,6 @@ const headerStyles = css`
   height: 120px;
   width: 100%;
   font-size: ${normalText};
-  //background-color: green;
   z-index: 2000;
 
   @media (max-width: 768px) {
@@ -21,7 +20,7 @@ const headerStyles = css`
     width: 100%;
     height: 120px;
     z-index: 2000;
-    //position: fixed;
+    position: fixed;
     background-color: white;
   }
 
