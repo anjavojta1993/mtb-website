@@ -119,9 +119,10 @@ const containerHeading = css`
 `;
 
 const portraitContainer = css`
-  width: auto;
-  height: auto;
+  width: 200px;
+  height: 200px;
   margin: 20px;
+  background-color: green;
 `;
 
 const testimonialText = css`
