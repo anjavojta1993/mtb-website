@@ -1,13 +1,7 @@
 import { css } from '@emotion/react';
-import axios from 'axios';
-import fileDownload from 'js-file-download';
 import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
 import Layout from '../components/Layout';
 import DieBestenArtikel from '../public/diebesten.pdf';
-import DieBesten from '../public/images/diebesten.png';
-import SalzburgerNachrichten from '../public/images/salzburgernachrichten.png';
 import SalzburgerNachrichtenArtikel from '../public/salzburgernachrichten.pdf';
 import {
   h1,

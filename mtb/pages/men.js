@@ -1,10 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { css } from '@emotion/react';
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
 import Layout from '../components/Layout';
-import NeustartVision from '../public/images/neustartvision.png';
 import {
   h1,
   h2,

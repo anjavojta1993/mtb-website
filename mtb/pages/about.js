@@ -242,7 +242,7 @@ export default function About() {
           <div css={portraitContainer}>
             {' '}
             <img
-              src="/images/Ullmann.png"
+              src="/images/ullmann.png"
               width="200px"
               height="200px"
               alt="Portrait von Mag. Anton Ullmann"

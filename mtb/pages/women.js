@@ -3,9 +3,6 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Layout from '../components/Layout';
-import RealitätVision from '../public/images/realitätvision.png';
-import RückschauRealitätVision from '../public/images/rückschaurealitätvision.png';
-import Vision from '../public/images/vision.png';
 import {
   h1,
   h2,
