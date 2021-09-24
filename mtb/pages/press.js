@@ -148,10 +148,10 @@ export default function Press() {
       <section css={pageContainer}>
         <div css={itemContainer}>
           <div css={itemHeading}>Die besten - Karrieremagazin</div>
-          <Image
-            src={DieBesten}
+          <img
+            src="/images/diebesten.png"
             alt="Ausschnitt aus Artikel in Die Besten das Karrieremagazin mit Mag. Marlies Theres Brunner"
-          ></Image>
+          />
           <button
             css={buttonStylesBlue}
             onClick={() => {
@@ -163,10 +163,10 @@ export default function Press() {
         </div>
         <div css={itemContainer}>
           <div css={itemHeading}>Salzburger Nachrichten</div>
-          <Image
-            src={SalzburgerNachrichten}
+          <img
+            src="/images/salzburgernachrichten.png"
             alt="Ausschnitt aus Artikel in den Salzburger Nachrichten mit Mag. Marlies Theres Brunner"
-          ></Image>
+          />
           <button
             css={buttonStylesBlue}
             onClick={() => {

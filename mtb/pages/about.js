@@ -2,13 +2,7 @@ import { css } from '@emotion/react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Layout from '../components/Layout';
-import Brecka from '../public/images/brecka.png';
-import Collini from '../public/images/collini.png';
-import Gruber from '../public/images/gruber.png';
-import Langthaler from '../public/images/langthaler.png';
 import Portrait from '../public/images/portrait.png';
-import Schallhammer from '../public/images/schallhammer.png';
-import Ullmann from '../public/images/ullmann.png';
 import {
   darkBlue,
   h1,
@@ -34,6 +28,7 @@ const leftContainer = css`
   align-items: center;
   //background-color: green;
   margin-bottom: 50px;
+  margin-top: 50px;
 `;
 
 const leftContainerHeading = css`
@@ -122,7 +117,7 @@ const portraitContainer = css`
   width: 200px;
   height: 200px;
   margin: 20px;
-  background-color: green;
+  //background-color: green;
 `;
 
 const testimonialText = css`
@@ -162,7 +157,7 @@ const heroHeading = css`
   font-weight: 700;
   color: white;
   letter-spacing: 1.5px;
-  background-color: yellow;
+  //background-color: yellow;
 
   @media (max-width: 768px) {
     font-size: 1.5rem;
@@ -246,10 +241,12 @@ export default function About() {
           <div css={testimonialHeading}>Ing. Mag. Anton Ullmann</div>
           <div css={portraitContainer}>
             {' '}
-            <Image
-              src={Ullmann}
-              alt="Portrait von Ing. Mag. Anton Ullmann"
-            ></Image>
+            <img
+              src="/images/Ullmann.png"
+              width="200px"
+              height="200px"
+              alt="Portrait von Mag. Anton Ullmann"
+            />
           </div>
           <div css={testimonialPosition}>
             Head of Strategy Development, Salzburg AG
@@ -266,10 +263,12 @@ export default function About() {
           <div css={testimonialHeading}>Mag. Ingrid Langthaler</div>
           <div css={portraitContainer}>
             {' '}
-            <Image
-              src={Langthaler}
+            <img
+              src="/images/langthaler.png"
+              width="200px"
+              height="200px"
               alt="Portrait von Mag. Ingrid Langthaler"
-            ></Image>
+            />
           </div>
           <div css={testimonialPosition}>
             FH Salzburg, Career Center &amp; Unternehmenskooperationen
@@ -286,7 +285,12 @@ export default function About() {
           <div css={testimonialHeading}>Gerhard Brecka</div>
           <div css={portraitContainer}>
             {' '}
-            <Image src={Brecka} alt="Portrait von Gerhard Brecka"></Image>
+            <img
+              src="/images/brecka.png"
+              width="200px"
+              height="200px"
+              alt="Portrait von Gerhard Brecka"
+            />
           </div>
           <div css={testimonialPosition}>
             COO, <br />
@@ -309,7 +313,12 @@ export default function About() {
           <div css={testimonialHeading}>Julia Collini</div>
           <div css={portraitContainer}>
             {' '}
-            <Image src={Collini} alt="Portrait von Julia Collini"></Image>
+            <img
+              src="/images/collini.png"
+              width="200px"
+              height="200px"
+              alt="Portrait von Julia Collini"
+            />
           </div>
           <div css={testimonialPosition}>
             BWL-Masterstudentin, <br /> Privatuni Seeburg
@@ -327,10 +336,12 @@ export default function About() {
           <div css={testimonialHeading}>Gerhard Schallhammer</div>
           <div css={portraitContainer}>
             {' '}
-            <Image
-              src={Schallhammer}
+            <img
+              src="/images/schallhammer.png"
+              width="200px"
+              height="200px"
               alt="Portrait von Gerhard Schallhammer"
-            ></Image>
+            />
           </div>
           <div css={testimonialPosition}>
             Vetrieb, Kloeckner Metals Austria GmbH & Co KG
@@ -346,10 +357,12 @@ export default function About() {
         <div css={singleTestimonialContainer}>
           <div css={testimonialHeading}>Mag. Brigitte Maria Gruber</div>
           <div css={portraitContainer}>
-            <Image
-              src={Gruber}
+            <img
+              src="/images/gruber.png"
+              width="200px"
+              height="200px"
               alt="Portrait von Mag. Brigitte Maria Gruber"
-            ></Image>
+            />
           </div>
           <div css={testimonialPosition}>
             Geschäftsführerin & Leiterin, Frauenfachakademie

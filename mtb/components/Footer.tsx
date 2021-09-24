@@ -42,7 +42,7 @@ const navBarContainer = css`
     //text-transform: uppercase;
     letter-spacing: 1px;
     text-decoration: none;
-    background-color: blue;
+    //background-color: blue;
     margin-right: 20px;
 
     p:hover {

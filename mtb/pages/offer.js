@@ -6,7 +6,6 @@ import { FiPhone } from 'react-icons/fi';
 import Layout from '../components/Layout';
 import Coaching from '../public/images/coaching.png';
 import FrauenFördern from '../public/images/frauenfördern.png';
-import MännerStärken from '../public/images/männerstärken.png';
 import TelefonAnfrage from '../public/images/telephone.png';
 import {
   darkBlue,
@@ -231,20 +230,24 @@ export default function Offer() {
       <section css={pageContainer}>
         <div css={itemContainer}>
           <div css={itemHeading}>Frauen fördern</div>
-          <Image
-            src={FrauenFördern}
-            alt="Junge Frau mit kurzem Afro steht an Whiteboard und coacht Frau die am Tisch sitzt"
-          ></Image>
+          <img
+            src="/images/frauenfördern.png"
+            width="340px"
+            height="400px"
+            alt="Junge Frau sitzt mit mit anderen Frauen auf Sofa und schreiben in ihre Notizblöcke"
+          />
           <Link href="/women/">
             <a css={buttonStylesBlue}>Mehr Infos</a>
           </Link>
         </div>
         <div css={itemContainer}>
           <div css={itemHeading}>Männer stärken</div>
-          <Image
-            src={MännerStärken}
+          <img
+            src="/images/männerstärken.png"
+            width="340px"
+            height="400px"
             alt="Junge Frau im Anzug sitzt mit Mann im Hemd auf einer Parkbank und coacht ihn"
-          ></Image>
+          />
           <Link href="/men/">
             <a css={buttonStylesBlue}>Mehr Infos</a>
           </Link>

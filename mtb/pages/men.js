@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { css } from '@emotion/react';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -86,7 +87,7 @@ const itemTextRight = css`
   font-size: ${normalText};
   //background-color: blue;
   letter-spacing: 1.5px;
-  line-height: 2;
+  line-height: 1.5;
   height: 100%;
   width: 50%;
 `;
@@ -143,18 +144,20 @@ export default function OfferMen() {
       </div>
       <div css={quoteContainer}>
         <div css={quoteStyles}>
-        &quot;Die Situation nicht als Rückschlag werten sondern als “erneut Anlauf
-          nehmen” beschreiben.&quot;
+          &quot;Die Situation nicht als Rückschlag werten sondern als “erneut
+          Anlauf nehmen” beschreiben.&quot;
         </div>
       </div>
       <section css={pageContainer}>
         <div css={containerHeadingLeft}>neustart &amp; Vision</div>
         <div css={itemContainer}>
           <div css={itemPhoto}>
-            <Image
-              src={NeustartVision}
+            <img
+              src="/images/neustartvision.png"
+              width="580px"
+              height="370px"
               alt="Älterer Herr mit Brille sitzt auf weißen Sofa und sieht sich Unterlagen an "
-            ></Image>
+            />
           </div>
           <div css={itemTextRight}>
             Sie haben eine gute Ausbildung und verdienen auch (sehr) gut. Sie

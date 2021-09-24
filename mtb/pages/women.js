@@ -93,13 +93,22 @@ const itemContainer = css`
   margin-bottom: 40px;
 `;
 
+const itemContainerLong = css`
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 80vw;
+  //background-color: orange;
+  margin-bottom: 40px;
+`;
+
 const itemTextRight = css`
   padding-left: 10px;
   margin-left: 10px;
   font-size: ${normalText};
   //background-color: blue;
   letter-spacing: 1.5px;
-  line-height: 2;
+  line-height: 1.5;
   height: 100%;
   width: 50%;
 `;
@@ -110,7 +119,7 @@ const itemTextLeft = css`
   font-size: ${normalText};
   //background-color: blue;
   letter-spacing: 1.5px;
-  line-height: 2;
+  line-height: 1.5;
   height: 100%;
   width: 50%;
 `;
@@ -195,33 +204,71 @@ export default function OfferWomen() {
         <div css={containerHeadingLeft}>Vision</div>
         <div css={itemContainer}>
           <div css={itemPhoto}>
-            <Image
-              src={Vision}
+            <img
+              height="350"
+              width="580"
+              src="/images/vision.png"
               alt="Blonde, junge Dame telefoniert im Freien mit Handy am Ohr"
-            ></Image>
+            />
           </div>
           <div css={itemTextRight}>
-            Jene Frauen, die am Beginn ihrer Berufslaufbahn stehen und
-            vorwiegend noch Wünsche an oder Ängste vor der beruflichen Zukunft
-            haben. Sie beginnen motiviert, mit hohen Erwartungen und viel
-            Ehrgeiz ihre Berufstätigkeit, fürchten aber das Ungewisse und
-            strahlen das dann auch aus.{' '}
+            <i>
+              &quot;Was wir heute nicht träumen, wird morgen nicht wahr&quot;
+            </i>
+            <br />
+            <br />
+            Sie haben ihre Ausbildung beendet – Gratulation und ihr Berufsleben
+            wartet schon auf Sie! Jetzt haben Sie Erwartungen und Wünsche an
+            Ihre Berufsleben, sind sehr motiviert, haben zugleich aber auch
+            Ängste vor dieser beruflichen Zukunft? <br />
+            <br />
+            <ul>
+              <li>
+                Kleine Hilfestellungen stärken das Selbstbewusstsein, reduzieren
+                Ihre Sorgen und erleichtern Ihren Berufseinstieg.
+              </li>
+            </ul>
           </div>
         </div>
         <div css={horizontalLine} />
         <div css={containerHeadingRight}>Realität &amp; Vision</div>
-        <div css={itemContainer}>
+        <div css={itemContainerLong}>
           <div css={itemTextLeft}>
-            Hier gibt es neben dem genannten Wunsch, wieder ins Berufsleben
-            zurückzukehren, sehr viele andere Probleme, die es erst zu entdecken
-            und zu bearbeiten gilt, bevor man sich dem eigentlichen Ziel –
-            Rückkehr in die Arbeitswelt – widmen kann.
+            <i>&quot;Gesteckte Ziele dürfen wahr werden&quot;</i>
+            <br />
+            <br />
+            <b>1)</b> Sie haben beruflich schon Fuß gefasst und es gilt jetzt
+            etwas zu verändern: Aufstieg-Umstieg- Neuorientierung? <br />
+            <ul>
+              <li>Wie gehe ich es an?</li>
+              <li>Wann ist der richtige Zeitpunkt dafür?</li>
+              <li>
+                Unterstützung bei der Erarbeitung von beruflichen
+                Zukunftsperspektiven
+              </li>
+            </ul>
+            <br />
+            <b>2)</b> Sie hatten eine berufliche Auszeit (Kinder- oder
+            Bildungskarenz oder anders) und denken an eine Rückkehr in die
+            Arbeitswelt
+            <ul>
+              <li>Bin ich schon bereit?</li>
+              <li>Ist dieser Wunsch schon realisierbar?</li>
+              <li>Was hindert mich darin?</li>
+              <li>Was wird von mir erwartet?</li>
+              <li>
+                Definieren von beruflichen Wünschen und Konkretisieren von
+                ersten Umsetzungsschritten
+              </li>
+            </ul>
           </div>
           <div css={itemPhoto}>
-            <Image
-              src={RealitätVision}
+            <img
+              height="350"
+              width="580"
+              src="/images/realitätvision.png"
               alt="Blonde Dame mit Pferdeschwanz und Brille sitzt am Schreibtisch vor ihrem PC"
-            ></Image>
+            />
           </div>
         </div>
         <div css={horizontalLine} />
@@ -230,17 +277,25 @@ export default function OfferWomen() {
         </div>
         <div css={itemContainer}>
           <div css={itemPhoto}>
-            <Image
-              src={RückschauRealitätVision}
+            <img
+              height="350"
+              width="580"
+              src="/images/rückschaurealitätvision.png"
               alt="Ältere Dame mit kurzen bloden Haaren unterhält sich am Schreibtisch mit älterer Dame mit langen schwarzen Haaren"
-            ></Image>
+            />
           </div>
           <div css={itemTextRight}>
-            Sie haben schon viel erlebt, arrangieren sich weitgehend mit der
-            Ist-Situation und haben auch gelernt, mit den erlebten
-            Enttäuschungen und Abstrichen zu leben – sowohl beruflich als auch
-            privat. Sie fühlen sich familiär und persönlich bereit, einen neuen
-            Anfang zu wagen.
+            <i>&quot;Mit frischem Wind zum neuen Ziel&quot;</i> <br />
+            <br />
+            Sie haben schon viel erlebt, sowohl beruflich als auch privat,
+            arrangieren sich gut mit der Ist-Situation und fühlen sich familiär
+            und persönlich bereit, beruflich etwas Neues zu wagen.
+            <ul>
+              <li>
+                Verbesserung des Selbstmarketings und Planung der schrittweisen
+                Vorgangsweise
+              </li>
+            </ul>
           </div>
         </div>
         <Link href="/calendly/">
