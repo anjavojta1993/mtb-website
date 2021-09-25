@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FiPhone } from 'react-icons/fi';
 import Layout from '../components/Layout';
+import Coaching from '../public/images/coaching.png';
 import TelefonAnfrage from '../public/images/telephone.png';
 import {
   darkBlue,
