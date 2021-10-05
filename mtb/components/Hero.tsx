@@ -25,10 +25,9 @@ const pageContainer = css`
   background-position: center;
 
   @media (max-width: 540px) {
-    position: absolute;
-    margin-top: 120px;
+    position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -36,6 +35,12 @@ const pageContainer = css`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+  }
+
+  @media (max-width: 768px) {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
   }
 `;
 

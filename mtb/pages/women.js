@@ -85,7 +85,7 @@ const quoteStyles = css`
 const itemContainer = css`
   display: flex;
   flex-direction: row;
-  height: 50vh;
+  height: auto;
   width: 80vw;
   //background-color: orange;
   margin-bottom: 40px;
@@ -101,7 +101,7 @@ const itemContainerLong = css`
 `;
 
 const itemTextRight = css`
-  padding-left: 10px;
+  padding-left: 30px;
   margin-left: 10px;
   font-size: ${normalText};
   //background-color: blue;
@@ -112,7 +112,7 @@ const itemTextRight = css`
 `;
 
 const itemTextLeft = css`
-  padding-left: 10px;
+  padding-right: 30px;
   margin-right: 10px;
   font-size: ${normalText};
   //background-color: blue;
@@ -194,8 +194,9 @@ export default function OfferWomen() {
       </div>
       <div css={quoteContainer}>
         <div css={quoteStyles}>
-          &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt.&quot;
+          &quot;Das (Berufs-)Leben ist wie eine spannende Reise, das erforscht
+          werden will, <br />
+          aber bestimmt kein Problem, das gelöst werden muss.&quot;
         </div>
       </div>
       <section css={pageContainer}>
@@ -216,16 +217,20 @@ export default function OfferWomen() {
             <br />
             <br />
             Sie haben ihre Ausbildung beendet – Gratulation und ihr Berufsleben
-            wartet schon auf Sie! Jetzt haben Sie Erwartungen und Wünsche an
-            Ihre Berufsleben, sind sehr motiviert, haben zugleich aber auch
-            Ängste vor dieser beruflichen Zukunft? <br />
+            wartet schon auf Sie! <br />
+            Jetzt haben Sie Erwartungen und Wünsche an Ihre Berufsleben, sind
+            sehr motiviert, haben zugleich aber auch Ängste vor dieser
+            beruflichen Zukunft? <br />
             <br />
+            <b>Einstieg</b>
             <ul>
-              <li>
-                Kleine Hilfestellungen stärken das Selbstbewusstsein, reduzieren
-                Ihre Sorgen und erleichtern Ihren Berufseinstieg.
-              </li>
+              <li>Wie gestalte ich meine Unterlagen?</li>
+              <li>Auf welche beruflichen Netzwerke soll ich gehen?</li>
+              <li>Wie laufen die Bewerbungsgespräche ab?</li>
+              <li>Mit welchen Fragen darf ich rechnen?</li>
             </ul>
+            Kleine Hilfestellungen stärken das Selbstbewusstsein, reduzieren
+            Ihre Sorgen und erleichtern Ihren Berufseinstieg.
           </div>
         </div>
         <div css={horizontalLine} />
@@ -235,20 +240,20 @@ export default function OfferWomen() {
             <i>&quot;Gesteckte Ziele dürfen wahr werden&quot;</i>
             <br />
             <br />
-            <b>1)</b> Sie haben beruflich schon Fuß gefasst und es gilt jetzt
-            etwas zu verändern: Aufstieg-Umstieg- Neuorientierung? <br />
+            Sie haben beruflich schon Fuß gefasst und es gilt jetzt etwas zu
+            verändern: <b>Aufstieg-Umstieg- Neuorientierung?</b> <br />
             <ul>
               <li>Wie gehe ich es an?</li>
               <li>Wann ist der richtige Zeitpunkt dafür?</li>
+              <li>Wohin verändere ich mich?</li>
               <li>
                 Unterstützung bei der Erarbeitung von beruflichen
                 Zukunftsperspektiven
               </li>
             </ul>
             <br />
-            <b>2)</b> Sie hatten eine berufliche Auszeit (Kinder- oder
-            Bildungskarenz oder anders) und denken an eine Rückkehr in die
-            Arbeitswelt
+            Sie hatten eine berufliche Auszeit (Kinder- oder Bildungskarenz oder
+            anders) und denken an eine <b>Rückkehr in die Arbeitswelt</b>
             <ul>
               <li>Bin ich schon bereit?</li>
               <li>Ist dieser Wunsch schon realisierbar?</li>
@@ -288,7 +293,14 @@ export default function OfferWomen() {
             Sie haben schon viel erlebt, sowohl beruflich als auch privat,
             arrangieren sich gut mit der Ist-Situation und fühlen sich familiär
             und persönlich bereit, beruflich etwas Neues zu wagen.
+            <br />
+            <br />
+            <b>Orientierung - Wiedereinstieg</b>
             <ul>
+              <li>Wie gehe ich es an?</li>
+              <li>Wie gestalte ich meine Unterlagen?</li>
+              <li>Auf welche beruflichen Netzwerke soll ich gehen?</li>
+              <li>Wie präsentiere ich mich interessant für die Arbeitswelt?</li>
               <li>
                 Verbesserung des Selbstmarketings und Planung der schrittweisen
                 Vorgangsweise

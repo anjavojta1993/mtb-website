@@ -20,6 +20,14 @@ const pageContainer = css`
   margin-top: 40px;
 `;
 
+const horizontalLine = css`
+  border: solid 1px black;
+  width: 80%;
+  color: black;
+  height: 1px;
+  margin-bottom: 20px;
+`;
+
 const heroContainer = css`
   position: relative;
   width: 100vw;
@@ -73,14 +81,14 @@ const quoteStyles = css`
 const itemContainer = css`
   display: flex;
   flex-direction: row;
-  height: 50vh;
+  height: auto;
   width: 80vw;
   //background-color: orange;
   margin-bottom: 40px;
 `;
 
 const itemTextRight = css`
-  padding-left: 10px;
+  padding-left: 30px;
   margin-left: 10px;
   font-size: ${normalText};
   //background-color: blue;
@@ -142,8 +150,9 @@ export default function OfferMen() {
       </div>
       <div css={quoteContainer}>
         <div css={quoteStyles}>
-          &quot;Die Situation nicht als Rückschlag werten sondern als “erneut
-          Anlauf nehmen” beschreiben.&quot;
+          &quot;So manche vermeintliche Bedrohung ist in Wirklichkeit eine neue
+          Chance. <br />
+          Man muss sie nur sehen und ergreifen. &quot;
         </div>
       </div>
       <section css={pageContainer}>
@@ -158,13 +167,51 @@ export default function OfferMen() {
             />
           </div>
           <div css={itemTextRight}>
-            Sie haben eine gute Ausbildung und verdienen auch (sehr) gut. Sie
-            wurden aber aus diversen Gründen „aus der Bahn geschmissen“ und
-            stehen dann „unter Schock“. Sie waren beruflich anerkannt, viele
-            haben/hatten eine leitende Position und sie selbst wurden um Rat
-            gefragt.
+            <i>
+              &quot;„Ein kurzes Innehalten ist wichtig vor einem neuen
+              Anlauf“&quot;
+            </i>
+            <br />
+            <br />
+            Für eine berufliche Veränderung sind Sie bereit und Sie möchten
+            strategisch klug vorgehen und Ihre Vorgangsweise planen.
+            <br />
+            <br />
+            <b>Umstieg - Aufstieg</b>
+            <ul>
+              <li>Wie gehe ich es an?</li>
+              <li>Wann ist der richtige Zeitpunkt dafür?</li>
+              <li>Wohin und in welchem Ausmaß verändere ich mich?</li>
+              <li>
+                Unterstützung bei der Erarbeitung von beruflichen
+                Zukunftsperspektiven
+              </li>
+            </ul>
+            <br />
+            <br />
+            Ihre solide berufliche Ist-Situation Sie aus diversen Gründen ins
+            Schwanken geraden und Sie müssen sich jetzt neuorientieren.
+            <br />
+            <br />
+            <b>Orientierung - Veränderung - Neustart</b>
+            <br />
+            <ul>
+              <li>
+                Welche Chance ergibt sich aus meiner bisherigen Erfahrung?
+              </li>
+              <li>Wie gehe ich es an?</li>
+              <li>
+                Auf welchen beruflichen Netzwerken bin ich zu finden und wie
+                präsentiere ich mich dort?
+              </li>
+              <li>
+                Unterstützung bei der Erarbeitung von beruflichen
+                Zukunftsperspektiven
+              </li>
+            </ul>
           </div>
         </div>
+        <div css={horizontalLine} />
         <Link href="/calendly/">
           <a css={buttonStylesBlue}>Termin buchen</a>
         </Link>

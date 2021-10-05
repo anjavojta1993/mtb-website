@@ -68,15 +68,6 @@ const navBarContainer = (open) => css`
   }
 `;
 
-// const navBar = css`
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   text-transform: uppercase;
-//   letter-spacing: 1px;
-//   text-decoration: none;
-//   //background-color: blue;
-
 export default function HeaderRightNav(props) {
   const [open, setOpen] = useState(false);
   return (
