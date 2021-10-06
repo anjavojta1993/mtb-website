@@ -111,7 +111,7 @@ const itemContainer = css`
 const leftContainer = css`
   height: 100%;
   width: 50%;
-  background-color: green;
+  //background-color: green;
 
   > img {
     height: auto;

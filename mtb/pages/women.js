@@ -93,7 +93,7 @@ const itemContainer = css`
   flex-direction: row;
   height: auto;
   width: 80vw;
-  background-color: orange;
+  //background-color: orange;
   margin-bottom: 40px;
 
   @media (max-width: 1024px) {
@@ -105,7 +105,7 @@ const itemContainer = css`
 const leftContainer = css`
   height: 100%;
   width: 50%;
-  background-color: green;
+  //background-color: green;
 
   > img {
     height: auto;

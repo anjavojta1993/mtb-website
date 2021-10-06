@@ -46,7 +46,7 @@ const leftContainer = css`
   justify-content: center;
   height: 80vh;
   align-items: center;
-  background-color: green;
+  //background-color: green;
   margin-bottom: 50px;
   margin-top: 20px;
 
@@ -83,7 +83,7 @@ const rightContainer = css`
   height: 80vh;
   align-items: center;
   margin-bottom: 50px;
-  background-color: yellow;
+  //background-color: yellow;
 
   @media (max-width: 1024px) {
     width: 100%;
@@ -119,7 +119,7 @@ const singleTestimonialContainer = css`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: purple;
+  //background-color: purple;
   padding: 10px;
   margin: 10px;
 
