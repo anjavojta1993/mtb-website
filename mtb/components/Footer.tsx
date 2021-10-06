@@ -20,6 +20,10 @@ const footerStyles = css`
     background-color: ${lightGrey};
     flex-wrap: wrap;
   }
+
+  @media (max-width: 540px) {
+    font-size: 0.75rem;
+  }
 `;
 
 const navBarContainer = css`

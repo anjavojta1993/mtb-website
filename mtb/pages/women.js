@@ -18,24 +18,26 @@ const pageContainer = css`
   flex-direction: column;
   width: 100%;
   align-items: center;
-  margin-top: 40px;
+
+  @media (max-width: 540px) {
+    position: relative;
+    margin-top: 120px;
+  }
 `;
 
 const heroContainer = css`
-  position: relative;
   width: 100vw;
   height: 50vh;
   align-items: center;
   justify-content: center;
   display: flex;
-  background-image: url('images/women.png');
+  background-image: url('images/about_me.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 
   @media (max-width: 768px) {
-    position: absolute;
-    margin-top: 120px;
+    //margin-top: 120px;
     height: 30vh;
   }
 `;
@@ -50,6 +52,7 @@ const heroHeading = css`
   font-weight: 700;
   color: white;
   letter-spacing: 1.5px;
+  //background-color: yellow;
 
   @media (max-width: 768px) {
     font-size: 1.5rem;
@@ -64,11 +67,8 @@ const quoteContainer = css`
   align-items: center;
   background-color: ${lightGrey};
   height: 20vh;
-
-  @media (max-width: 768px) {
-    position: absolute;
-    margin-top: 500px;
-  }
+  width: 100%;
+  margin-bottom: 20px;
 `;
 
 const quoteStyles = css`
@@ -80,6 +80,12 @@ const quoteStyles = css`
   text-align: center;
   letter-spacing: 1.5px;
   line-height: 1.5;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    align-self: center;
+    align-items: center;
+  }
 `;
 
 const itemContainer = css`
@@ -87,20 +93,43 @@ const itemContainer = css`
   flex-direction: row;
   height: auto;
   width: 80vw;
-  //background-color: orange;
+  background-color: orange;
   margin-bottom: 40px;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
 `;
 
-const itemContainerLong = css`
-  display: flex;
-  flex-direction: row;
-  height: auto;
-  width: 80vw;
-  //background-color: orange;
-  margin-bottom: 40px;
+const leftContainer = css`
+  height: 100%;
+  width: 50%;
+  background-color: green;
+
+  > img {
+    height: auto;
+    width: 100%;
+
+    @media (max-width: 1024px) {
+      width: 70%;
+    }
+
+    @media (max-width: 780px) {
+      width: 80%;
+    }
+
+    @media (max-width: 540px) {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
-const itemTextRight = css`
+const itemText = css`
   padding-left: 30px;
   margin-left: 10px;
   font-size: ${normalText};
@@ -109,25 +138,32 @@ const itemTextRight = css`
   line-height: 1.5;
   height: 100%;
   width: 50%;
+
+  @media (max-width: 540px) {
+    font-size: 0.75rem;
+    padding-left: 10px;
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 1024px) {
+    padding-left: 10px;
+    width: 90%;
+    margin-top: 20px;
+  }
 `;
 
-const itemTextLeft = css`
-  padding-right: 30px;
-  margin-right: 10px;
-  font-size: ${normalText};
-  //background-color: blue;
-  letter-spacing: 1.5px;
-  line-height: 1.5;
-  height: 100%;
-  width: 50%;
-`;
+// const itemPhoto = css`
+//   align-content: center;
+//   //background-color: red;
+//   height: 350px;
+//   width: 580px;
 
-const itemPhoto = css`
-  align-content: center;
-  //background-color: red;
-  height: 100%;
-  width: 50%;
-`;
+//   @media (max-width: 1024px) {
+//     height: auto;
+//     width: 380px;
+//   }
+// `;
 
 const containerHeadingLeft = css`
   display: flex;
@@ -139,6 +175,10 @@ const containerHeadingLeft = css`
   font-weight: 700;
   width: 80%;
   letter-spacing: 1.5px;
+
+  @media (max-width: 780px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const containerHeadingRight = css`
@@ -151,6 +191,10 @@ const containerHeadingRight = css`
   font-weight: 700;
   width: 80%;
   letter-spacing: 1.5px;
+
+  @media (max-width: 780px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const buttonStylesBlue = css`
@@ -173,6 +217,28 @@ const buttonStylesBlue = css`
     -moz-transform: scale(1.1, 1.1);
     cursor: pointer;
   }
+
+  @media (max-width: 540px) {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: white;
+    background-color: ${mediumBlue};
+    font-size: 0.75rem;
+    font-weight: 400;
+    border-radius: 8px;
+    padding: 8px 10px;
+    letter-spacing: 2px;
+    text-transform: none;
+
+    :hover {
+      border: none;
+      transform: scale(1.1, 1.1);
+      -webkit-transform: scale(1.1, 1.1);
+      -moz-transform: scale(1.1, 1.1);
+      cursor: pointer;
+    }
+  }
 `;
 
 const horizontalLine = css`
@@ -183,34 +249,34 @@ const horizontalLine = css`
   margin-bottom: 20px;
 `;
 
+const itemPhoto = css``;
+
 export default function OfferWomen() {
   return (
     <Layout>
       <Head>
         <title>Frauen fördern</title>
       </Head>
-      <div css={heroContainer}>
-        <div css={heroHeading}>Frauen fördern</div>
-      </div>
-      <div css={quoteContainer}>
-        <div css={quoteStyles}>
-          &quot;Das (Berufs-)Leben ist wie eine spannende Reise, das erforscht
-          werden will, <br />
-          aber bestimmt kein Problem, das gelöst werden muss.&quot;
-        </div>
-      </div>
       <section css={pageContainer}>
+        <div css={heroContainer}>
+          <div css={heroHeading}>Frauen fördern</div>
+        </div>
+        <div css={quoteContainer}>
+          <div css={quoteStyles}>
+            &quot;Das (Berufs-)Leben ist wie eine spannende Reise, das erforscht
+            werden will, <br />
+            aber bestimmt kein Problem, das gelöst werden muss.&quot;
+          </div>
+        </div>
         <div css={containerHeadingLeft}>Vision</div>
         <div css={itemContainer}>
-          <div css={itemPhoto}>
+          <div css={leftContainer}>
             <img
-              height="350"
-              width="580"
               src="/images/vision.png"
               alt="Blonde, junge Dame telefoniert im Freien mit Handy am Ohr"
             />
           </div>
-          <div css={itemTextRight}>
+          <div css={itemText}>
             <i>
               &quot;Was wir heute nicht träumen, wird morgen nicht wahr&quot;
             </i>
@@ -235,8 +301,14 @@ export default function OfferWomen() {
         </div>
         <div css={horizontalLine} />
         <div css={containerHeadingRight}>Realität &amp; Vision</div>
-        <div css={itemContainerLong}>
-          <div css={itemTextLeft}>
+        <div css={itemContainer}>
+          <div css={leftContainer}>
+            <img
+              src="/images/realitätvision.png"
+              alt="Blonde Dame mit Pferdeschwanz und Brille sitzt am Schreibtisch vor ihrem PC"
+            />
+          </div>
+          <div css={itemText}>
             <i>&quot;Gesteckte Ziele dürfen wahr werden&quot;</i>
             <br />
             <br />
@@ -265,29 +337,19 @@ export default function OfferWomen() {
               </li>
             </ul>
           </div>
-          <div css={itemPhoto}>
-            <img
-              height="350"
-              width="580"
-              src="/images/realitätvision.png"
-              alt="Blonde Dame mit Pferdeschwanz und Brille sitzt am Schreibtisch vor ihrem PC"
-            />
-          </div>
         </div>
         <div css={horizontalLine} />
         <div css={containerHeadingLeft}>
           Rückschau &amp; Realität &amp; Vision
         </div>
         <div css={itemContainer}>
-          <div css={itemPhoto}>
+          <div css={leftContainer}>
             <img
-              height="350"
-              width="580"
               src="/images/rückschaurealitätvision.png"
               alt="Ältere Dame mit kurzen bloden Haaren unterhält sich am Schreibtisch mit älterer Dame mit langen schwarzen Haaren"
             />
           </div>
-          <div css={itemTextRight}>
+          <div css={itemText}>
             <i>&quot;Mit frischem Wind zum neuen Ziel&quot;</i> <br />
             <br />
             Sie haben schon viel erlebt, sowohl beruflich als auch privat,
