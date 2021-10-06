@@ -13,13 +13,14 @@ const headerStyles = css`
   height: 120px;
   width: 100%;
   font-size: ${normalText};
-  background-color: green;
+  //background-color: green;
   z-index: 2000;
 
   @media (max-width: 540px) {
     position: fixed;
-    margin-top: 0px;
-    background-color: green;
+    top: 0px;
+    right: 0px;
+    background-color: white;
   }
 `;
 

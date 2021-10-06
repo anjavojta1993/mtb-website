@@ -14,6 +14,7 @@ import {
 
 const pageContainer = css`
   position: relative;
+  //margin-top: 120px;
   width: 100vw;
   height: 100vh;
   align-items: center;
@@ -26,6 +27,7 @@ const pageContainer = css`
 
   @media (max-width: 540px) {
     position: relative;
+    margin-top: 120px;
     width: 100%;
     height: 100%;
     align-items: center;
