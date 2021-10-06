@@ -17,7 +17,11 @@ const pageContainer = css`
   flex-direction: column;
   width: 100%;
   align-items: center;
-  margin-top: 40px;
+
+  @media (max-width: 540px) {
+    position: relative;
+    margin-top: 120px;
+  }
 `;
 
 const horizontalLine = css`
@@ -41,8 +45,6 @@ const heroContainer = css`
   background-position: center;
 
   @media (max-width: 768px) {
-    position: absolute;
-    margin-top: 120px;
     height: 30vh;
   }
 `;
@@ -57,6 +59,12 @@ const heroHeading = css`
   font-weight: 700;
   color: white;
   letter-spacing: 1.5px;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    align-self: center;
+    align-items: center;
+  }
 `;
 
 const quoteContainer = css`
@@ -65,6 +73,8 @@ const quoteContainer = css`
   align-items: center;
   background-color: ${lightGrey};
   height: 20vh;
+  width: 100%;
+  margin-bottom: 20px;
 `;
 
 const quoteStyles = css`
@@ -76,6 +86,12 @@ const quoteStyles = css`
   text-align: center;
   letter-spacing: 1.5px;
   line-height: 1.5;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    align-self: center;
+    align-items: center;
+  }
 `;
 
 const itemContainer = css`
@@ -85,9 +101,41 @@ const itemContainer = css`
   width: 80vw;
   //background-color: orange;
   margin-bottom: 40px;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
 `;
 
-const itemTextRight = css`
+const leftContainer = css`
+  height: 100%;
+  width: 50%;
+  background-color: green;
+
+  > img {
+    height: auto;
+    width: 100%;
+
+    @media (max-width: 1024px) {
+      width: 70%;
+    }
+
+    @media (max-width: 780px) {
+      width: 80%;
+    }
+
+    @media (max-width: 540px) {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+`;
+
+const itemText = css`
   padding-left: 30px;
   margin-left: 10px;
   font-size: ${normalText};
@@ -96,13 +144,19 @@ const itemTextRight = css`
   line-height: 1.5;
   height: 100%;
   width: 50%;
-`;
 
-const itemPhoto = css`
-  align-content: center;
-  //background-color: red;
-  height: 100%;
-  width: 50%;
+  @media (max-width: 540px) {
+    font-size: 0.75rem;
+    padding-left: 10px;
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 1024px) {
+    padding-left: 10px;
+    width: 90%;
+    margin-top: 20px;
+  }
 `;
 
 const containerHeadingLeft = css`
@@ -115,6 +169,10 @@ const containerHeadingLeft = css`
   font-weight: 700;
   width: 80%;
   letter-spacing: 1.5px;
+
+  @media (max-width: 780px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const buttonStylesBlue = css`
@@ -137,6 +195,28 @@ const buttonStylesBlue = css`
     -moz-transform: scale(1.1, 1.1);
     cursor: pointer;
   }
+
+  @media (max-width: 540px) {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: white;
+    background-color: ${mediumBlue};
+    font-size: 0.75rem;
+    font-weight: 400;
+    border-radius: 8px;
+    padding: 8px 10px;
+    letter-spacing: 2px;
+    text-transform: none;
+
+    :hover {
+      border: none;
+      transform: scale(1.1, 1.1);
+      -webkit-transform: scale(1.1, 1.1);
+      -moz-transform: scale(1.1, 1.1);
+      cursor: pointer;
+    }
+  }
 `;
 
 export default function OfferMen() {
@@ -145,31 +225,29 @@ export default function OfferMen() {
       <Head>
         <title>Männer stärken</title>
       </Head>
-      <div css={heroContainer}>
-        <div css={heroHeading}>Männer stärken</div>
-      </div>
-      <div css={quoteContainer}>
-        <div css={quoteStyles}>
-          &quot;So manche vermeintliche Bedrohung ist in Wirklichkeit eine neue
-          Chance. <br />
-          Man muss sie nur sehen und ergreifen. &quot;
-        </div>
-      </div>
       <section css={pageContainer}>
+        <div css={heroContainer}>
+          <div css={heroHeading}>Männer stärken</div>
+        </div>
+        <div css={quoteContainer}>
+          <div css={quoteStyles}>
+            &quot;So manche vermeintliche Bedrohung ist in Wirklichkeit eine
+            neue Chance. <br />
+            Man muss sie nur sehen und ergreifen. &quot;
+          </div>
+        </div>
         <div css={containerHeadingLeft}>neustart &amp; Vision</div>
         <div css={itemContainer}>
-          <div css={itemPhoto}>
+          <div css={leftContainer}>
             <img
               src="/images/neustartvision.png"
-              width="580px"
-              height="370px"
               alt="Älterer Herr mit Brille sitzt auf weißen Sofa und sieht sich Unterlagen an "
             />
           </div>
-          <div css={itemTextRight}>
+          <div css={itemText}>
             <i>
-              &quot;„Ein kurzes Innehalten ist wichtig vor einem neuen
-              Anlauf“&quot;
+              &quot;Ein kurzes Innehalten ist wichtig vor einem neuen
+              Anlauf&quot;
             </i>
             <br />
             <br />
@@ -188,8 +266,7 @@ export default function OfferMen() {
               </li>
             </ul>
             <br />
-            <br />
-            Ihre solide berufliche Ist-Situation Sie aus diversen Gründen ins
+            Ihre solide berufliche Ist-Situation ist aus diversen Gründen ins
             Schwanken geraden und Sie müssen sich jetzt neuorientieren.
             <br />
             <br />
