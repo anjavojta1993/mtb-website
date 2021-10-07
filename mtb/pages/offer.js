@@ -19,11 +19,14 @@ import {
 
 const pageContainer = css`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   align-items: center;
-  justify-content: center;
-  margin-top: 40px;
+
+  @media (max-width: 540px) {
+    position: relative;
+    margin-top: 120px;
+  }
 `;
 
 const appointmentContainer = css`
@@ -33,6 +36,11 @@ const appointmentContainer = css`
   align-items: center;
   justify-content: center;
   margin-top: 40px;
+
+  @media (max-width: 1024px) {
+    flex-wrap: wrap;
+    margin-top: 0px;
+  }
 `;
 
 const heroContainer = css`
@@ -48,8 +56,7 @@ const heroContainer = css`
   background-position: center;
 
   @media (max-width: 768px) {
-    position: absolute;
-    margin-top: 120px;
+    //margin-top: 120px;
     height: 30vh;
   }
 `;
@@ -64,6 +71,12 @@ const heroHeading = css`
   font-weight: 700;
   color: white;
   letter-spacing: 1.5px;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    align-self: center;
+    align-items: center;
+  }
 `;
 
 const quoteContainer = css`
@@ -72,6 +85,7 @@ const quoteContainer = css`
   align-items: center;
   background-color: ${lightGrey};
   height: 20vh;
+  width: 100%;
 `;
 
 const itemContainer = css`
@@ -83,6 +97,21 @@ const itemContainer = css`
   height: auto;
   margin-left: 80px;
   margin-right: 80px;
+
+  @media (max-width: 1024px) {
+    font-size: 1rem;
+    align-self: center;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  @media (max-width: 540px) {
+    img {
+      width: 300px;
+      height: auto;
+    }
+  }
 `;
 
 const itemHeading = css`
@@ -94,6 +123,10 @@ const itemHeading = css`
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 1.5px;
+
+  @media (max-width: 780px) {
+    font-size: 1rem;
+  }
 `;
 
 const buttonStylesBlue = css`
@@ -116,6 +149,39 @@ const buttonStylesBlue = css`
     -moz-transform: scale(1.1, 1.1);
     cursor: pointer;
   }
+
+  @media (max-width: 540px) {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+    background-color: ${mediumBlue};
+    font-size: 0.75rem;
+    font-weight: 400;
+    border-radius: 8px;
+    padding: 8px 10px;
+    letter-spacing: 2px;
+    text-transform: none;
+
+    :hover {
+      border: none;
+      transform: scale(1.1, 1.1);
+      -webkit-transform: scale(1.1, 1.1);
+      -moz-transform: scale(1.1, 1.1);
+      cursor: pointer;
+    }
+  }
+`;
+
+const offerContainer = css`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const quoteStyles = css`
@@ -127,6 +193,12 @@ const quoteStyles = css`
   text-align: center;
   letter-spacing: 1.5px;
   line-height: 1.5;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    align-self: center;
+    align-items: center;
+  }
 `;
 
 const containerHeading = css`
@@ -153,6 +225,13 @@ const itemContainerAppointment = css`
   margin-left: 80px;
   margin-right: 80px;
   margin-bottom: 50px;
+
+  @media (max-width: 1024px) {
+    width: auto;
+    height: auto;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
 `;
 
 const itemHeadingAppointment = css`
@@ -164,6 +243,10 @@ const itemHeadingAppointment = css`
   margin-top: 20px;
   height: 10%;
   text-transform: uppercase;
+
+  @media (max-width: 1024px) {
+    font-size: 1rem;
+  }
 `;
 
 const itemAppointmentStyles = css`
@@ -173,6 +256,11 @@ const itemAppointmentStyles = css`
   padding: 20px;
   height: 15%;
   text-transform: uppercase;
+
+  @media (max-width: 1024px) {
+    font-size: 0.7rem;
+    width: auto;
+  }
 `;
 
 const containerHeadingAppointment = css`
@@ -185,7 +273,11 @@ const containerHeadingAppointment = css`
   height: 20%;
   padding: 50px;
   text-transform: uppercase;
-  //background-color: green;
+  // background-color: green;
+
+  @media (max-width: 780px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const methodenContainer = css`
@@ -217,73 +309,76 @@ export default function Offer() {
       <Head>
         <title>Mein Angebot</title>
       </Head>
-      <div css={heroContainer}>
-        <div css={heroHeading}>Mein Angebot</div>
-      </div>
-      <div css={quoteContainer}>
-        <div css={quoteStyles}>
-          “So manche vermeintliche Bedrohung ist in Wirklichkeit eine Chance.
-          <br />
-          Man muss sie nur sehen und ergreifen!”
-        </div>
-      </div>
       <section css={pageContainer}>
-        <div css={itemContainer}>
-          <div css={itemHeading}>Frauen fördern</div>
-          <img
-            src="/images/frauenfördern.png"
-            width="340px"
-            height="400px"
-            alt="Junge Frau sitzt mit mit anderen Frauen auf Sofa und schreiben in ihre Notizblöcke"
-          />
-          <Link href="/women/">
-            <a css={buttonStylesBlue}>Mehr Infos</a>
-          </Link>
+        <div css={heroContainer}>
+          <div css={heroHeading}>Mein Angebot</div>
         </div>
-        <div css={itemContainer}>
-          <div css={itemHeading}>Männer stärken</div>
-          <img
-            src="/images/männerstärken.png"
-            width="340px"
-            height="400px"
-            alt="Junge Frau im Anzug sitzt mit Mann im Hemd auf einer Parkbank und coacht ihn"
-          />
-          <Link href="/men/">
-            <a css={buttonStylesBlue}>Mehr Infos</a>
-          </Link>
-        </div>
-      </section>
-      <div css={containerHeading}>Methoden</div>
-      <div css={methodenContainer}>WAS DARF HIER REIN? ODER GANZ WEG?</div>
-      <div css={containerHeadingAppointment}>Termin buchen</div>
-      <div css={appointmentContainer}>
-        <div css={itemContainerAppointment}>
-          <Image
-            src={TelefonAnfrage}
-            alt="Junge Frau mit Afro sitzt an Schreibtisch und telefoniert mit Kabeltelefon"
-          ></Image>
-          <div css={itemHeadingAppointment}>Telefonische Anfrage</div>
-          <div css={itemAppointmentStyles}>
-            Gerne können wir unverbindlich über Ihr Anliegen sprechen.
+        <div css={quoteContainer}>
+          <div css={quoteStyles}>
+            “So manche vermeintliche Bedrohung ist in Wirklichkeit eine Chance.
+            <br />
+            Man muss sie nur sehen und ergreifen!”
           </div>
-          <div css={buttonStylesBlue}>
-            <div css={iconContainer}>
-              <FiPhone size={22} /> <span>0664 1111111</span>
+        </div>
+        <div css={offerContainer}>
+          <div css={itemContainer}>
+            <div css={itemHeading}>Frauen fördern</div>
+            <img
+              src="/images/frauenfördern.png"
+              width="340px"
+              height="400px"
+              alt="Junge Frau sitzt mit mit anderen Frauen auf Sofa und schreiben in ihre Notizblöcke"
+            />
+            <Link href="/women/">
+              <a css={buttonStylesBlue}>Mehr Infos</a>
+            </Link>
+          </div>
+          <div css={itemContainer}>
+            <div css={itemHeading}>Männer stärken</div>
+            <img
+              src="/images/männerstärken.png"
+              width="340px"
+              height="400px"
+              alt="Junge Frau im Anzug sitzt mit Mann im Hemd auf einer Parkbank und coacht ihn"
+            />
+            <Link href="/men/">
+              <a css={buttonStylesBlue}>Mehr Infos</a>
+            </Link>
+          </div>
+        </div>
+        <div css={containerHeading}>Methoden</div>
+        <div css={methodenContainer}>WAS DARF HIER REIN? ODER GANZ WEG?</div>
+        <div css={containerHeadingAppointment}>Termin buchen</div>
+        <div css={appointmentContainer}>
+          <div css={itemContainerAppointment}>
+            <Image
+              src={TelefonAnfrage}
+              alt="Junge Frau mit Afro sitzt am Schreibtisch und telefoniert mit Kabeltelefon"
+            ></Image>
+            <div css={itemHeadingAppointment}>Telefonische Anfrage</div>
+            <div css={itemAppointmentStyles}>
+              Gerne können wir unverbindlich <br />
+              über Ihr Anliegen sprechen.
+            </div>
+            <div css={buttonStylesBlue}>
+              <div css={iconContainer}>
+                <FiPhone size={22} /> <span>0664 1111111</span>
+              </div>
             </div>
           </div>
+          <div css={itemContainerAppointment}>
+            <Image
+              src={Coaching}
+              alt="Frau und Mann sitzen an Schreibtisch und Frau coacht Mann mit Laptop"
+            ></Image>
+            <div css={itemHeadingAppointment}>Einzelcoaching</div>
+            <div css={itemAppointmentStyles}>90 Minuten</div>
+            <Link href="/men/">
+              <a css={buttonStylesBlue}>Jetzt buchen</a>
+            </Link>
+          </div>
         </div>
-        <div css={itemContainerAppointment}>
-          <Image
-            src={Coaching}
-            alt="Frau und Mann sitzen an Schreibtisch und Frau coacht Mann mit Laptop"
-          ></Image>
-          <div css={itemHeadingAppointment}>Einzelcoaching</div>
-          <div css={itemAppointmentStyles}>90 Minuten</div>
-          <Link href="/men/">
-            <a css={buttonStylesBlue}>Jetzt buchen</a>
-          </Link>
-        </div>
-      </div>
+      </section>
     </Layout>
   );
 }

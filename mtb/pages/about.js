@@ -199,6 +199,7 @@ const testimonialText = css`
 
   @media (max-width: 780px) {
     font-size: 0.75rem;
+    margin: 10px;
   }
 `;
 
