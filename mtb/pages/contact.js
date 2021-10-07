@@ -117,6 +117,8 @@ const contactInfosContainer = css`
   margin-bottom: 40px;
 
   @media (max-width: 540px) {
+    margin-bottom: 20px;
+
     p,
     a {
       font-size: 0.75rem;

@@ -7,7 +7,9 @@ import Portrait from '../public/images/portrait.png';
 import {
   darkBlue,
   h1,
+  largeText,
   lightGrey,
+  mediumBlue,
   mediumText,
   normalText,
 } from '../styles/sharedStyles';
@@ -30,11 +32,10 @@ const aboutContainer = css`
   flex-direction: row;
   width: 100%;
   justify-content: center;
-  height: auto;
-  align-items: flex-start;
   padding-top: 20px;
+  //background-color: red;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1200px) {
     flex-direction: column;
   }
 `;
@@ -42,7 +43,7 @@ const aboutContainer = css`
 const leftContainer = css`
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 40%;
   justify-content: center;
   height: 80vh;
   align-items: center;
@@ -50,7 +51,7 @@ const leftContainer = css`
   margin-bottom: 50px;
   margin-top: 20px;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1200px) {
     width: 100%;
     margin-bottom: 0px;
     height: auto;
@@ -76,14 +77,93 @@ const rightContainer = css`
   display: flex;
   margin-top: 20px;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  width: 50%;
-  padding: 10px;
-  padding-right: 80px;
-  height: 80vh;
-  align-items: center;
+  width: 60%;
+  height: auto;
   margin-bottom: 50px;
-  //background-color: yellow;
+  margin-right: 20px;
+  background-color: yellow;
+
+  li {
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+
+  @media (max-width: 780px) {
+    font-size: 0.75rem;
+    margin-bottom: 0px;
+  }
+`;
+
+const containerLeftUpperCorner = css`
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 50%;
+  height: 450px;
+  background-color: ${darkBlue};
+  color: white;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+
+  @media (max-width: 780px) {
+    font-size: 0.75rem;
+    margin-bottom: 0px;
+  }
+`;
+
+const containerRightUpperCorner = css`
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 50%;
+  height: 450px;
+  background-color: ${mediumBlue};
+  color: white;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+
+  @media (max-width: 780px) {
+    font-size: 0.75rem;
+    margin-bottom: 0px;
+  }
+`;
+
+const containerRightBottomCorner = css`
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 50%;
+  height: 450px;
+  background-color: ${darkBlue};
+  color: white;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+
+  @media (max-width: 780px) {
+    font-size: 0.75rem;
+    margin-bottom: 0px;
+  }
+`;
+
+const containerLeftBottomCorner = css`
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 50%;
+  height: 450px;
+  background-color: ${mediumBlue};
+  color: white;
 
   @media (max-width: 1024px) {
     width: 100%;
@@ -239,6 +319,24 @@ const heroHeading = css`
   }
 `;
 
+const aboutHeading = css`
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  font-size: ${mediumText};
+  text-transform: uppercase;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1.5px;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    align-self: center;
+    align-items: center;
+  }
+`;
+
 const quoteContainer = css`
   display: flex;
   justify-content: center;
@@ -267,8 +365,8 @@ const quoteStyles = css`
 
 const aboutPortraitContainer = css`
   @media (max-width: 768px) {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
   }
 `;
 
@@ -303,28 +401,59 @@ export default function About() {
             </div>
           </div>
           <div css={rightContainer}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum. fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in
-            voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum. fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id . <br /> <br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            <div css={containerLeftUpperCorner}>
+              <div css={aboutHeading}>Wer bin ich - beruflich?</div>
+              <ul>
+                <li>IBWL Studium in Wien – Schwerpunkt Human Resources</li>
+                <li>Masterstudium in Salzburg- HR Training und Entwicklung</li>
+                <li>Zertifizierter Systemischer Coach</li>
+                <li>
+                  Senior HR Consultant seit 21 Jahren bei Dr. Pendl & Dr.
+                  Piswanger Salzburg
+                </li>
+                <li>Berufscoach </li>
+                <li>Mentorin bei der Frauenfachakademie Mondsee </li>
+                <li>
+                  Referentin an der FH Salzburg und Wifi Kufstein für
+                  Recruiting, Social Media, Employer Branding und Effektive
+                  Kommunikation
+                </li>
+              </ul>
+            </div>
+            <div css={containerRightUpperCorner}>
+              <div css={aboutHeading}>Wer bin ich - privat?</div>
+              <ul>
+                <li>Salzburgerin, verheiratet, 3 Töchter</li>
+                <li>Sportlich so aktiv wie möglich…</li>
+                <li>Mit meiner Vespa unterwegs</li>
+                <li>Sehr gern gesellig mit Freunden</li>
+              </ul>
+            </div>
+            <div css={containerLeftBottomCorner}>
+              <div css={aboutHeading}>Was zeichnet mich aus?</div>
+              <ul>
+                <li>Langjährige Berufserfahrung im Bereich HR</li>
+                <li>Unzählige Gespräche mit arbeitswilligen Personen</li>
+                <li>Bindeglied zwischen Unternehmen und BewerberInnen</li>
+                <li>Zuhören-Beobachten-Motivieren-Coachen</li>
+              </ul>
+            </div>
+            <div css={containerRightBottomCorner}>
+              <div css={aboutHeading}>Was motiviert mich?</div>
+              <ul>
+                <li>
+                  Das Selbstbewusstsein zu stärken und die Angst vor neuen
+                  beruflichen Herausforderungen zu nehmen
+                </li>
+                <li>
+                  Das Erreichen beruflich gesteckter Ziele zu unterstützen
+                </li>
+                <li>
+                  Den beruflichen Einstieg-Aufstieg-Veränderung -Neustart zu
+                  begleiten
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div css={containerHeading}>REFERENZEN</div>
@@ -462,6 +591,29 @@ export default function About() {
               Mit Expertise und Empathie beflügelt sie Frauen auf ihrem Weg zu
               mehr Klarheit und kraftvollem Selbstbewusstsein. Dafür sagen wir
               herzlich DANKE!&quot;
+            </div>
+          </div>
+          <div css={singleTestimonialContainer}>
+            <div css={testimonialHeading}>Marie-Luise Brand </div>
+            <div css={portraitContainer}>
+              <img
+                src="/images/brand.png"
+                width="200px"
+                height="200px"
+                alt="Portrait von Marie-Luise Brand"
+              />
+            </div>
+            <div css={testimonialPosition}>
+              Business Process Manager, Salzburg AG
+            </div>
+            <div css={testimonialText}>
+              &quot;Die wertschätzenden Impulse von Marlies haben mich dabei
+              unterstützt, mir meiner Stärken bewusst zu werden und diese auch
+              nach außen zu kommunizieren. Mit diesem Bewusstsein kann ich nun
+              authentisch, selbstsicher und mit Leichtigkeit neue Wege
+              beschreiten und Entscheidungen treffen, welche mir langfristige
+              Zufriedenheit sowohl im beruflichen als auch privaten Umfeld
+              garantieren.&quot;
             </div>
           </div>
         </div>
