@@ -15,11 +15,14 @@ import {
 
 const pageContainer = css`
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   width: 100%;
   align-items: center;
-  margin-top: 40px;
+
+  @media (max-width: 540px) {
+    position: relative;
+    margin-top: 120px;
+  }
 `;
 
 const heroContainer = css`
@@ -35,8 +38,6 @@ const heroContainer = css`
   background-position: center;
 
   @media (max-width: 768px) {
-    position: absolute;
-    margin-top: 120px;
     height: 30vh;
   }
 `;
@@ -51,9 +52,27 @@ const heroHeading = css`
   font-weight: 700;
   color: white;
   letter-spacing: 1.5px;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    align-self: center;
+    align-items: center;
+  }
 `;
 
 const itemContainer = css`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: row;
+
+  @media (max-width: 1024px) {
+    flex-flow: row wrap;
+    padding-top: 0px;
+  }
+`;
+
+const singleItemContainer = css`
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -62,17 +81,29 @@ const itemContainer = css`
   height: auto;
   margin-left: 80px;
   margin-right: 80px;
+
+  @media (max-width: 540px) {
+    img {
+      width: 80vw;
+    }
+  }
 `;
 
 const itemHeading = css`
   display: flex;
   justify-content: center;
+  background-color: green;
+  width: 500px;
   padding-top: 50px;
   padding-bottom: 25px;
   font-size: ${largeText};
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 1.5px;
+
+  @media (max-width: 780px) {
+    font-size: 1rem;
+  }
 `;
 
 const buttonStylesBlue = css`
@@ -95,6 +126,28 @@ const buttonStylesBlue = css`
     -webkit-transform: scale(1.1, 1.1);
     -moz-transform: scale(1.1, 1.1);
     cursor: pointer;
+  }
+
+  @media (max-width: 540px) {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+    background-color: ${mediumBlue};
+    font-size: 0.75rem;
+    font-weight: 400;
+    border-radius: 8px;
+    padding: 8px 10px;
+    letter-spacing: 2px;
+    text-transform: none;
+
+    :hover {
+      border: none;
+      transform: scale(1.1, 1.1);
+      -webkit-transform: scale(1.1, 1.1);
+      -moz-transform: scale(1.1, 1.1);
+      cursor: pointer;
+    }
   }
 `;
 
@@ -137,42 +190,44 @@ export default function Press() {
       <Head>
         <title>Presse</title>
       </Head>
-      <div css={heroContainer}>
-        <div css={heroHeading}>Presse</div>
-      </div>
       <section css={pageContainer}>
-        <div css={itemContainer}>
-          <div css={itemHeading}>Die besten - Karrieremagazin</div>
-          <img
-            src="/images/diebesten.png"
-            alt="Ausschnitt aus Artikel in Die Besten das Karrieremagazin mit Mag. Marlies Theres Brunner"
-          />
-          <button
-            css={buttonStylesBlue}
-            onClick={() => {
-              handleDownload(DieBestenArtikel, 'Diebesten.pdf');
-            }}
-          >
-            Jetzt lesen
-          </button>
+        <div css={heroContainer}>
+          <div css={heroHeading}>Presse</div>
         </div>
         <div css={itemContainer}>
-          <div css={itemHeading}>Salzburger Nachrichten</div>
-          <img
-            src="/images/salzburgernachrichten.png"
-            alt="Ausschnitt aus Artikel in den Salzburger Nachrichten mit Mag. Marlies Theres Brunner"
-          />
-          <button
-            css={buttonStylesBlue}
-            onClick={() => {
-              handleDownload(
-                SalzburgerNachrichtenArtikel,
-                'SalzburgerNachrichten.pdf',
-              );
-            }}
-          >
-            Jetzt lesen
-          </button>
+          <div css={singleItemContainer}>
+            <div css={itemHeading}>Die besten</div>
+            <img
+              src="/images/diebesten.png"
+              alt="Ausschnitt aus Artikel in Die Besten das Karrieremagazin mit Mag. Marlies Theres Brunner"
+            />
+            <button
+              css={buttonStylesBlue}
+              onClick={() => {
+                handleDownload(DieBestenArtikel, 'Diebesten.pdf');
+              }}
+            >
+              Jetzt lesen
+            </button>
+          </div>
+          <div css={singleItemContainer}>
+            <div css={itemHeading}>Salzburger Nachrichten</div>
+            <img
+              src="/images/salzburgernachrichten.png"
+              alt="Ausschnitt aus Artikel in den Salzburger Nachrichten mit Mag. Marlies Theres Brunner"
+            />
+            <button
+              css={buttonStylesBlue}
+              onClick={() => {
+                handleDownload(
+                  SalzburgerNachrichtenArtikel,
+                  'SalzburgerNachrichten.pdf',
+                );
+              }}
+            >
+              Jetzt lesen
+            </button>
+          </div>
         </div>
       </section>
     </Layout>
