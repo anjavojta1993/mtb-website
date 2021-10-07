@@ -92,7 +92,6 @@ const singleItemContainer = css`
 const itemHeading = css`
   display: flex;
   justify-content: center;
-  background-color: green;
   width: 500px;
   padding-top: 50px;
   padding-bottom: 25px;

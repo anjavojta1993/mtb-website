@@ -17,13 +17,17 @@ import {
 
 const pageContainer = css`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   align-items: center;
+
+  @media (max-width: 540px) {
+    position: relative;
+    margin-top: 120px;
+  }
 `;
 
 const heroContainer = css`
-  position: relative;
   width: 100vw;
   height: 50vh;
   align-items: center;
@@ -34,9 +38,8 @@ const heroContainer = css`
   background-repeat: no-repeat;
   background-position: center;
 
-   @media (max-width: 768px) {
-    position: absolute;
-    margin-top: 120px;
+  @media (max-width: 768px) {
+    //margin-top: 120px;
     height: 30vh;
   }
 `;
@@ -75,6 +78,18 @@ const leftContainer = css`
     margin-top: 50px;
     font-size: ${mediumText};
   }
+
+  @media (max-width: 1024px) {
+    height: auto;
+    width: 100%;
+  }
+
+  @media (max-width: 540px) {
+    height: auto;
+    span {
+      font-size: 1rem;
+    }
+  }
 `;
 
 const rightContainer = css`
@@ -86,6 +101,11 @@ const rightContainer = css`
   height: 100vh;
   align-items: center;
   padding-top: 40px;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 const contactInfosContainer = css`
@@ -95,6 +115,13 @@ const contactInfosContainer = css`
   width: 100%;
   //background-color: orange;
   margin-bottom: 40px;
+
+  @media (max-width: 540px) {
+    p,
+    a {
+      font-size: 0.75rem;
+    }
+  }
 `;
 
 const iconContainer = css`
@@ -146,6 +173,10 @@ const contactInfosTextStyles = css`
     color: white;
     text-decoration: none;
   }
+
+  @media (max-width: 540px) {
+    font-size: 0.75rem;
+  }
 `;
 
 const horizontalLine = css`
@@ -156,11 +187,28 @@ const horizontalLine = css`
   margin-left: 20px;
 `;
 
+const contentContainer = css`
+  display: flex;
+  flex-direction: row;
+  //background-color: red;
+  width: 100%;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
+`;
+
 const formContainer = css`
   display: flex;
   flex-direction: column;
   //background-color: red;
   width: 70%;
+
+  @media (max-width: 540px) {
+    label {
+      font-size: 0.75rem;
+    }
+  }
 `;
 
 const inputStyles = css`
@@ -173,6 +221,10 @@ const inputStyles = css`
   margin-bottom: 20px;
   border: 1px solid black;
   height: 40px;
+
+  @media (max-width: 540px) {
+    font-size: 0.75rem;
+  }
 `;
 
 const textareaStyles = css`
@@ -185,6 +237,10 @@ const textareaStyles = css`
   margin-bottom: 20px;
   border: 1px solid black;
   height: 200px;
+
+  @media (max-width: 540px) {
+    font-size: 0.75rem;
+  }
 `;
 
 const buttonStylesBlue = css`
@@ -213,6 +269,28 @@ const buttonStylesBlue = css`
     -moz-transform: scale(1.1, 1.1);
     cursor: pointer;
   }
+
+  @media (max-width: 540px) {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: white;
+    background-color: ${mediumBlue};
+    font-size: 0.75rem;
+    font-weight: 400;
+    border-radius: 8px;
+    padding: 8px 10px;
+    letter-spacing: 2px;
+    text-transform: none;
+
+    :hover {
+      border: none;
+      transform: scale(1.1, 1.1);
+      -webkit-transform: scale(1.1, 1.1);
+      -moz-transform: scale(1.1, 1.1);
+      cursor: pointer;
+    }
+  }
 `;
 
 const buttonStylesMessage = css`
@@ -240,6 +318,27 @@ const buttonStylesMessage = css`
     -webkit-transform: scale(1.1, 1.1);
     -moz-transform: scale(1.1, 1.1);
     cursor: pointer;
+  }
+
+  @media (max-width: 540px) {
+    display: inline-block;
+    margin-top: 50px;
+    color: white;
+    background-color: ${mediumBlue};
+    font-size: 0.75rem;
+    font-weight: 400;
+    border-radius: 8px;
+    padding: 8px 10px;
+    letter-spacing: 2px;
+    text-transform: none;
+
+    :hover {
+      border: none;
+      transform: scale(1.1, 1.1);
+      -webkit-transform: scale(1.1, 1.1);
+      -moz-transform: scale(1.1, 1.1);
+      cursor: pointer;
+    }
   }
 `;
 
@@ -270,72 +369,79 @@ export default function Contact() {
       <Head>
         <title>Kontakt</title>
       </Head>
-      <div css={heroContainer}>
-        <div css={heroHeading}>Kontakt</div>
-      </div>
       <section css={pageContainer}>
-        {!loading ? (
-          <div css={leftContainer}>
-            <form css={formContainer} onSubmit={handleOnSubmit}>
-              <div>
-                <label htmlFor>Name</label>
-                <input css={inputStyles} id="name" type="text" name="name" />
-              </div>
-              <div>
-                <label htmlFor>Email Adresse</label>
-                <input css={inputStyles} id="email" type="text" name="email" />
-              </div>
+        <div css={heroContainer}>
+          <div css={heroHeading}>Kontakt</div>
+        </div>
+        <div css={contentContainer}>
+          {!loading ? (
+            <div css={leftContainer}>
+              <form css={formContainer} onSubmit={handleOnSubmit}>
+                <div>
+                  <label htmlFor>Name</label>
+                  <input css={inputStyles} id="name" type="text" name="name" />
+                </div>
+                <div>
+                  <label htmlFor>Email Adresse</label>
+                  <input
+                    css={inputStyles}
+                    id="email"
+                    type="text"
+                    name="email"
+                  />
+                </div>
 
-              <div>
-                <label htmlFor>Ihre Nachricht</label>
-                <textarea css={textareaStyles} id="message" name="message" />
-              </div>
-              <button css={buttonStylesBlue}>Senden</button>
-            </form>
-          </div>
-        ) : (
-          <div css={leftContainer}>
-            <span>
-              Danke für Ihre Nachricht. <br />
-              Ich melde mich so bald wie möglich bei Ihnen!{' '}
-            </span>
-            <Link href="/contact/">
-              <a css={buttonStylesMessage} onClick={() => setLoading(false)}>
-                Neue Nachricht
-              </a>
-            </Link>
-          </div>
-        )}
-        <div css={rightContainer}>
-          <div css={contactInfosContainer}>
-            <div css={iconContainer}>
-              <GoLocation size={32} />
-              <p>Adresse</p>
+                <div>
+                  <label htmlFor>Ihre Nachricht</label>
+                  <textarea css={textareaStyles} id="message" name="message" />
+                </div>
+                <button css={buttonStylesBlue}>Senden</button>
+              </form>
             </div>
-            <div css={horizontalLine} />
-            <div css={contactInfosTextStyles}>
-              Michael-Walz-Gasse 37, 5020 Salzburg
-            </div>
-          </div>
-          <div css={contactInfosContainer}>
-            <div css={iconContainer}>
-              <HiOutlineMailOpen size={32} />
-              <p>Email</p>
-            </div>
-            <div css={horizontalLine} />
-            <div css={contactInfosTextStyles}>
-              <Link href="mailto:marliestheresbrunner@gmail.com">
-                <a>marliestheresbrunner@gmail.com</a>
+          ) : (
+            <div css={leftContainer}>
+              <span>
+                Danke für Ihre Nachricht. <br />
+                Ich melde mich so bald wie möglich bei Ihnen!{' '}
+              </span>
+              <Link href="/contact/">
+                <a css={buttonStylesMessage} onClick={() => setLoading(false)}>
+                  Neue Nachricht
+                </a>
               </Link>
             </div>
-          </div>
-          <div css={contactInfosContainer}>
-            <div css={iconContainer}>
-              <FiPhone size={32} />
-              <p>Telefon</p>
+          )}
+          <div css={rightContainer}>
+            <div css={contactInfosContainer}>
+              <div css={iconContainer}>
+                <GoLocation size={32} />
+                <p>Adresse</p>
+              </div>
+              <div css={horizontalLine} />
+              <div css={contactInfosTextStyles}>
+                Michael-Walz-Gasse 37, 5020 Salzburg
+              </div>
             </div>
-            <div css={horizontalLine} />
-            <div css={contactInfosTextStyles}>0664 000 0000</div>
+            <div css={contactInfosContainer}>
+              <div css={iconContainer}>
+                <HiOutlineMailOpen size={32} />
+                <p>Email</p>
+              </div>
+              <div css={horizontalLine} />
+              <div css={contactInfosTextStyles}>
+                <Link href="mailto:marliestheresbrunner@gmail.com">
+                  <a>marliestheresbrunner@gmail.com</a>
+                </Link>
+              </div>
+            </div>
+            <div css={contactInfosContainer}>
+              <div css={iconContainer}>
+                <FiPhone size={32} />
+                <p>Telefon</p>
+              </div>
+              <div css={horizontalLine} />
+              <div css={contactInfosTextStyles}>0664 000 0000</div>
+            </div>
           </div>
         </div>
       </section>
