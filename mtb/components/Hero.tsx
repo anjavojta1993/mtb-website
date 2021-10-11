@@ -63,9 +63,12 @@ const heroContainer = css`
   }
   @media (max-width: 540px) {
     position: absolute;
+    text-align: center;
     top: 40%;
-    left: 5%;
-    width: 90%;
+    left: 0%;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
     height: 60%;
   }
 `;
@@ -104,6 +107,11 @@ const heroSubheadingContainer = css`
     font-size: 1rem;
     margin-top: 20px;
   }
+
+  @media (max-width: 540px) {
+    text-shadow: 0 0 0.4em white;
+    font-weight: 500;
+  }
 `;
 
 const heroSubheadingContainerItalic = css`
@@ -116,6 +124,8 @@ const heroSubheadingContainerItalic = css`
 
   @media (max-width: 540px) {
     margin-top: 20px;
+    font-weight: 500;
+    text-shadow: 0 0 0.4em white;
   }
 `;
 
@@ -203,7 +213,6 @@ const buttonStylesLight = css`
     margin-right: 5%;
     color: black;
     margin-top: 20px;
-    background-color: none;
     font-size: 0.75rem;
     font-weight: 400;
     border: 1px solid black;
@@ -211,6 +220,7 @@ const buttonStylesLight = css`
     padding: 8px 10px;
     letter-spacing: 2px;
     text-transform: none;
+    background-color: rgba(255, 255, 255, 0.3);
 
     :hover {
       transform: scale(1.1, 1.1);
