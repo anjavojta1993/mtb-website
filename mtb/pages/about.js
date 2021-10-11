@@ -43,7 +43,7 @@ const aboutContainer = css`
 const leftContainer = css`
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 35%;
   justify-content: center;
   height: 80vh;
   align-items: center;
@@ -76,14 +76,15 @@ const leftContainerHeading = css`
 const rightContainer = css`
   display: flex;
   margin-top: 20px;
+  //margin-left: 20px;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  width: 60%;
+  width: 65%;
   height: auto;
   margin-bottom: 50px;
   margin-right: 20px;
-  background-color: yellow;
+  //background-color: yellow;
 
   li {
     margin-bottom: 10px;
@@ -100,16 +101,20 @@ const rightContainer = css`
 `;
 
 const containerLeftUpperCorner = css`
-  display: flex;
   flex-direction: column;
   padding: 10px;
-  width: 50%;
+  border-radius: 10px 40px;
+  width: 45%;
   height: 450px;
+  box-shadow: 0 7px 17px rgb(0 0 0 / 13%);
   background-color: ${darkBlue};
   color: white;
 
   @media (max-width: 1024px) {
     width: 100%;
+    height: auto;
+    border-radius: 0px;
+    order: 1;
   }
 
   @media (max-width: 780px) {
@@ -119,16 +124,22 @@ const containerLeftUpperCorner = css`
 `;
 
 const containerRightUpperCorner = css`
-  display: flex;
+  border-radius: 40px 10px;
+  margin-left: 10px;
+  box-shadow: 0 7px 17px rgb(0 0 0 / 13%);
   flex-direction: column;
   padding: 10px;
-  width: 50%;
+  width: 45%;
   height: 450px;
   background-color: ${mediumBlue};
   color: white;
 
   @media (max-width: 1024px) {
     width: 100%;
+    height: auto;
+    border-radius: 0px;
+    margin: 0px;
+    order: 2;
   }
 
   @media (max-width: 780px) {
@@ -138,16 +149,23 @@ const containerRightUpperCorner = css`
 `;
 
 const containerRightBottomCorner = css`
-  display: flex;
+  border-radius: 10px 40px;
+  box-shadow: 0 7px 17px rgb(0 0 0 / 13%);
+  margin-top: 10px;
   flex-direction: column;
+  margin-left: 10px;
   padding: 10px;
-  width: 50%;
+  width: 45%;
   height: 450px;
   background-color: ${darkBlue};
   color: white;
 
   @media (max-width: 1024px) {
     width: 100%;
+    height: auto;
+    border-radius: 0px;
+    margin: 0px;
+    order: 3;
   }
 
   @media (max-width: 780px) {
@@ -157,21 +175,28 @@ const containerRightBottomCorner = css`
 `;
 
 const containerLeftBottomCorner = css`
-  display: flex;
+  border-radius: 40px 10px;
+  box-shadow: 0 7px 17px rgb(0 0 0 / 13%);
+  margin-top: 10px;
   flex-direction: column;
   padding: 10px;
-  width: 50%;
+  width: 45%;
   height: 450px;
   background-color: ${mediumBlue};
   color: white;
 
   @media (max-width: 1024px) {
     width: 100%;
+    height: auto;
+    border-radius: 0px;
+    margin: 0px;
+    order: 4;
   }
 
   @media (max-width: 780px) {
     font-size: 0.75rem;
     margin-bottom: 0px;
+    margin-bottom: 20px;
   }
 `;
 
@@ -319,15 +344,33 @@ const heroHeading = css`
   }
 `;
 
-const aboutHeading = css`
+const aboutHeadingLightBlue = css`
   display: flex;
   justify-content: center;
   padding-top: 20px;
   padding-bottom: 25px;
   font-size: ${mediumText};
+  color: ${mediumBlue};
   text-transform: uppercase;
   font-weight: 700;
-  color: white;
+  letter-spacing: 1.5px;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    align-self: center;
+    align-items: center;
+  }
+`;
+
+const aboutHeadingDarkBlue = css`
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  font-size: ${mediumText};
+  color: ${darkBlue};
+  text-transform: uppercase;
+  font-weight: 700;
   letter-spacing: 1.5px;
 
   @media (max-width: 768px) {
@@ -394,15 +437,15 @@ export default function About() {
             <div css={aboutPortraitContainer}>
               <Image
                 src={Portrait}
-                width="500"
-                height="500"
+                width="400"
+                height="400"
                 alt="Portrait von Marlies Theres Brunner"
               ></Image>
             </div>
           </div>
           <div css={rightContainer}>
             <div css={containerLeftUpperCorner}>
-              <div css={aboutHeading}>Wer bin ich - beruflich?</div>
+              <div css={aboutHeadingLightBlue}>Wer bin ich - beruflich?</div>
               <ul>
                 <li>IBWL Studium in Wien – Schwerpunkt Human Resources</li>
                 <li>Masterstudium in Salzburg- HR Training und Entwicklung</li>
@@ -421,7 +464,7 @@ export default function About() {
               </ul>
             </div>
             <div css={containerRightUpperCorner}>
-              <div css={aboutHeading}>Wer bin ich - privat?</div>
+              <div css={aboutHeadingDarkBlue}>Wer bin ich - privat?</div>
               <ul>
                 <li>Salzburgerin, verheiratet, 3 Töchter</li>
                 <li>Sportlich so aktiv wie möglich…</li>
@@ -430,7 +473,7 @@ export default function About() {
               </ul>
             </div>
             <div css={containerLeftBottomCorner}>
-              <div css={aboutHeading}>Was zeichnet mich aus?</div>
+              <div css={aboutHeadingDarkBlue}>Was zeichnet mich aus?</div>
               <ul>
                 <li>Langjährige Berufserfahrung im Bereich HR</li>
                 <li>Unzählige Gespräche mit arbeitswilligen Personen</li>
@@ -439,7 +482,7 @@ export default function About() {
               </ul>
             </div>
             <div css={containerRightBottomCorner}>
-              <div css={aboutHeading}>Was motiviert mich?</div>
+              <div css={aboutHeadingLightBlue}>Was motiviert mich?</div>
               <ul>
                 <li>
                   Das Selbstbewusstsein zu stärken und die Angst vor neuen
