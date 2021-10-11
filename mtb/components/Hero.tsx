@@ -64,7 +64,7 @@ const heroContainer = css`
   @media (max-width: 540px) {
     position: absolute;
     top: 40%;
-    width: 85%;
+    width: 90%;
     height: 60%;
   }
 `;
