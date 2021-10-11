@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { css } from '@emotion/react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -29,16 +30,22 @@ const logoContainer = css`
   align-items: center;
   justify-content: center;
   height: 100%;
-  width: 25%;
+  width: auto;
   margin-left: 30px;
-  background-image: url('images/logo.jpg');
-  background-repeat: no-repeat;
   //background-color: red;
 
-  @media (max-width: 1208px) {
-    margin-top: 20px;
-    margin-left: 30px;
-    background-image: url('images/logo_responsive.jpg');
+  .logo2 {
+    display: none;
+  }
+
+  @media (max-width: 780px) {
+    .logo1 {
+      display: none;
+    }
+
+    .logo2 {
+      display: flex;
+    }
   }
 `;
 
@@ -47,10 +54,16 @@ export default function Header(props) {
   return (
     <header css={headerStyles}>
       <div css={logoContainer}>
-        {/* <Image
-          src={Logo}
+        <img
+          src="/images/logo.jpg"
           alt="Blauer Kreis mit Initialien MTB und Systemischer Coach"
-        /> */}
+          className="logo1"
+        />
+        <img
+          src="/images/logo_responsive.jpg"
+          alt="Blauer Kreis mit Initialien MTB und Systemischer Coach"
+          className="logo2"
+        />
       </div>
       <HeaderRightNav open={open} />
       <HeaderBurger open={open} setOpen={setOpen} />
