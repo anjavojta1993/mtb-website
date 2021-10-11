@@ -62,10 +62,10 @@ const heroContainer = css`
     //background-color: green;
   }
   @media (max-width: 540px) {
-    position: relative;
-    top: 0%;
-    width: 80%;
-    height: 80%;
+    position: absolute;
+    top: 40%;
+    width: 85%;
+    height: 60%;
   }
 `;
 
@@ -82,7 +82,12 @@ const heroHeadingContainer = css`
   @media (max-width: 768px) {
     font-size: 1.5rem;
     width: 95%;
-    margin-top: 60px;
+    margin-top: 40px;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 1.25rem;
   }
 `;
 
@@ -107,6 +112,10 @@ const heroSubheadingContainerItalic = css`
   text-transform: uppercase;
   //background-color: red;
   line-height: 1.5;
+
+  @media (max-width: 540px) {
+    margin-top: 20px;
+  }
 `;
 
 const signatureStyles = css`
