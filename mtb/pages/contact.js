@@ -359,11 +359,16 @@ export default function Contact() {
       formData[field.name] = field.value;
     });
 
-    await fetch('/api/mail', {
+    const response = await fetch('/api/mail', {
       method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify(formData),
     });
     e.target.reset();
+
+    console.log(response, 'API response');
   }
 
   return (

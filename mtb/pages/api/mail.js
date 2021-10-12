@@ -1,19 +1,18 @@
-import sgMail from '@sendgrid/mail';
+const mail = require('@sendgrid/mail');
+mail.setApiKey(process.env.SENDGRID_API_KEY);
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async function sendMail(req, res) {
-  const body = JSON.parse(req.body);
+  const body = req.body;
   console.log('body', body);
 
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-
   const message = `
-  Name: ${body.name}\r\n
-  Email: ${body.email}\r\n
-  Message: ${body.message}
+  <b>Name:</b> ${body.name}\r\n </br>
+  <b>Email:</b> ${body.email}\r\n </br>
+  <b>Message:</b> ${body.message} </br>
 `;
 
-  await sgMail
+  await mail
     .send({
       to: 'anja.vojta@gmail.com',
       from: 'systemischercoachmtb@gmail.com',
@@ -21,8 +20,8 @@ export default async function sendMail(req, res) {
       text: message,
       html: message.replace(/\r\n/g, '<br>'),
     })
-    .then((res) => {
-      console.log(res);
+    .then(() => {
+      res.status(200).json({ status: 'Ok' });
     })
     .catch((error) => {
       console.error(error);
