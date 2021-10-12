@@ -425,8 +425,9 @@ export default function About() {
         </div>
         <div css={quoteContainer}>
           <div css={quoteStyles}>
-            &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-            do eiusmod tempor incididunt.&quot;
+            &quot;So manche vermeintliche Bedrohung ist in Wirklichkeit eine
+            neue Chance. <br />
+            Man muss sie nur sehen und ergreifen. &quot;
           </div>
         </div>
         <div css={aboutContainer}>

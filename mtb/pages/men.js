@@ -231,9 +231,9 @@ export default function OfferMen() {
         </div>
         <div css={quoteContainer}>
           <div css={quoteStyles}>
-            &quot;So manche vermeintliche Bedrohung ist in Wirklichkeit eine
-            neue Chance. <br />
-            Man muss sie nur sehen und ergreifen. &quot;
+            &quot;Du kannst nicht zurückgehen und den Anfang ändern, aber Du
+            kannst neustarten, von dort, wo du gerade bist und das Ende
+            beeinflussen (C.S. Lewis).&quot;
           </div>
         </div>
         <div css={containerHeadingLeft}>neustart &amp; Vision</div>
