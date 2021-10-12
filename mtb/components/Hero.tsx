@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Signature from '../public/images/signature.png';
 import {
+  darkBlue,
   h1,
   h2,
   largeText,
@@ -211,16 +212,16 @@ const buttonStylesLight = css`
   @media (max-width: 540px) {
     display: inline-block;
     margin-right: 5%;
-    color: black;
     margin-top: 20px;
     font-size: 0.75rem;
     font-weight: 400;
-    border: 1px solid black;
+    border: none;
     border-radius: 8px;
     padding: 8px 10px;
     letter-spacing: 2px;
     text-transform: none;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: ${darkBlue};
+    color: white;
 
     :hover {
       transform: scale(1.1, 1.1);

@@ -1,10 +1,11 @@
-const mail = require('@sendgrid/mail');
-mail.setApiKey(process.env.SENDGRID_API_KEY);
+import sgMail from '@sendgrid/mail';
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default (req, res) => {
+export default async function sendMail(req, res) {
   const body = JSON.parse(req.body);
   console.log('body', body);
+
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
   const message = `
   Name: ${body.name}\r\n
@@ -12,7 +13,7 @@ export default (req, res) => {
   Message: ${body.message}
 `;
 
-  mail
+  await sgMail
     .send({
       to: 'anja.vojta@gmail.com',
       from: 'systemischercoachmtb@gmail.com',
@@ -20,7 +21,10 @@ export default (req, res) => {
       text: message,
       html: message.replace(/\r\n/g, '<br>'),
     })
-    .then(() => {
-      res.status(200).json({ status: 'Ok' });
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((error) => {
+      console.error(error);
     });
-};
+}
