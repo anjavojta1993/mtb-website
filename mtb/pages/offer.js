@@ -31,11 +31,12 @@ const pageContainer = css`
 
 const appointmentContainer = css`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   align-items: center;
   justify-content: center;
   margin-top: 40px;
+  background-color: ${darkBlue};
 
   @media (max-width: 1024px) {
     flex-wrap: wrap;
@@ -142,13 +143,6 @@ const buttonStylesBlue = css`
   padding: 16px 40px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  :hover {
-    border: none;
-    transform: scale(1.1, 1.1);
-    -webkit-transform: scale(1.1, 1.1);
-    -moz-transform: scale(1.1, 1.1);
-    cursor: pointer;
-  }
 
   @media (max-width: 540px) {
     display: inline-block;
@@ -162,14 +156,6 @@ const buttonStylesBlue = css`
     padding: 8px 10px;
     letter-spacing: 2px;
     text-transform: none;
-
-    :hover {
-      border: none;
-      transform: scale(1.1, 1.1);
-      -webkit-transform: scale(1.1, 1.1);
-      -moz-transform: scale(1.1, 1.1);
-      cursor: pointer;
-    }
   }
 `;
 
@@ -218,6 +204,7 @@ const containerHeading = css`
 const itemContainerAppointment = css`
   display: flex;
   flex-direction: column;
+  background-color: white;
   border: 1px solid black;
   align-items: center;
   width: 30%;
@@ -236,12 +223,14 @@ const itemContainerAppointment = css`
 
 const itemHeadingAppointment = css`
   display: flex;
-  font-size: ${largeText};
+  font-size: ${mediumText};
   font-weight: 700;
   letter-spacing: 1.5px;
-  padding: 10px;
+  padding: 20px;
   margin-top: 20px;
-  height: 10%;
+  height: auto;
+  width: 100%;
+  //background-color: green;
   text-transform: uppercase;
 
   @media (max-width: 1024px) {
@@ -253,9 +242,11 @@ const itemAppointmentStyles = css`
   display: flex;
   font-size: ${normalText};
   letter-spacing: 1.5px;
+  //background-color: red;
   padding: 20px;
-  height: 15%;
-  text-transform: uppercase;
+  height: auto;
+  width: 100%;
+  //text-transform: uppercase;
 
   @media (max-width: 1024px) {
     font-size: 0.7rem;
@@ -268,12 +259,13 @@ const containerHeadingAppointment = css`
   font-weight: 700;
   text-align: center;
   letter-spacing: 1.5px;
+  color: white;
   width: 100%;
   justify-content: center;
   height: 20%;
   padding: 50px;
   text-transform: uppercase;
-  // background-color: green;
+  //background-color: green;
 
   @media (max-width: 780px) {
     font-size: 1.5rem;
@@ -339,36 +331,26 @@ export default function Offer() {
             </Link>
           </div>
         </div>
-        <div css={containerHeading}>Methoden</div>
-        <div css={methodenContainer}>WAS DARF HIER REIN? ODER GANZ WEG?</div>
-        <div css={containerHeadingAppointment}>Termin buchen</div>
         <div css={appointmentContainer}>
+          <div css={containerHeadingAppointment}>Termin buchen</div>
           <div css={itemContainerAppointment}>
             <Image
               src={TelefonAnfrage}
               alt="Junge Frau mit Afro sitzt am Schreibtisch und telefoniert mit Kabeltelefon"
             ></Image>
-            <div css={itemHeadingAppointment}>Telefonische Anfrage</div>
+            <div css={itemHeadingAppointment}>
+              Kostenloses telefonisches <br />
+              Erstgespräch
+            </div>
             <div css={itemAppointmentStyles}>
-              Gerne können wir unverbindlich <br />
-              über Ihr Anliegen sprechen.
+              Gerne können wir unverbindlich und kostenlos <br />
+              über Ihr Anliegen sprechen. Rufen Sie mich an!
             </div>
             <div css={buttonStylesBlue}>
               <div css={iconContainer}>
-                <FiPhone size={22} /> <span>0664 1111111</span>
+                <FiPhone size={22} /> <span>+43 664 3309622</span>
               </div>
             </div>
-          </div>
-          <div css={itemContainerAppointment}>
-            <Image
-              src={Coaching}
-              alt="Frau und Mann sitzen an Schreibtisch und Frau coacht Mann mit Laptop"
-            ></Image>
-            <div css={itemHeadingAppointment}>Einzelcoaching</div>
-            <div css={itemAppointmentStyles}>90 Minuten</div>
-            <Link href="/men/">
-              <a css={buttonStylesBlue}>Jetzt buchen</a>
-            </Link>
           </div>
         </div>
       </section>

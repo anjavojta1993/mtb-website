@@ -248,8 +248,8 @@ export default function Hero() {
         <Link href="/offer/">
           <a css={buttonStylesBlue}>Mein Angebot</a>
         </Link>
-        <Link href="/calendly">
-          <a css={buttonStylesLight}>Termin buchen</a>
+        <Link href="/contact">
+          <a css={buttonStylesLight}>Infogespräch</a>
         </Link>
 
         <div css={signatureStyles}>

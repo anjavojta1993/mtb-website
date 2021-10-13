@@ -447,7 +447,7 @@ export default function Contact() {
                 <p>Telefon</p>
               </div>
               <div css={horizontalLine} />
-              <div css={contactInfosTextStyles}>0664 000 0000</div>
+              <div css={contactInfosTextStyles}>+43 664 3309622</div>
             </div>
           </div>
         </div>

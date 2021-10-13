@@ -231,9 +231,9 @@ export default function OfferMen() {
         </div>
         <div css={quoteContainer}>
           <div css={quoteStyles}>
-            &quot;Du kannst nicht zurückgehen und den Anfang ändern, aber Du
-            kannst neustarten, von dort, wo du gerade bist und das Ende
-            beeinflussen (C.S. Lewis).&quot;
+            &quot;Du kannst nicht zurückgehen und den Anfang ändern, aber du
+            kannst neustarten, von dort, <br />
+            wo du gerade bist und das Ende beeinflussen (C.S. Lewis).&quot;
           </div>
         </div>
         <div css={containerHeadingLeft}>neustart &amp; Vision</div>
@@ -289,8 +289,8 @@ export default function OfferMen() {
           </div>
         </div>
         <div css={horizontalLine} />
-        <Link href="/calendly/">
-          <a css={buttonStylesBlue}>Termin buchen</a>
+        <Link href="/contact/">
+          <a css={buttonStylesBlue}>Infogespräch vereinbaren</a>
         </Link>
       </section>
     </Layout>

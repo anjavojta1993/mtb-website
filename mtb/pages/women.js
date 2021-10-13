@@ -370,8 +370,8 @@ export default function OfferWomen() {
             </ul>
           </div>
         </div>
-        <Link href="/calendly/">
-          <a css={buttonStylesBlue}>Termin buchen</a>
+        <Link href="/contact/">
+          <a css={buttonStylesBlue}>Infogespräch vereinbaren</a>
         </Link>
       </section>
     </Layout>
