@@ -305,6 +305,11 @@ export default function Offer() {
         <div css={heroContainer}>
           <div css={heroHeading}>Mein Angebot</div>
         </div>
+        <div css={quoteContainer}>
+          <div css={quoteStyles}>
+            &quot;Jede Veränderung beginnt in uns selbst.&quot;
+          </div>
+        </div>
         <div css={offerContainer}>
           <div css={itemContainer}>
             <div css={itemHeading}>Frauen fördern</div>
