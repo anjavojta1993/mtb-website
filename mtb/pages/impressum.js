@@ -71,7 +71,7 @@ export default function Impressum() {
           <b>Für den Inhalt verantwortlich, Copyright:</b>
           <br />
           Mag. Marlies Brunner, MTD | Michael-Walz-Gasse 37 | 5020 Salzburg |
-          Österreich | UID Nummer: ATUXXXXXX <br />
+          Österreich | UID Nummer: ATU46105806 <br />
           <br />
           Alle Rechte vorbehalten. Irrtümer und Änderungen vorbehalten.
           <br />
