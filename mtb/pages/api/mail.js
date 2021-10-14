@@ -14,7 +14,7 @@ export default async function sendMail(req, res) {
 
   await mail
     .send({
-      to: 'anja.vojta@gmail.com',
+      to: 'marlies.brunner@aon.at',
       from: 'info@marliestheresbrunner.at',
       subject: 'Neue Nachricht Systemischer Coach!',
       text: message,
