@@ -436,8 +436,8 @@ export default function Contact() {
               </div>
               <div css={horizontalLine} />
               <div css={contactInfosTextStyles}>
-                <Link href="mailto:marliestheresbrunner@gmail.com">
-                  <a>marliestheresbrunner@gmail.com</a>
+                <Link href="mailto:marlies.brunner@aon.at">
+                  <a>marlies.brunner@aon.at</a>
                 </Link>
               </div>
             </div>

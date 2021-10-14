@@ -110,8 +110,12 @@ const heroSubheadingContainer = css`
   }
 
   @media (max-width: 540px) {
-    text-shadow: 0 0 0.4em white;
+    //text-shadow: 0 0 0.4em white;
     font-weight: 500;
+    margin-top: 0px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
   }
 `;
 
@@ -126,7 +130,9 @@ const heroSubheadingContainerItalic = css`
   @media (max-width: 540px) {
     margin-top: 20px;
     font-weight: 500;
-    text-shadow: 0 0 0.4em white;
+    padding-top: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    //text-shadow: 0 0 0.4em white;
   }
 `;
 
