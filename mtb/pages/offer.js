@@ -130,7 +130,7 @@ const itemHeading = css`
   }
 `;
 
-const buttonStylesBlue = css`
+const buttonStylesBluePhone = css`
   display: inline-block;
   text-align: center;
   margin-top: 30px;
@@ -156,6 +156,51 @@ const buttonStylesBlue = css`
     padding: 8px 10px;
     letter-spacing: 2px;
     text-transform: none;
+  }
+`;
+
+const buttonStylesBlue = css`
+  display: inline-block;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: white;
+  background-color: ${mediumBlue};
+  font-size: ${normalText};
+  font-weight: 400;
+  border-radius: 8px;
+  padding: 16px 40px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  :hover {
+    border: none;
+    transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    cursor: pointer;
+  }
+
+  @media (max-width: 540px) {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: white;
+    background-color: ${mediumBlue};
+    font-size: 0.75rem;
+    font-weight: 400;
+    border-radius: 8px;
+    padding: 8px 10px;
+    letter-spacing: 2px;
+    text-transform: none;
+
+    :hover {
+      border: none;
+      transform: scale(1.1, 1.1);
+      -webkit-transform: scale(1.1, 1.1);
+      -moz-transform: scale(1.1, 1.1);
+      cursor: pointer;
+    }
   }
 `;
 
@@ -208,10 +253,15 @@ const itemContainerAppointment = css`
   border: 1px solid black;
   align-items: center;
   width: 30%;
-  height: 80vh;
+  height: auto;
   margin-left: 80px;
   margin-right: 80px;
   margin-bottom: 50px;
+
+  > img {
+    height: auto;
+    width: 100%;
+  }
 
   @media (max-width: 1024px) {
     width: auto;
@@ -339,10 +389,10 @@ export default function Offer() {
         <div css={appointmentContainer}>
           <div css={containerHeadingAppointment}>Termin buchen</div>
           <div css={itemContainerAppointment}>
-            <Image
-              src={TelefonAnfrage}
+            <img
+              src="/images/telephone.png"
               alt="Junge Frau mit Afro sitzt am Schreibtisch und telefoniert mit Kabeltelefon"
-            ></Image>
+            />
             <div css={itemHeadingAppointment}>
               Kostenloses telefonisches <br />
               Erstgespräch
@@ -351,7 +401,7 @@ export default function Offer() {
               Gerne können wir unverbindlich und kostenlos <br />
               über Ihr Anliegen sprechen. Rufen Sie mich an!
             </div>
-            <div css={buttonStylesBlue}>
+            <div css={buttonStylesBluePhone}>
               <div css={iconContainer}>
                 <FiPhone size={22} /> <span>+43 664 3309622</span>
               </div>
