@@ -284,7 +284,7 @@ export default function OfferWomen() {
             <br />
             Sie haben ihre Ausbildung beendet – Gratulation und ihr Berufsleben
             wartet schon auf Sie! <br />
-            Jetzt haben Sie Erwartungen und Wünsche an Ihre Berufsleben, sind
+            Jetzt haben Sie Erwartungen und Wünsche an Ihr Berufsleben, sind
             sehr motiviert, haben zugleich aber auch Ängste vor dieser
             beruflichen Zukunft? <br />
             <br />
