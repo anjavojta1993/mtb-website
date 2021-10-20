@@ -251,6 +251,7 @@ const testimonialPosition = css`
 
   @media (max-width: 780px) {
     font-size: 1rem;
+    margin-bottom: 0px;
   }
 `;
 
@@ -304,7 +305,7 @@ const testimonialText = css`
 
   @media (max-width: 780px) {
     font-size: 0.75rem;
-    margin: 10px;
+    margin: 0px;
   }
 `;
 
@@ -635,6 +636,28 @@ export default function About() {
               Mit Expertise und Empathie beflügelt sie Frauen auf ihrem Weg zu
               mehr Klarheit und kraftvollem Selbstbewusstsein. Dafür sagen wir
               herzlich DANKE!&quot;
+            </div>
+          </div>
+          <div css={singleTestimonialContainer}>
+            <div css={testimonialHeading}>Mag. Thomas Stockinger, MTD</div>
+            <div css={portraitContainer}>
+              <img
+                src="/images/stockinger.png"
+                width="200px"
+                height="200px"
+                alt="Portrait von Mag. Thomas Stockinger, MTD"
+              />
+            </div>
+            <div css={testimonialPosition}>
+              National Sales Training Manager ŠKODA
+            </div>
+            <div css={testimonialText}>
+              &quot;Ich kenne Frau Marlies Brunner als äußerst erfahrene,
+              fachlich versierte und auch engagierte Personalberaterin. Bei der
+              Überarbeitung meiner Bewerbungsunterlagen hat sie mich sehr
+              ambitioniert gecoacht und mit ihren punktgenauen Anmerkungen aus
+              der Recruiting-Perspektive einen wertvollen Beitrag
+              geleistet.&quot;
             </div>
           </div>
           <div css={singleTestimonialContainer}>
