@@ -175,6 +175,22 @@ const containerHeadingLeft = css`
   }
 `;
 
+const containerHeadingRight = css`
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  font-size: ${h2};
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 80%;
+  letter-spacing: 1.5px;
+
+  @media (max-width: 780px) {
+    font-size: 1.5rem;
+  }
+`;
+
 const buttonStylesBlue = css`
   display: inline-block;
   text-align: center;
@@ -236,11 +252,11 @@ export default function OfferMen() {
             wo du gerade bist und das Ende beeinflussen (C.S. Lewis).&quot;
           </div>
         </div>
-        <div css={containerHeadingLeft}>neustart &amp; Vision</div>
+        <div css={containerHeadingLeft}>Vision</div>
         <div css={itemContainer}>
           <div css={leftContainer}>
             <img
-              src="/images/neustartvision.png"
+              src="/images/visionmen.jpg"
               alt="Älterer Herr mit Brille sitzt auf weißen Sofa und sieht sich Unterlagen an "
             />
           </div>
@@ -265,6 +281,18 @@ export default function OfferMen() {
                 Zukunftsperspektiven
               </li>
             </ul>
+          </div>
+        </div>
+        <div css={horizontalLine} />
+        <div css={containerHeadingRight}>Neustart</div>
+        <div css={itemContainer}>
+          <div css={leftContainer}>
+            <img
+              src="/images/neustart.png"
+              alt="Älterer Herr mit Brille sitzt auf weißen Sofa und sieht sich Unterlagen an "
+            />
+          </div>
+          <div css={itemText}>
             <br />
             Ihre solide berufliche Ist-Situation ist aus diversen Gründen ins
             Schwanken geraden und Sie müssen sich jetzt neuorientieren.
@@ -288,7 +316,6 @@ export default function OfferMen() {
             </ul>
           </div>
         </div>
-        <div css={horizontalLine} />
         <Link href="/contact/">
           <a css={buttonStylesBlue}>Infogespräch vereinbaren</a>
         </Link>
