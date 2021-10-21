@@ -2,6 +2,7 @@
 import { css } from '@emotion/react';
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import Layout from '../components/Layout';
 import Portrait from '../public/images/portrait.png';
 import {
@@ -24,6 +25,27 @@ const pageContainer = css`
   @media (max-width: 540px) {
     position: relative;
     margin-top: 120px;
+  }
+
+  a {
+    :hover {
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    :visited {
+      cursor: pointer;
+      color: white;
+    }
+    :active {
+      cursor: pointer;
+      color: white;
+    }
+    :link {
+      cursor: pointer;
+      text-decoration: underline;
+      color: white;
+    }
   }
 `;
 
@@ -428,7 +450,7 @@ export default function About() {
           <div css={quoteStyles}>
             &quot;So manche vermeintliche Bedrohung ist in Wirklichkeit eine
             neue Chance. <br />
-            Man muss sie nur sehen und ergreifen. &quot;
+            Man muss sie nur sehen und ergreifen.&quot;
           </div>
         </div>
         <div css={aboutContainer}>
@@ -457,7 +479,12 @@ export default function About() {
                   Piswanger Salzburg
                 </li>
                 <li>Berufscoach </li>
-                <li>Mentorin bei der Frauenfachakademie Mondsee </li>
+                <li>
+                  Mentorin bei der{' '}
+                  <Link href="https://www.frauenfachakademie.at">
+                    <a target="blank">Frauen:Fachakademie Schloss Mondsee</a>
+                  </Link>
+                </li>
                 <li>
                   Referentin an der FH Salzburg und Wifi Kufstein für
                   Recruiting, Social Media, Employer Branding und Effektive
@@ -628,7 +655,7 @@ export default function About() {
               />
             </div>
             <div css={testimonialPosition}>
-              Geschäftsführerin & Leiterin, Frauenfachakademie
+              Geschäftsführerin, Frauen:Fachakademie Schloss Mondsee
             </div>
             <div css={testimonialText}>
               &quot;Bei unserem WEITBLICK!-Mentoring haben wir Frau Mag. Brunner
@@ -649,7 +676,7 @@ export default function About() {
               />
             </div>
             <div css={testimonialPosition}>
-              National Sales Training Manager ŠKODA
+              National Sales Training Manager, ŠKODA
             </div>
             <div css={testimonialText}>
               &quot;Ich kenne Frau Marlies Brunner als äußerst erfahrene,

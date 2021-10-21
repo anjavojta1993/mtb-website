@@ -68,14 +68,14 @@ export default function Datenschutz() {
     <Layout>
       <div css={pageContainer}>
         <div css={textContainer}>
-          Ich, Berufscoach, Mag. Marlies Brunner, MTD, Anton-Adlgasser-Weg 32,
-          5020 Salzburg, bearbeite Ihre personenbezogenen Daten ausschließlich
-          im Fall Ihrer Einwilligung bzw. zur Ausführung des von Ihnen erteilten
-          Auftrages zu den mit Ihnen vereinbarten Zwecken im Sinn der
-          Datenschutz-Grundverordnung (DSGVO). Es werden nur solche
-          personenbezogenen Daten erhoben, die für die Durchführung und
-          Abwicklung meiner beauftragten Aufgaben und Leistungen erforderlich
-          sind oder die Sie mir freiwillig zur Verfügung gestellt haben.
+          Ich, Berufscoach, Mag. Marlies Brunner, MTD, bearbeite Ihre
+          personenbezogenen Daten ausschließlich im Fall Ihrer Einwilligung bzw.
+          zur Ausführung des von Ihnen erteilten Auftrages zu den mit Ihnen
+          vereinbarten Zwecken im Sinn der Datenschutz-Grundverordnung (DSGVO).
+          Es werden nur solche personenbezogenen Daten erhoben, die für die
+          Durchführung und Abwicklung meiner beauftragten Aufgaben und
+          Leistungen erforderlich sind oder die Sie mir freiwillig zur Verfügung
+          gestellt haben.
           <br />
           <br />
           <b>Ihr Recht auf Auskunft und Löschung (Betroffenenrechte)</b>
