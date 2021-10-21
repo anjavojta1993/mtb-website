@@ -475,8 +475,8 @@ export default function About() {
                 <li>Masterstudium in Salzburg- HR Training und Entwicklung</li>
                 <li>Zertifizierter Systemischer Coach</li>
                 <li>
-                  Senior HR Consultant seit 21 Jahren bei Dr. Pendl & Dr.
-                  Piswanger Salzburg
+                  Senior HR Consultant bei Dr. Pendl & Dr. Piswanger Salzburg
+                  seit Oktober 2000
                 </li>
                 <li>Berufscoach </li>
                 <li>
@@ -575,14 +575,14 @@ export default function About() {
             </div>
           </div>
           <div css={singleTestimonialContainer}>
-            <div css={testimonialHeading}>Gerhard Brecka</div>
+            <div css={testimonialHeading}>DI Gerhard Brecka</div>
             <div css={portraitContainer}>
               {' '}
               <img
                 src="/images/brecka.png"
                 width="200px"
                 height="200px"
-                alt="Portrait von Gerhard Brecka"
+                alt="Portrait von Direktor Gerhard Brecka"
               />
             </div>
             <div css={testimonialPosition}>
