@@ -1,7 +1,12 @@
 const path = require('path');
 
 module.exports = {
-  webpack: (config, options) => {
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.node = {
+        net: 'empty',
+      };
+    }
     config.module.rules.push({
       test: /\.pdf/,
       type: 'asset/resource',
