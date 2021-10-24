@@ -248,7 +248,7 @@ export default function Hero() {
         </div>
         <div css={heroSubheadingContainer}>
           Beratung und Begleitung in jeder Phase <br />
-          ihres Berufslebens!
+          Ihres Berufslebens!
         </div>
 
         <Link href="/offer/">
