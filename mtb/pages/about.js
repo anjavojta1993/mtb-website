@@ -521,7 +521,7 @@ export default function About() {
                   Das Erreichen beruflich gesteckter Ziele zu unterstützen
                 </li>
                 <li>
-                  Den beruflichen Einstieg-Aufstieg-Veränderung -Neustart zu
+                  Den beruflichen Einstieg-Aufstieg-Veränderung-Neustart zu
                   begleiten
                 </li>
               </ul>
@@ -639,7 +639,7 @@ export default function About() {
             <div css={testimonialText}>
               &quot;In dieser schnelllebigen Zeit ist es wichtig, die richtigen
               Entscheidungen zu treffen. Frau Brunner ist hierbei die beste
-              Wahl! Mit viel Fachwissen, Erfahrung, Gespühr führt sie zum
+              Wahl! Mit viel Fachwissen, Erfahrung, Gespür führt sie zum
               richtigen Weg und hilft dabei, nie den Mut zu verlieren! Vor allem
               das war besonders wichtig - Danke!&quot;
             </div>

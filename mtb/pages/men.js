@@ -248,7 +248,7 @@ export default function OfferMen() {
         <div css={quoteContainer}>
           <div css={quoteStyles}>
             &quot;Du kannst nicht zurückgehen und den Anfang ändern, aber du
-            kannst neustarten, von dort, <br />
+            kannst neu starten, von dort, <br />
             wo du gerade bist und das Ende beeinflussen (C.S. Lewis).&quot;
           </div>
         </div>
@@ -257,7 +257,7 @@ export default function OfferMen() {
           <div css={leftContainer}>
             <img
               src="/images/visionmen.jpg"
-              alt="Älterer Herr mit Brille sitzt auf weißen Sofa und sieht sich Unterlagen an "
+              alt="Mitteljähriger Herr steht an Geländer in einem Saal und blickt ins Weite"
             />
           </div>
           <div css={itemText}>
@@ -295,7 +295,7 @@ export default function OfferMen() {
           <div css={itemText}>
             <br />
             Ihre solide berufliche Ist-Situation ist aus diversen Gründen ins
-            Schwanken geraden und Sie müssen sich jetzt neuorientieren.
+            Schwanken geraden und Sie müssen sich jetzt neu orientieren.
             <br />
             <br />
             <b>Orientierung - Veränderung - Neustart</b>

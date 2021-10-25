@@ -198,7 +198,7 @@ export default function Press() {
             <div css={itemHeading}>Die besten</div>
             <img
               src="/images/diebesten.png"
-              alt="Ausschnitt aus Artikel in Die Besten das Karrieremagazin mit Mag. Marlies Theres Brunner"
+              alt="Ausschnitt aus Artikel in Die Besten - Das Karrieremagazin mit Mag. Marlies Theres Brunner"
             />
             <button
               css={buttonStylesBlue}

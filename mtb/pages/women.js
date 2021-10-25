@@ -282,7 +282,7 @@ export default function OfferWomen() {
             </i>
             <br />
             <br />
-            Sie haben ihre Ausbildung beendet – Gratulation und ihr Berufsleben
+            Sie haben Ihre Ausbildung beendet – Gratulation und Ihr Berufsleben
             wartet schon auf Sie! <br />
             Jetzt haben Sie Erwartungen und Wünsche an Ihr Berufsleben, sind
             sehr motiviert, haben zugleich aber auch Ängste vor dieser
@@ -313,7 +313,7 @@ export default function OfferWomen() {
             <br />
             <br />
             Sie haben beruflich schon Fuß gefasst und es gilt jetzt etwas zu
-            verändern: <b>Aufstieg-Umstieg- Neuorientierung?</b> <br />
+            verändern: <b>Aufstieg-Umstieg-Neuorientierung?</b> <br />
             <ul>
               <li>Wie gehe ich es an?</li>
               <li>Wann ist der richtige Zeitpunkt dafür?</li>
