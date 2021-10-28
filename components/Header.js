@@ -3,7 +3,6 @@ import { css } from '@emotion/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import Logo from '../public/images/logo.jpg';
 import { normalText } from '../styles/sharedStyles';
 import HeaderBurger from './HeaderBurger';
 import HeaderRightNav from './HeaderRightNav';
@@ -29,10 +28,13 @@ const logoContainer = css`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
   width: auto;
-  margin-left: 30px;
+  margin-left: 20px;
   //background-color: red;
+
+  img {
+    height: 110px;
+  }
 
   .logo2 {
     display: none;
@@ -55,13 +57,13 @@ export default function Header(props) {
     <header css={headerStyles}>
       <div css={logoContainer}>
         <img
-          src="/images/logo.jpg"
+          src="/images/logo8.svg"
           alt="Blauer Kreis mit Initialien MTB und Systemischer Coach"
           className="logo1"
         />
         <img
           src="/images/logo_responsive.jpg"
-          alt="Blauer Kreis mit Initialien MTB und Systemischer Coach"
+          alt="Blauer Kreis mit Initialien MTB"
           className="logo2"
         />
       </div>
