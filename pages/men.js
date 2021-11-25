@@ -71,7 +71,7 @@ const quoteContainer = css`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${lightGrey};
+  background-color: #f5f5f5;
   height: 20vh;
   width: 100%;
   margin-bottom: 20px;
@@ -261,10 +261,7 @@ export default function OfferMen() {
             />
           </div>
           <div css={itemText}>
-            <i>
-              &quot;Ein kurzes Innehalten ist wichtig vor einem neuen
-              Anlauf&quot;
-            </i>
+            <i>&quot;Mut ist die Bugwelle zum Erfolg&quot;</i>
             <br />
             <br />
             Für eine berufliche Veränderung sind Sie bereit und Sie möchten
@@ -293,6 +290,11 @@ export default function OfferMen() {
             />
           </div>
           <div css={itemText}>
+            <i>
+              &quot;Ein kurzes Innehalten ist wichtig vor einem neuen
+              Anlauf.&quot;
+            </i>
+            <br />
             <br />
             Ihre solide berufliche Ist-Situation ist aus diversen Gründen ins
             Schwanken geraden und Sie müssen sich jetzt neu orientieren.
