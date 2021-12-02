@@ -297,7 +297,7 @@ export default function OfferMen() {
             <br />
             <br />
             Ihre solide berufliche Ist-Situation ist aus diversen Gründen ins
-            Schwanken geraden und Sie müssen sich jetzt neu orientieren.
+            Schwanken geraten und Sie müssen sich jetzt neu orientieren.
             <br />
             <br />
             <b>Orientierung - Veränderung - Neustart</b>
