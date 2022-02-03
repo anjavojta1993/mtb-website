@@ -240,31 +240,41 @@ const buttonStylesLight = css`
 
 export default function Hero() {
   return (
-    <div css={pageContainer}>
-      <div css={heroContainer}>
-        <div css={heroHeadingContainer}>Systemisches Coaching im Beruf</div>
-        <div css={heroSubheadingContainerItalic}>
-          <i>Einstieg – Aufstieg – Orientierung – Veränderung – Neustart</i>
-        </div>
-        <div css={heroSubheadingContainer}>
-          Beratung und Begleitung in jeder Phase <br />
-          Ihres Berufslebens!
-        </div>
+    <>
+      <Head>
+        <title>Systemisches Coaching im Beruf</title>
+        <meta
+          name="description"
+          content="Einstieg – Aufstieg – Orientierung – Veränderung – Neustart. Beratung und Begleitung in jeder Phase
+            Ihres Berufslebens!"
+        ></meta>
+      </Head>
+      <div css={pageContainer}>
+        <div css={heroContainer}>
+          <div css={heroHeadingContainer}>Systemisches Coaching im Beruf</div>
+          <div css={heroSubheadingContainerItalic}>
+            <i>Einstieg – Aufstieg – Orientierung – Veränderung – Neustart</i>
+          </div>
+          <div css={heroSubheadingContainer}>
+            Beratung und Begleitung in jeder Phase <br />
+            Ihres Berufslebens!
+          </div>
 
-        <Link href="/offer/">
-          <a css={buttonStylesBlue}>Mein Angebot</a>
-        </Link>
-        <Link href="/contact">
-          <a css={buttonStylesLight}>Infogespräch</a>
-        </Link>
+          <Link href="/offer/">
+            <a css={buttonStylesBlue}>Mein Angebot</a>
+          </Link>
+          <Link href="/contact">
+            <a css={buttonStylesLight}>Infogespräch</a>
+          </Link>
 
-        <div css={signatureStyles}>
-          <Image
-            src={Signature}
-            alt="Unterschrift von Marlies Theres Brunner"
-          ></Image>
+          <div css={signatureStyles}>
+            <Image
+              src={Signature}
+              alt="Unterschrift von Marlies Theres Brunner"
+            ></Image>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
