@@ -688,7 +688,7 @@ export default function About() {
             </div>
           </div>
           <div css={singleTestimonialContainer}>
-            <div css={testimonialHeading}>Marie-Luise Brand </div>
+            <div css={testimonialHeading}>Marie-Luise Brand, BA </div>
             <div css={portraitContainer}>
               <img
                 src="/images/brand.png"
@@ -711,7 +711,7 @@ export default function About() {
             </div>
           </div>
           <div css={singleTestimonialContainer}>
-            <div css={testimonialHeading}>Mag. Thomas Wörndl</div>
+            <div css={testimonialHeading}>Mag. (FH) Thomas Wörndl, MSc</div>
             <div css={portraitContainer}>
               <img
                 src="/images/woerndl.png"
