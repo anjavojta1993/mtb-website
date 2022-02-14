@@ -710,6 +710,30 @@ export default function About() {
               garantieren.&quot;
             </div>
           </div>
+          <div css={singleTestimonialContainer}>
+            <div css={testimonialHeading}>Mag. Thomas Wörndl</div>
+            <div css={portraitContainer}>
+              <img
+                src="/images/woerndl.png"
+                width="200px"
+                height="200px"
+                alt="Portrait von Thomas Wörndl"
+              />
+            </div>
+            <div css={testimonialPosition}>
+              Brand Marketing Manager, Salzburg AG
+            </div>
+            <div css={testimonialText}>
+              &quot;Marlies Brunner begleitet mit langjähriger Expertise und
+              äußerst versierten Fachwissen die Aufbereitung von
+              Bewerbungsunterlagen. Ihre Blick fürs Wesentliche als auch ihr
+              Fingerspitzengefühl verleihen jedem Persönlichkeitsprofil die ganz
+              individuelle Note die es heute braucht um sich von Mitbewerbern zu
+              unterscheiden. Ihre empathische Art sowie wertvollen Insights rund
+              ums Thema Bewerbung machen die gemeinsame Zeit besonders
+              wertvoll.&quot;
+            </div>
+          </div>
         </div>
       </section>
     </Layout>
