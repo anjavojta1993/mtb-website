@@ -7,7 +7,7 @@ import SalzburgerNachrichtenArtikel from '../public/salzburgernachrichten.pdf';
 import {
   h1,
   largeText,
-  lightGrey,
+  lightBlue,
   mediumBlue,
   mediumText,
   normalText,

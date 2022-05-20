@@ -6,7 +6,7 @@ import Layout from '../components/Layout';
 import {
   h1,
   h2,
-  lightGrey,
+  lightBlue,
   mediumBlue,
   mediumText,
   normalText,
@@ -71,7 +71,7 @@ const quoteContainer = css`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f5f5f5;
+  background-color: ${lightBlue};
   height: 20vh;
   width: 100%;
   margin-bottom: 20px;

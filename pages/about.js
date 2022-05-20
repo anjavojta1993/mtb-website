@@ -9,7 +9,7 @@ import {
   darkBlue,
   h1,
   largeText,
-  lightGrey,
+  lightBlue,
   mediumBlue,
   mediumText,
   normalText,
@@ -407,7 +407,7 @@ const quoteContainer = css`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${lightGrey};
+  background-color: ${lightBlue};
   height: 20vh;
   width: 100%;
 `;

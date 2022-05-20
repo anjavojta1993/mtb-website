@@ -9,7 +9,7 @@ import Layout from '../components/Layout';
 import {
   darkBlue,
   h1,
-  lightGrey,
+  lightBlue,
   mediumBlue,
   mediumText,
   normalText,
@@ -216,7 +216,7 @@ const formContainer = css`
 const inputStyles = css`
   display: block;
   width: 100%;
-  background-color: ${lightGrey};
+  background-color: ${lightBlue};
   font-family: Spartan;
   font-size: ${normalText};
   margin-top: 20px;
@@ -232,7 +232,7 @@ const inputStyles = css`
 const textareaStyles = css`
   display: block;
   width: 100%;
-  background-color: ${lightGrey};
+  background-color: ${lightBlue};
   font-family: Spartan;
   font-size: ${normalText};
   margin-top: 20px;

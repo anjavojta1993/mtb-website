@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
-import { darkBlue, lightGrey, normalText } from '../styles/sharedStyles';
+import { darkBlue, lightBlue, normalText } from '../styles/sharedStyles';
 
 const pageContainer = css`
   display: flex;

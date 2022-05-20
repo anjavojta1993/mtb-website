@@ -242,7 +242,7 @@ export default function Hero() {
   return (
     <>
       <Head>
-        <title>Systemisches Coaching im Beruf</title>
+        <title>Businesscoaching</title>
         <meta
           name="description"
           content="Einstieg – Aufstieg – Orientierung – Veränderung – Neustart. Beratung und Begleitung in jeder Phase
@@ -251,7 +251,7 @@ export default function Hero() {
       </Head>
       <div css={pageContainer}>
         <div css={heroContainer}>
-          <div css={heroHeadingContainer}>Systemisches Coaching im Beruf</div>
+          <div css={heroHeadingContainer}>Businesscoaching</div>
           <div css={heroSubheadingContainerItalic}>
             <i>Einstieg – Aufstieg – Orientierung – Veränderung – Neustart</i>
           </div>
