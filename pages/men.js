@@ -273,11 +273,9 @@ export default function OfferMen() {
               <li>Wie gehe ich es an?</li>
               <li>Wann ist der richtige Zeitpunkt dafür?</li>
               <li>Wohin und in welchem Ausmaß verändere ich mich?</li>
-              <li>
-                Unterstützung bei der Erarbeitung von beruflichen
-                Zukunftsperspektiven
-              </li>
             </ul>
+            Unterstützung bei der Erarbeitung von beruflichen
+            Zukunftsperspektiven.
           </div>
         </div>
         <div css={horizontalLine} />
@@ -311,11 +309,9 @@ export default function OfferMen() {
                 Auf welchen beruflichen Netzwerken bin ich zu finden und wie
                 präsentiere ich mich dort?
               </li>
-              <li>
-                Unterstützung bei der Erarbeitung von beruflichen
-                Zukunftsperspektiven
-              </li>
             </ul>
+            Unterstützung bei der Erarbeitung von beruflichen
+            Zukunftsperspektiven.
           </div>
         </div>
         <Link href="/contact/">

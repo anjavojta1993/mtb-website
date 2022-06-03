@@ -276,8 +276,11 @@ const itemHeadingAppointment = css`
   font-size: ${mediumText};
   font-weight: 700;
   letter-spacing: 1.5px;
-  padding: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
   margin-top: 20px;
+  margin-bottom: 0px;
   height: auto;
   width: 100%;
   //background-color: green;

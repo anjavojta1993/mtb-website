@@ -318,11 +318,10 @@ export default function OfferWomen() {
               <li>Wie gehe ich es an?</li>
               <li>Wann ist der richtige Zeitpunkt dafür?</li>
               <li>Wohin verändere ich mich?</li>
-              <li>
-                Unterstützung bei der Erarbeitung von beruflichen
-                Zukunftsperspektiven
-              </li>
             </ul>
+            Unterstützung bei der Erarbeitung von beruflichen
+            Zukunftsperspektiven.
+            <br />
             <br />
             Sie hatten eine berufliche Auszeit (Kinder- oder Bildungskarenz oder
             anders) und denken an eine <b>Rückkehr in die Arbeitswelt</b>
@@ -331,11 +330,9 @@ export default function OfferWomen() {
               <li>Ist dieser Wunsch schon realisierbar?</li>
               <li>Was hindert mich darin?</li>
               <li>Was wird von mir erwartet?</li>
-              <li>
-                Definieren von beruflichen Wünschen und Konkretisieren von
-                ersten Umsetzungsschritten
-              </li>
             </ul>
+            Definieren von beruflichen Wünschen und Konkretisieren von ersten
+            Umsetzungsschritten.
           </div>
         </div>
         <div css={horizontalLine} />
@@ -363,11 +360,9 @@ export default function OfferWomen() {
               <li>Wie gestalte ich meine Unterlagen?</li>
               <li>Auf welche beruflichen Netzwerke soll ich gehen?</li>
               <li>Wie präsentiere ich mich interessant für die Arbeitswelt?</li>
-              <li>
-                Verbesserung des Selbstmarketings und Planung der schrittweisen
-                Vorgangsweise
-              </li>
             </ul>
+            Verbesserung des Selbstmarketings und Planung der schrittweisen
+            Vorgangsweise
           </div>
         </div>
         <Link href="/contact/">

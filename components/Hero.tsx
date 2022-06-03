@@ -251,7 +251,10 @@ export default function Hero() {
       </Head>
       <div css={pageContainer}>
         <div css={heroContainer}>
-          <div css={heroHeadingContainer}>Businesscoaching</div>
+          <div css={heroHeadingContainer}>
+            Business- <br />
+            und Karrierecoaching
+          </div>
           <div css={heroSubheadingContainerItalic}>
             <i>Einstieg – Aufstieg – Orientierung – Veränderung – Neustart</i>
           </div>
