@@ -242,7 +242,7 @@ export default function Hero() {
   return (
     <>
       <Head>
-        <title>Businesscoaching</title>
+        <title>Business- und Karrierecoaching</title>
         <meta
           name="description"
           content="Einstieg – Aufstieg – Orientierung – Veränderung – Neustart. Beratung und Begleitung in jeder Phase
