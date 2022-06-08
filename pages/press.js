@@ -3,6 +3,7 @@ import { css } from '@emotion/react';
 import Head from 'next/head';
 import Layout from '../components/Layout';
 import DieBestenArtikel from '../public/diebesten.pdf';
+import DieBestenArtikel2 from '../public/diebesten2.pdf';
 import SalzburgerNachrichtenArtikel from '../public/salzburgernachrichten.pdf';
 import {
   h1,
@@ -81,6 +82,28 @@ const singleItemContainer = css`
   height: auto;
   margin-left: 80px;
   margin-right: 80px;
+
+  @media (max-width: 540px) {
+    img {
+      width: 80vw;
+    }
+  }
+`;
+
+const singleItemContainerNew = css`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 35%;
+  height: auto;
+  margin-left: 80px;
+  margin-right: 80px;
+  align-self: left;
+
+  img {
+    border: 1px solid black;
+  }
 
   @media (max-width: 540px) {
     img {
@@ -227,6 +250,24 @@ export default function Press() {
               Jetzt lesen
             </button>
           </div>
+        </div>
+        <div css={itemContainer}>
+          <div css={singleItemContainerNew}>
+            <div css={itemHeading}>Die Besten</div>
+            <img
+              src="/images/diebesten2.png"
+              alt="Ausschnitt aus Artikel aus Die Besten mit Mag. Marlies Theres Brunner"
+            />
+            <button
+              css={buttonStylesBlue}
+              onClick={() => {
+                handleDownload(DieBestenArtikel2, 'diebesten2.pdf');
+              }}
+            >
+              Jetzt lesen
+            </button>
+          </div>
+          <div css={singleItemContainerNew}></div>
         </div>
       </section>
     </Layout>
