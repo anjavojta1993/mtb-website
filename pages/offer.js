@@ -89,6 +89,16 @@ const quoteContainer = css`
   width: 100%;
 `;
 
+const phoneStyles = css`
+  a,
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration: none;
+    color: inherit;
+  }
+`;
+
 const itemContainer = css`
   display: flex;
   justify-content: center;
@@ -406,7 +416,10 @@ export default function Offer() {
             </div>
             <div css={buttonStylesBluePhone}>
               <div css={iconContainer}>
-                <FiPhone size={22} /> <span>+43 664 3309622</span>
+                <FiPhone size={22} />{' '}
+                <span css={phoneStyles}>
+                  <a href="tel:+436643309622">+43 664 3309622</a>
+                </span>
               </div>
             </div>
           </div>
