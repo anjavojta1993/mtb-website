@@ -401,8 +401,8 @@ export default function Offer() {
               Erstgespräch
             </div>
             <div css={itemAppointmentStyles}>
-              Gerne können wir unverbindlich und kostenlos <br />
-              über Ihr Anliegen sprechen. Rufen Sie mich an!
+              Gerne können wir unverbindlich und kostenlos über Ihr Anliegen
+              sprechen. Rufen Sie mich an!
             </div>
             <div css={buttonStylesBluePhone}>
               <div css={iconContainer}>

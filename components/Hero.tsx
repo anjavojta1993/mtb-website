@@ -21,7 +21,7 @@ const pageContainer = css`
   align-items: center;
   justify-content: center;
   display: flex;
-  background-image: url('images/title_photo.png');
+  background-image: url('images/title_photo_new.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

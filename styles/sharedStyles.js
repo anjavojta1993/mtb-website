@@ -1,7 +1,7 @@
 // Color Palette
 
 export const lightBlue = '#c3dce9';
-export const lightGrey = '#d9d9d9';
+export const lightGrey = '#a8a8a8';
 export const mediumBlue = '#2A6F97';
 export const darkBlue = '#012A4A';
 

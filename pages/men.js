@@ -257,7 +257,7 @@ export default function OfferMen() {
           <div css={leftContainer}>
             <img
               src="/images/visionmen.jpg"
-              alt="Mitteljähriger Herr steht an Geländer in einem Saal und blickt ins Weite"
+              alt="Mitteljähriger Herr sitzt an Holz Bürotisch mit Laptop und Handy am Ohr und telefoniert lächelnd"
             />
           </div>
           <div css={itemText}>
@@ -283,8 +283,8 @@ export default function OfferMen() {
         <div css={itemContainer}>
           <div css={leftContainer}>
             <img
-              src="/images/neustart.png"
-              alt="Älterer Herr mit Brille sitzt auf weißen Sofa und sieht sich Unterlagen an "
+              src="/images/neustart.jpg"
+              alt="Älterer Herr mit Brille sitzt in einem Café an Tisch und blickt in seinen Laptop "
             />
           </div>
           <div css={itemText}>
