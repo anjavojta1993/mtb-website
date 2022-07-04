@@ -247,9 +247,9 @@ export default function OfferMen() {
         </div>
         <div css={quoteContainer}>
           <div css={quoteStyles}>
-            &quot;Du kannst nicht zurückgehen und den Anfang ändern, aber du
-            kannst neu starten, von dort, <br />
-            wo du gerade bist und das Ende beeinflussen (C.S. Lewis).&quot;
+            &quot;Berufliche Flaute? Bei einer vermeintlichen beruflichen
+            „Windstille“ musst du oft nur die Segel anders setzen <br />
+            und schon nimmst du wieder Fahrt auf!&quot;
           </div>
         </div>
         <div css={containerHeadingLeft}>Vision</div>
