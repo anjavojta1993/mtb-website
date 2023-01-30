@@ -4,7 +4,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Layout from '../components/Layout';
-import Portrait from '../public/images/portrait.png';
+import Portrait from '../public/images/portrait_neu.png';
 import {
   darkBlue,
   h1,
@@ -13,6 +13,7 @@ import {
   mediumBlue,
   mediumText,
   normalText,
+  smallText,
 } from '../styles/sharedStyles';
 
 const pageContainer = css`
@@ -57,7 +58,7 @@ const aboutContainer = css`
   padding-top: 20px;
   //background-color: red;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1024px) {
     flex-direction: column;
   }
 `;
@@ -69,7 +70,7 @@ const leftContainer = css`
   justify-content: center;
   height: 80vh;
   align-items: center;
-  //background-color: green;
+  background-color: green;
   margin-bottom: 50px;
   margin-top: 20px;
 
@@ -82,30 +83,34 @@ const leftContainer = css`
 
 const leftContainerHeading = css`
   display: flex;
+  position: absolute;
+  top: 20%;
+  z-index: 2;
   width: 100%;
   justify-content: center;
   height: 10vh;
   align-items: center;
-  font-size: ${mediumText};
+  font-size: ${smallText};
   font-weight: 700;
   //background-color: purple;
 
   @media (max-width: 1024px) {
     font-size: 1rem;
+    position: relative;
   }
 `;
 
 const rightContainer = css`
   display: flex;
   margin-top: 20px;
+  position: relative;
   //margin-left: 20px;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  width: 65%;
-  height: auto;
+  width: 90%;
+  min-height: 1000px;
   margin-bottom: 50px;
-  margin-right: 20px;
   //background-color: yellow;
 
   li {
@@ -114,6 +119,7 @@ const rightContainer = css`
 
   @media (max-width: 1200px) {
     width: 100%;
+    margin-top: 0px;
   }
 
   @media (max-width: 780px) {
@@ -124,19 +130,28 @@ const rightContainer = css`
 
 const containerLeftUpperCorner = css`
   flex-direction: column;
+  position: absolute;
+  margin-bottom: 20px;
+  top: 0;
+  left: 0;
   padding: 10px;
   border-radius: 10px 40px;
-  width: 45%;
+  width: 40%;
   height: 450px;
   box-shadow: 0 7px 17px rgb(0 0 0 / 13%);
-  background-color: ${darkBlue};
+  background-color: ${mediumBlue};
   color: white;
 
   @media (max-width: 1024px) {
+    position: relative;
+    margin-bottom: 0px;
     width: 100%;
     height: auto;
     border-radius: 0px;
     order: 1;
+    margin-top: 20px;
+    box-shadow: none;
+    border-bottom: 1px solid ${darkBlue};
   }
 
   @media (max-width: 780px) {
@@ -146,22 +161,27 @@ const containerLeftUpperCorner = css`
 `;
 
 const containerRightUpperCorner = css`
+  position: absolute;
+  top: 0;
+  right: 0;
   border-radius: 40px 10px;
-  margin-left: 10px;
   box-shadow: 0 7px 17px rgb(0 0 0 / 13%);
   flex-direction: column;
   padding: 10px;
-  width: 45%;
+  width: 40%;
   height: 450px;
   background-color: ${mediumBlue};
   color: white;
 
   @media (max-width: 1024px) {
+    position: relative;
     width: 100%;
     height: auto;
     border-radius: 0px;
     margin: 0px;
     order: 2;
+    box-shadow: none;
+    border-bottom: 1px solid ${darkBlue};
   }
 
   @media (max-width: 780px) {
@@ -171,23 +191,29 @@ const containerRightUpperCorner = css`
 `;
 
 const containerRightBottomCorner = css`
+  position: absolute;
+  bottom: 0;
+  right: 0;
   border-radius: 10px 40px;
   box-shadow: 0 7px 17px rgb(0 0 0 / 13%);
   margin-top: 10px;
   flex-direction: column;
   margin-left: 10px;
   padding: 10px;
-  width: 45%;
+  width: 40%;
   height: 450px;
-  background-color: ${darkBlue};
+  background-color: ${mediumBlue};
   color: white;
 
   @media (max-width: 1024px) {
+    position: relative;
     width: 100%;
     height: auto;
     border-radius: 0px;
     margin: 0px;
     order: 3;
+    box-shadow: none;
+    border-bottom: 1px solid ${darkBlue};
   }
 
   @media (max-width: 780px) {
@@ -197,28 +223,33 @@ const containerRightBottomCorner = css`
 `;
 
 const containerLeftBottomCorner = css`
+  position: absolute;
+  bottom: 0;
+  left: 0;
   border-radius: 40px 10px;
   box-shadow: 0 7px 17px rgb(0 0 0 / 13%);
   margin-top: 10px;
   flex-direction: column;
   padding: 10px;
-  width: 45%;
+  width: 40%;
   height: 450px;
   background-color: ${mediumBlue};
   color: white;
 
   @media (max-width: 1024px) {
+    position: relative;
     width: 100%;
     height: auto;
     border-radius: 0px;
     margin: 0px;
     order: 4;
+    box-shadow: none;
+    padding-bottom: 30px;
   }
 
   @media (max-width: 780px) {
     font-size: 0.75rem;
     margin-bottom: 0px;
-    margin-bottom: 20px;
   }
 `;
 
@@ -231,7 +262,7 @@ const testimonialContainer = css`
   height: auto;
   align-items: flex-start;
   background-color: ${darkBlue};
-  padding-top: 20px;
+  margin-bottom: 20px;
 
   @media (max-width: 1024px) {
     flex-flow: row wrap;
@@ -407,13 +438,14 @@ const quoteContainer = css`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${lightBlue};
+  background-color: ${darkBlue};
   height: 20vh;
   width: 100%;
 `;
 
 const quoteStyles = css`
   margin: 10px;
+  color: white;
   padding: 10px;
   align-content: center;
   font-size: ${mediumText};
@@ -430,9 +462,15 @@ const quoteStyles = css`
 `;
 
 const aboutPortraitContainer = css`
-  @media (max-width: 768px) {
+  position: absolute;
+  top: 30%;
+  z-index: 1;
+  //background-color: green;
+  @media (max-width: 1024px) {
     width: 200px;
     height: 200px;
+    position: relative;
+    top: 0;
   }
 `;
 
@@ -454,22 +492,9 @@ export default function About() {
           </div>
         </div>
         <div css={aboutContainer}>
-          <div css={leftContainer}>
-            <div css={leftContainerHeading}>
-              MAG. MARLIES THERES BRUNNER, MTD
-            </div>
-            <div css={aboutPortraitContainer}>
-              <Image
-                src={Portrait}
-                width="400"
-                height="400"
-                alt="Portrait von Marlies Theres Brunner"
-              ></Image>
-            </div>
-          </div>
           <div css={rightContainer}>
             <div css={containerLeftUpperCorner}>
-              <div css={aboutHeadingLightBlue}>Wer bin ich - beruflich?</div>
+              <div css={aboutHeadingDarkBlue}>Wer bin ich - beruflich?</div>
               <ul>
                 <li>IBWL Studium in Wien – Schwerpunkt Human Resources</li>
                 <li>Masterstudium in Salzburg- HR Training und Entwicklung</li>
@@ -501,6 +526,18 @@ export default function About() {
                 <li>Sehr gern gesellig mit Freunden</li>
               </ul>
             </div>
+            <div css={leftContainerHeading}>
+              MAG. MARLIES THERES
+              <br /> BRUNNER, MTD
+            </div>
+            <div css={aboutPortraitContainer}>
+              <Image
+                src={Portrait}
+                width="400"
+                height="400"
+                alt="Portrait von Marlies Theres Brunner"
+              ></Image>
+            </div>
             <div css={containerLeftBottomCorner}>
               <div css={aboutHeadingDarkBlue}>Was zeichnet mich aus?</div>
               <ul>
@@ -511,7 +548,7 @@ export default function About() {
               </ul>
             </div>
             <div css={containerRightBottomCorner}>
-              <div css={aboutHeadingLightBlue}>Was motiviert mich?</div>
+              <div css={aboutHeadingDarkBlue}>Was motiviert mich?</div>
               <ul>
                 <li>
                   Das Selbstbewusstsein zu stärken und die Angst vor neuen

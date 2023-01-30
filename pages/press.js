@@ -6,6 +6,7 @@ import DieBestenArtikel from '../public/diebesten.pdf';
 import DieBestenArtikel2 from '../public/diebesten2.pdf';
 import SalzburgerNachrichtenArtikel from '../public/salzburgernachrichten.pdf';
 import {
+  darkBlue,
   h1,
   largeText,
   lightBlue,
@@ -114,6 +115,7 @@ const singleItemContainerNew = css`
 
 const itemHeading = css`
   display: flex;
+  color: ${darkBlue};
   justify-content: center;
   width: 500px;
   padding-top: 50px;
@@ -135,7 +137,7 @@ const buttonStylesBlue = css`
   margin-top: 50px;
   margin-bottom: 50px;
   color: white;
-  background-color: ${mediumBlue};
+  background-color: ${darkBlue};
   font-size: ${normalText};
   font-weight: 400;
   border-radius: 8px;
@@ -155,7 +157,6 @@ const buttonStylesBlue = css`
     margin-top: 20px;
     margin-bottom: 20px;
     color: white;
-    background-color: ${mediumBlue};
     font-size: 0.75rem;
     font-weight: 400;
     border-radius: 8px;

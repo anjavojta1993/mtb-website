@@ -76,6 +76,7 @@ const heroContainer = css`
 
 const heroHeadingContainer = css`
   font-size: ${h1};
+  color: ${darkBlue};
   text-transform: uppercase;
   font-weight: 700;
   //background-color: yellow;

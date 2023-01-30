@@ -257,7 +257,7 @@ const buttonStylesBlue = css`
   color: white;
   width: 30%;
   align-items: center;
-  background-color: ${mediumBlue};
+  background-color: ${darkBlue};
   font-size: ${normalText};
   font-weight: 400;
   border-radius: 8px;
@@ -277,7 +277,7 @@ const buttonStylesBlue = css`
     margin-top: 10px;
     margin-bottom: 20px;
     color: white;
-    background-color: ${mediumBlue};
+    background-color: ${darkBlue};
     font-size: 0.75rem;
     font-weight: 400;
     border-radius: 8px;

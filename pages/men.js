@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 import {
+  darkBlue,
   h1,
   h2,
   lightBlue,
@@ -25,9 +26,9 @@ const pageContainer = css`
 `;
 
 const horizontalLine = css`
-  border: solid 1px black;
+  border: solid 1px ${darkBlue};
   width: 80%;
-  color: black;
+  color: ${darkBlue};
   height: 1px;
   margin-bottom: 20px;
 `;
@@ -71,7 +72,7 @@ const quoteContainer = css`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${lightBlue};
+  background-color: ${darkBlue};
   height: 20vh;
   width: 100%;
   margin-bottom: 20px;
@@ -79,6 +80,7 @@ const quoteContainer = css`
 
 const quoteStyles = css`
   margin: 10px;
+  color: white;
   padding: 10px;
   align-content: center;
   font-size: ${mediumText};
@@ -135,7 +137,26 @@ const leftContainer = css`
   }
 `;
 
+const containerQuoteStyles = css`
+  display: flex;
+  color: ${darkBlue};
+  margin-bottom: 20px;
+  justify-content: flex-start;
+  font-weight: 700;
+  width: 80%;
+  letter-spacing: 1.5px;
+  @media (max-width: 780px) {
+    margin-bottom: 10px;
+
+    @media (max-width: 780px) {
+      font-weight: 500;
+      font-size: 12px;
+    }
+  }
+`;
+
 const itemText = css`
+  //text-align: justify;
   padding-left: 30px;
   margin-left: 10px;
   font-size: ${normalText};
@@ -147,13 +168,14 @@ const itemText = css`
 
   @media (max-width: 540px) {
     font-size: 0.75rem;
-    padding-left: 10px;
+    padding-left: 0px;
     width: 90%;
     margin-top: 20px;
+    margin-left: 0px;
   }
 
   @media (max-width: 1024px) {
-    padding-left: 10px;
+    padding-left: 0px;
     width: 90%;
     margin-top: 20px;
   }
@@ -161,9 +183,10 @@ const itemText = css`
 
 const containerHeadingLeft = css`
   display: flex;
+  color: ${darkBlue};
   justify-content: flex-start;
   padding-top: 20px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   font-size: ${h2};
   text-transform: uppercase;
   font-weight: 700;
@@ -177,6 +200,7 @@ const containerHeadingLeft = css`
 
 const containerHeadingRight = css`
   display: flex;
+  color: ${darkBlue};
   justify-content: flex-end;
   padding-top: 20px;
   padding-bottom: 30px;
@@ -197,7 +221,7 @@ const buttonStylesBlue = css`
   margin-top: 50px;
   margin-bottom: 50px;
   color: white;
-  background-color: ${mediumBlue};
+  background-color: ${darkBlue};
   font-size: ${normalText};
   font-weight: 400;
   border-radius: 8px;
@@ -217,7 +241,6 @@ const buttonStylesBlue = css`
     margin-top: 10px;
     margin-bottom: 20px;
     color: white;
-    background-color: ${mediumBlue};
     font-size: 0.75rem;
     font-weight: 400;
     border-radius: 8px;
@@ -253,6 +276,9 @@ export default function OfferMen() {
           </div>
         </div>
         <div css={containerHeadingLeft}>Vision</div>
+        <div css={containerQuoteStyles}>
+          <i>&quot;Was wir heute nicht träumen, wird morgen nicht wahr&quot;</i>
+        </div>
         <div css={itemContainer}>
           <div css={leftContainer}>
             <img
@@ -279,7 +305,13 @@ export default function OfferMen() {
           </div>
         </div>
         <div css={horizontalLine} />
-        <div css={containerHeadingRight}>Neustart</div>
+        <div css={containerHeadingLeft}>Neustart</div>
+        <div css={containerQuoteStyles}>
+          <i>
+            &quot;Ein kurzes Innehalten ist wichtig vor einem neuen
+            Anlauf.&quot;
+          </i>
+        </div>
         <div css={itemContainer}>
           <div css={leftContainer}>
             <img
@@ -288,12 +320,6 @@ export default function OfferMen() {
             />
           </div>
           <div css={itemText}>
-            <i>
-              &quot;Ein kurzes Innehalten ist wichtig vor einem neuen
-              Anlauf.&quot;
-            </i>
-            <br />
-            <br />
             Ihre solide berufliche Ist-Situation ist aus diversen Gründen ins
             Schwanken geraten und Sie müssen sich jetzt neu orientieren.
             <br />

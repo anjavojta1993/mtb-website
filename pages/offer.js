@@ -84,7 +84,7 @@ const quoteContainer = css`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${lightBlue};
+  background-color: ${darkBlue};
   height: 20vh;
   width: 100%;
 `;
@@ -227,6 +227,7 @@ const offerContainer = css`
 
 const quoteStyles = css`
   margin: 10px;
+  color: white;
   padding: 10px;
   align-content: center;
   font-size: ${mediumText};
