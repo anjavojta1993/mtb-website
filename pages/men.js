@@ -76,6 +76,11 @@ const quoteContainer = css`
   height: 20vh;
   width: 100%;
   margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    height: auto;
+    padding: 20px;
+  }
 `;
 
 const quoteStyles = css`

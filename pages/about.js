@@ -441,6 +441,11 @@ const quoteContainer = css`
   background-color: ${darkBlue};
   height: 20vh;
   width: 100%;
+
+  @media (max-width: 768px) {
+    height: auto;
+    padding: 20px;
+  }
 `;
 
 const quoteStyles = css`
