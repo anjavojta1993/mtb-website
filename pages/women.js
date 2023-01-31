@@ -288,9 +288,9 @@ export default function OfferWomen() {
         </div>
         <div css={quoteContainer}>
           <div css={quoteStyles}>
-            &quot;Das (Berufs-)Leben ist wie eine spannende Reise, das erforscht
-            werden will, <br />
-            aber bestimmt kein Problem, das gelöst werden muss.&quot;
+            &quot;Das (Berufs-)Leben ist wie eine spannende Reise, <br />
+            das erforscht werden will, aber bestimmt kein Problem, das gelöst
+            werden muss.&quot;
           </div>
         </div>
         <div css={containerHeadingLeft}>Vision</div>
