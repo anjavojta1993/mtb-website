@@ -33,7 +33,7 @@ const heroContainer = css`
   align-items: center;
   justify-content: center;
   display: flex;
-  background-image: url('images/women_new.png');
+  background-image: url('images/women_neu.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
