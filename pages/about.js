@@ -439,13 +439,9 @@ const quoteContainer = css`
   justify-content: center;
   align-items: center;
   background-color: ${darkBlue};
-  height: 20vh;
+  height: auto;
+  padding: 20px;
   width: 100%;
-
-  @media (max-width: 768px) {
-    height: auto;
-    padding: 20px;
-  }
 `;
 
 const quoteStyles = css`
