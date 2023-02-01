@@ -21,7 +21,7 @@ const pageContainer = css`
   align-items: center;
   justify-content: center;
   display: flex;
-  background-image: url('images/title_photo_new.png');
+  background-image: url('images/title_photo_blue.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -158,7 +158,7 @@ const buttonStylesBlue = css`
   margin-right: 5%;
   margin-top: 40px;
   color: white;
-  background-color: ${mediumBlue};
+  background-color: ${darkBlue};
   font-size: ${normalText};
   font-weight: 400;
   border-radius: 8px;
