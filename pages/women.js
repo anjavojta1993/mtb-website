@@ -313,8 +313,12 @@ export default function OfferWomen() {
             <br />
             <b>Einstieg</b>
             <ul>
+              <li>Wie mache ich auf mich aufmerksam?</li>
               <li>Wie gestalte ich meine Unterlagen?</li>
-              <li>Auf welche beruflichen Netzwerke soll ich gehen?</li>
+              <li>
+                Auf welchen beruflichen Netzwerken soll ich präsent sein und wie
+                präsentiere ich mich dort?
+              </li>
               <li>Wie laufen die Bewerbungsgespräche ab?</li>
               <li>Mit welchen Fragen darf ich rechnen?</li>
             </ul>
@@ -340,7 +344,11 @@ export default function OfferWomen() {
             <ul>
               <li>Wie gehe ich es an?</li>
               <li>Wann ist der richtige Zeitpunkt dafür?</li>
-              <li>Wohin verändere ich mich?</li>
+              <li>Wie verändere ich mich und wohin?</li>
+              <li>
+                Ist mein Weg der richtige und schlage ich ihn zum rechten
+                Zeitpunkt ein?
+              </li>
             </ul>
             Unterstützung bei der Erarbeitung von beruflichen
             Zukunftsperspektiven.
@@ -349,10 +357,11 @@ export default function OfferWomen() {
             Sie hatten eine berufliche Auszeit (Kinder- oder Bildungskarenz oder
             anders) und denken an eine <b>Rückkehr in die Arbeitswelt</b>
             <ul>
-              <li>Bin ich schon bereit?</li>
+              <li>Sind ich und mein Umfeld schon bereit?</li>
               <li>Ist dieser Wunsch schon realisierbar?</li>
-              <li>Was hindert mich darin?</li>
               <li>Was wird von mir erwartet?</li>
+              <li>Was lässt mich noch zögern?</li>
+              <li>Was hindert mich darin?</li>
             </ul>
             Definieren von beruflichen Wünschen und Konkretisieren von ersten
             Umsetzungsschritten.
@@ -380,13 +389,18 @@ export default function OfferWomen() {
             <br />
             <b>Orientierung - Wiedereinstieg</b>
             <ul>
-              <li>Wie gehe ich es an?</li>
-              <li>Wie gestalte ich meine Unterlagen?</li>
-              <li>Auf welche beruflichen Netzwerke soll ich gehen?</li>
-              <li>Wie präsentiere ich mich interessant für die Arbeitswelt?</li>
+              <li>Bin ich bereit?</li>
+              <li>
+                Wie gestalte ich meine Unterlagen aussagekräftig und wie gehe
+                ich mit Lücken um?
+              </li>
+              <li>Wie mache ich mich interessant für die Arbeitswelt?</li>
+              <li>Wo und wie finde ich die richtige Stelle für mich?</li>
+              <li>Wie werde ich gefunden?</li>
             </ul>
-            Verbesserung des Selbstmarketings und Planung der schrittweisen
-            Vorgangsweise
+            Verbesserung des Selbstmarketings, Planung der schrittweisen
+            Vorgangsweise und müheloses und selbstbewusstes Präsentieren der
+            eigenen Kompetenzen.
           </div>
         </div>
         <Link href="/contact/">

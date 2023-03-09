@@ -297,12 +297,14 @@ export default function OfferMen() {
             <br />
             <b>Umstieg - Aufstieg</b>
             <ul>
+              <li>Karriereplanung und Weiterentwicklung definieren</li>
               <li>Wie gehe ich es an?</li>
               <li>Wann ist der richtige Zeitpunkt dafür?</li>
               <li>Wohin und in welchem Ausmaß verändere ich mich?</li>
+              <li>Wie und wann möchte ich mein Ziel erreichen?</li>
             </ul>
-            Unterstützung bei der Erarbeitung von beruflichen
-            Zukunftsperspektiven.
+            Unterstützung bei der Erarbeitung Ihrer beruflichen
+            Zukunftsperspektive.
           </div>
         </div>
         <div css={horizontalLine} />
@@ -331,11 +333,12 @@ export default function OfferMen() {
               <li>
                 Welche Chance ergibt sich aus meiner bisherigen Erfahrung?
               </li>
-              <li>Wie gehe ich es an?</li>
+              <li>Wie gehe ich es an, mich neu zu orientieren?</li>
               <li>
                 Auf welchen beruflichen Netzwerken bin ich zu finden und wie
                 präsentiere ich mich dort?
               </li>
+              <li>Wie mache ich auf mich aufmerksam und steche hervor?</li>
             </ul>
             Unterstützung bei der Erarbeitung von beruflichen
             Zukunftsperspektiven.
