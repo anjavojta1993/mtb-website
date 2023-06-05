@@ -171,6 +171,50 @@ const itemText = css`
 //   }
 // `;
 
+const wrapperContainer = css`
+  display: flex;
+  flex-direction: column;
+  //background-color: green;
+
+  > span {
+    line-height: 2;
+  }
+`;
+
+const infoContainer = css`
+  align-items: center;
+  text-align: left;
+  display: flex;
+  //background-color: red;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 50px;
+  padding-top: 30px;
+  width: auto;
+  height: auto;
+  border: 1px black solid;
+  margin-bottom: 40px;
+
+  @media (max-width: 1024px) {
+    //width: 70%;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 780px) {
+    width: 80vw;
+    align-items: center;
+    text-align: left;
+  }
+
+  @media (max-width: 540px) {
+    width: 80vw;
+    font-size: 0.75rem;
+    padding: 20px;
+    align-items: center;
+    text-align: left;
+  }
+`;
+
 const containerHeadingLeft = css`
   display: flex;
   color: ${darkBlue};
@@ -226,8 +270,8 @@ const containerQuoteStyles = css`
 const buttonStylesBlue = css`
   display: inline-block;
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  //margin-top: 0px;
+  margin-bottom: 20px;
   color: white;
   background-color: ${darkBlue};
   font-size: ${normalText};
@@ -247,7 +291,7 @@ const buttonStylesBlue = css`
   @media (max-width: 540px) {
     display: inline-block;
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: white;
     font-size: 0.75rem;
     font-weight: 400;
@@ -293,7 +337,7 @@ export default function OfferWomen() {
             werden muss.&quot;
           </div>
         </div>
-        <div css={containerHeadingLeft}>Vision</div>
+        <div css={containerHeadingLeft}>Berufseinstieg</div>
         <div css={containerQuoteStyles}>
           <i>&quot;Was wir heute nicht träumen, wird morgen nicht wahr&quot;</i>
         </div>
@@ -327,7 +371,7 @@ export default function OfferWomen() {
           </div>
         </div>
         <div css={horizontalLine} />
-        <div css={containerHeadingLeft}>Realität &amp; Vision</div>
+        <div css={containerHeadingLeft}>Aufstieg-Umstieg-Rückkehr</div>
         <div css={containerQuoteStyles}>
           <i>&quot;Gesteckte Ziele dürfen wahr werden&quot;</i>
         </div>
@@ -368,9 +412,7 @@ export default function OfferWomen() {
           </div>
         </div>
         <div css={horizontalLine} />
-        <div css={containerHeadingLeft}>
-          Rückschau &amp; Realität &amp; Vision
-        </div>
+        <div css={containerHeadingLeft}>Neuorientierung</div>
         <div css={containerQuoteStyles}>
           <i>&quot;Mit frischem Wind zum neuen Ziel&quot;</i>
         </div>
@@ -403,9 +445,16 @@ export default function OfferWomen() {
             eigenen Kompetenzen.
           </div>
         </div>
-        <Link href="/contact/">
-          <a css={buttonStylesBlue}>Infogespräch vereinbaren</a>
-        </Link>
+        <div css={infoContainer}>
+          <div css={wrapperContainer}>
+            <Link href="/contact/">
+              <a css={buttonStylesBlue}>Infogespräch vereinbaren</a>
+            </Link>
+            <span>&#10003; Austausch über Ihre Situation</span>
+            <span>&#10003; Individuelles Coaching Angebot</span>
+            <span>&#10003; Nächste Schritte & Terminvereinbarung</span>
+          </div>
+        </div>
       </section>
     </Layout>
   );

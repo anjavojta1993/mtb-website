@@ -13,6 +13,50 @@ import {
   normalText,
 } from '../styles/sharedStyles';
 
+const wrapperContainer = css`
+  display: flex;
+  flex-direction: column;
+  //background-color: green;
+
+  > span {
+    line-height: 2;
+  }
+`;
+
+const infoContainer = css`
+  align-items: center;
+  text-align: left;
+  display: flex;
+  //background-color: red;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 50px;
+  padding-top: 30px;
+  width: auto;
+  height: auto;
+  border: 1px black solid;
+  margin-bottom: 40px;
+
+  @media (max-width: 1024px) {
+    //width: 70%;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 780px) {
+    width: 80vw;
+    align-items: center;
+    text-align: left;
+  }
+
+  @media (max-width: 540px) {
+    width: 80vw;
+    font-size: 0.75rem;
+    padding: 20px;
+    align-items: center;
+    text-align: left;
+  }
+`;
+
 const pageContainer = css`
   display: flex;
   flex-direction: column;
@@ -219,8 +263,8 @@ const containerHeadingRight = css`
 const buttonStylesBlue = css`
   display: inline-block;
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  //margin-top: 0px;
+  margin-bottom: 20px;
   color: white;
   background-color: ${darkBlue};
   font-size: ${normalText};
@@ -240,7 +284,7 @@ const buttonStylesBlue = css`
   @media (max-width: 540px) {
     display: inline-block;
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: white;
     font-size: 0.75rem;
     font-weight: 400;
@@ -276,7 +320,7 @@ export default function OfferMen() {
             und schon nimmst du wieder Fahrt auf!&quot;
           </div>
         </div>
-        <div css={containerHeadingLeft}>Vision</div>
+        <div css={containerHeadingLeft}>Entwicklung</div>
         <div css={containerQuoteStyles}>
           <i>&quot;Was wir heute nicht träumen, wird morgen nicht wahr&quot;</i>
         </div>
@@ -344,9 +388,16 @@ export default function OfferMen() {
             Zukunftsperspektiven.
           </div>
         </div>
-        <Link href="/contact/">
-          <a css={buttonStylesBlue}>Infogespräch vereinbaren</a>
-        </Link>
+        <div css={infoContainer}>
+          <div css={wrapperContainer}>
+            <Link href="/contact/">
+              <a css={buttonStylesBlue}>Infogespräch vereinbaren</a>
+            </Link>
+            <span>&#10003; Austausch über Ihre Situation</span>
+            <span>&#10003; Individuelles Coaching Angebot</span>
+            <span>&#10003; Nächste Schritte & Terminvereinbarung</span>
+          </div>
+        </div>
       </section>
     </Layout>
   );

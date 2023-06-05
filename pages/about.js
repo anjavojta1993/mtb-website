@@ -262,7 +262,6 @@ const testimonialContainer = css`
   height: auto;
   align-items: flex-start;
   background-color: ${darkBlue};
-  margin-bottom: 20px;
 
   @media (max-width: 1024px) {
     flex-flow: row wrap;

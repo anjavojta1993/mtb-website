@@ -84,12 +84,12 @@ export default function HeaderRightNav(props) {
       </Link>
       <Link href="/women">
         <a>
-          <li>Frauen fördern</li>
+          <li>Für Frauen</li>
         </a>
       </Link>
       <Link href="/men">
         <a>
-          <li>Männer stärken</li>
+          <li>Für Männer</li>
         </a>
       </Link>
       <Link href="/press">
