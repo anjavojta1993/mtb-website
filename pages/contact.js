@@ -1,11 +1,13 @@
 import { css } from '@emotion/react';
 import Head from 'next/head';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { FiPhone } from 'react-icons/fi';
 import { GoLocation } from 'react-icons/go';
 import { HiOutlineMailOpen } from 'react-icons/hi';
 import Layout from '../components/Layout';
+import Portrait from '../public/images/portrait_neu.png';
 import {
   darkBlue,
   h1,
@@ -25,6 +27,15 @@ const pageContainer = css`
     position: relative;
     margin-top: 120px;
   }
+`;
+
+const portraitContainer = css`
+  display: flex;
+  width: 70%;
+  height: 30%;
+  margin-bottom: 20px;
+  //background-color: yellow;
+  justify-content: center;
 `;
 
 const heroContainer = css`
@@ -66,7 +77,7 @@ const leftContainer = css`
   display: flex;
   flex-direction: column;
   width: 60%;
-  height: 100vh;
+  height: 100%;
   align-items: center;
   padding-top: 40px;
   //background-color: green;
@@ -76,6 +87,12 @@ const leftContainer = css`
     text-align: center;
     align-items: center;
     margin-top: 50px;
+    font-size: ${mediumText};
+  }
+
+  p {
+    margin-bottom: 30px;
+    font-weight: bold italic;
     font-size: ${mediumText};
   }
 
@@ -98,7 +115,7 @@ const rightContainer = css`
   background-color: ${darkBlue};
   color: white;
   width: 40%;
-  height: 100vh;
+  height: auto;
   align-items: center;
   padding-top: 40px;
 
@@ -205,6 +222,7 @@ const formContainer = css`
   flex-direction: column;
   //background-color: red;
   width: 70%;
+  height: 70%;
 
   @media (max-width: 540px) {
     label {
@@ -248,7 +266,7 @@ const textareaStyles = css`
 const buttonStylesBlue = css`
   display: flex;
   align-self: center;
-  background-color: yellow;
+  //background-color: yellow;
   border: none;
   text-align: center;
   justify-content: center;
@@ -298,7 +316,7 @@ const buttonStylesBlue = css`
 const buttonStylesMessage = css`
   display: flex;
   align-self: center;
-  background-color: yellow;
+  //background-color: yellow;
   border: none;
   text-align: center;
   justify-content: center;
@@ -404,6 +422,19 @@ export default function Contact() {
                 </div>
                 <button css={buttonStylesBlue}>Senden</button>
               </form>
+              <div css={portraitContainer}>
+                <Image
+                  src={Portrait}
+                  width="400"
+                  height="400"
+                  alt="Portrait von Marlies Theres Brunner"
+                ></Image>
+              </div>
+              <p>
+                <i>
+                  <b>Ich freue mich auf Sie!</b>
+                </i>
+              </p>
             </div>
           ) : (
             <div css={leftContainer}>

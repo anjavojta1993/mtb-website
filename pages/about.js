@@ -4,7 +4,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Layout from '../components/Layout';
-import Portrait from '../public/images/portrait_neu.png';
+import Portrait from '../public/images/about_portrait_new.png';
 import {
   darkBlue,
   h1,

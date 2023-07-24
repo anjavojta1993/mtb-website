@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Layout from '../components/Layout';
 import DieBestenArtikel from '../public/diebesten.pdf';
 import DieBestenArtikel2 from '../public/diebesten2.pdf';
+import DieBestenArtikel3 from '../public/diebesten3.pdf';
 import SalzburgerNachrichtenArtikel from '../public/salzburgernachrichten.pdf';
 import {
   darkBlue,
@@ -100,7 +101,6 @@ const singleItemContainerNew = css`
   height: auto;
   margin-left: 80px;
   margin-right: 80px;
-  align-self: left;
 
   img {
     border: 1px solid black;
@@ -268,7 +268,21 @@ export default function Press() {
               Jetzt lesen
             </button>
           </div>
-          <div css={singleItemContainerNew}></div>
+          <div css={singleItemContainerNew}>
+            <div css={itemHeading}>Die Besten</div>
+            <img
+              src="/images/diebesten3.png"
+              alt="Ausschnitt aus Artikel aus Die Besten mit Mag. Marlies Theres Brunner"
+            />
+            <button
+              css={buttonStylesBlue}
+              onClick={() => {
+                handleDownload(DieBestenArtikel3, 'diebesten3.pdf');
+              }}
+            >
+              Jetzt lesen
+            </button>
+          </div>
         </div>
       </section>
     </Layout>
