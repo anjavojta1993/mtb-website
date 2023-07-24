@@ -34,6 +34,7 @@ const portraitContainer = css`
   width: 70%;
   height: 30%;
   margin-bottom: 20px;
+  margin-top: 10px;
   //background-color: yellow;
   justify-content: center;
 `;
