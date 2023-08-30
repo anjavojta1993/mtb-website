@@ -486,8 +486,7 @@ export default function About() {
         </div>
         <div css={quoteContainer}>
           <div css={quoteStyles}>
-            &quot;So manche vermeintliche Bedrohung ist in Wirklichkeit eine
-            neue Chance. <br />
+            &quot;Sehr oft sind Veränderungen eine neue Chance. <br />
             Man muss sie nur sehen und ergreifen.&quot;
           </div>
         </div>
