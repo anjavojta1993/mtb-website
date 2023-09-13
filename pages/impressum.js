@@ -9,7 +9,7 @@ const pageContainer = css`
   width: 100%;
   align-items: center;
   padding-top: 50px;
-  height: 100%;
+  height: 100vh;
   color: white;
   background-color: ${darkBlue};
 
@@ -79,7 +79,7 @@ export default function Impressum() {
           <br />
           <b>Konzeption, Webdesign & Programmierung:</b>
           <br />
-          Anja Vojta | 1090 Wien | Österreich |
+          Anja VojtA | 1090 Wien | Österreich |
           <Link href="https://www.linkedin.com/in/anja-vojta-2b7141144/">
             <a>LinkedIn</a>
           </Link>

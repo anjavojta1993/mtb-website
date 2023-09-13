@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "start": "next start",
     "build": "next build",
     "postbuild": "next-sitemap",
-    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
@@ -16,7 +16,7 @@
     "axios": "^0.21.4",
     "js-file-download": "^0.4.12",
     "next": "^11.1.4",
-    "react": "17.0.2",
+    "react": "^18.2.0",
     "react-dom": "17.0.2",
     "react-icons": "^4.2.0"
   },
