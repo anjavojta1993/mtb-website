@@ -86,7 +86,7 @@ const leftContainerHeading = css`
   position: absolute;
   top: 20%;
   z-index: 2;
-  width: 100%;
+  width: 500px;
   justify-content: center;
   height: 10vh;
   align-items: center;
@@ -505,8 +505,8 @@ export default function About() {
                 <li>Berufscoach </li>
                 <li>
                   Mentorin bei der{' '}
-                  <Link href="https://www.frauenfachakademie.at">
-                    <a target="blank">Frauen:Fachakademie Schloss Mondsee</a>
+                  <Link href="https://www.frauenfachakademie.at" target="blank">
+                    Frauen:Fachakademie Schloss Mondsee
                   </Link>
                 </li>
                 <li>
@@ -531,11 +531,11 @@ export default function About() {
             </div>
             <div css={aboutPortraitContainer}>
               <Image
-                src={Portrait}
-                width="400"
-                height="400"
+                src={'/images/about_portrait_new.png'}
+                width={400}
+                height={400}
                 alt="Portrait von Marlies Theres Brunner"
-              ></Image>
+              />
             </div>
             <div css={containerLeftBottomCorner}>
               <div css={aboutHeadingDarkBlue}>Was zeichnet mich aus?</div>

@@ -109,20 +109,14 @@ export default function Footer() {
     <div css={footerStyles}>
       <div css={navBarContainer}>
         <Link href="/impressum">
-          <a>
             <li>Impressum</li>
-          </a>
         </Link>
         <Link href="/datenschutz">
-          <a>
             <li>Datenschutzerklärung</li>
-          </a>
         </Link>
-        <Link href="https://www.linkedin.com/in/marlies-theres-brunner-97761118/">
-          <a target="blank">
+        <a href="https://www.linkedin.com/in/marlies-theres-brunner-97761118/" target="blank">
             <SiLinkedin size={26} />
-          </a>
-        </Link>
+        </a>
         <li>&copy; Marlies Theres Brunner</li>
       </div>
     </div>

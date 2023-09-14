@@ -81,22 +81,22 @@ export default function Impressum() {
           <br />
           Anja VojtA | 1090 Wien | Österreich |
           <Link href="https://www.linkedin.com/in/anja-vojta-2b7141144/">
-            <a>LinkedIn</a>
+            LinkedIn
           </Link>
           <br />
           <b>Bildrechte:</b>
           <br />
           <Link href="https://www.pexels.com">
-            <a>Pexels</a>
+            Pexels
           </Link>
           <Link href="https://unsplash.com/">
-            <a>Unsplash</a>
+            Unsplash
           </Link>
           <Link href="https://www.flaticon.com/free-icon/linkedin_174857">
-            <a>Flaticon</a>
+            Flaticon
           </Link>
           <Link href="https://www.reneedelmissier.com/">
-            <a>Renée Del Missier</a>
+            Renée Del Missier
           </Link>
           <br />
           <b>Haftungsausschluss:</b>

@@ -447,8 +447,8 @@ export default function OfferWomen() {
         </div>
         <div css={infoContainer}>
           <div css={wrapperContainer}>
-            <Link href="/contact/">
-              <a css={buttonStylesBlue}>Infogespräch vereinbaren</a>
+            <Link href="/contact/" css={buttonStylesBlue}>
+              Infogespräch vereinbaren
             </Link>
             <span>&#10003; Austausch über Ihre Situation</span>
             <span>&#10003; Individuelles Coaching Angebot</span>
