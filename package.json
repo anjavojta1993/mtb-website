@@ -10,23 +10,22 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/babel-plugin": "^11.3.0",
-    "@emotion/react": "^11.4.1",
-    "@sendgrid/mail": "^7.4.7",
-    "axios": "^0.21.4",
+    "@emotion/babel-plugin": "^11.11.0",
+    "@emotion/react": "^11.11.1",
+    "@sendgrid/mail": "^7.7.0",
+    "axios": "^1.5.0",
     "js-file-download": "^0.4.12",
     "next": "^13.4.19",
     "react": "^18.2.0",
-    "react-dom": "17.0.2",
+    "react-dom": "18.2.0",
     "react-icons": "^4.2.0"
   },
   "devDependencies": {
-    "@types/react": "^17.0.19",
-    "eslint": "7.32.0",
-    "eslint-config-next": "11.1.2",
-    "file-loader": "^6.2.0",
-    "next-sitemap": "^1.6.203",
-    "typescript": "^4.4.2"
+    "@types/react": "^18.2.21",
+    "eslint": "8.49.0",
+    "eslint-config-next": "13.4.19",
+    "next-sitemap": "^4.2.3",
+    "typescript": "^5.2.2"
   },
   "cacheDirectories": [
     ".next/cache"
