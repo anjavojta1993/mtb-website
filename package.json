@@ -21,6 +21,7 @@
     "react-icons": "^4.2.0"
   },
   "devDependencies": {
+    "@types/node": "20.6.0",
     "@types/react": "^18.2.21",
     "eslint": "8.49.0",
     "eslint-config-next": "13.4.19",
