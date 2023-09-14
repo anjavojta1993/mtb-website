@@ -383,8 +383,8 @@ export default function Offer() {
               height="400px"
               alt="Junge Frau sitzt mit mit anderen Frauen auf Sofa und schreiben in ihre Notizblöcke"
             />
-            <Link href="/women/">
-              <a css={buttonStylesBlue}>Mehr Infos</a>
+            <Link href="/women/" css={buttonStylesBlue}>
+              Mehr Infos
             </Link>
           </div>
           <div css={itemContainer}>
@@ -395,8 +395,8 @@ export default function Offer() {
               height="400px"
               alt="Junge Frau im Anzug sitzt mit Mann im Hemd auf einer Parkbank und coacht ihn"
             />
-            <Link href="/men/">
-              <a css={buttonStylesBlue}>Mehr Infos</a>
+            <Link href="/men/" css={buttonStylesBlue}>
+              Mehr Infos
             </Link>
           </div>
         </div>

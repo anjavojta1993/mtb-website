@@ -404,11 +404,11 @@ export default function Contact() {
             <div css={leftContainer}>
               <form css={formContainer} onSubmit={handleOnSubmit}>
                 <div>
-                  <label htmlFor>Name</label>
+                  <label htmlFor="name">Name</label>
                   <input css={inputStyles} id="name" type="text" name="name" />
                 </div>
                 <div>
-                  <label htmlFor>Email Adresse</label>
+                  <label htmlFor="email">Email Adresse</label>
                   <input
                     css={inputStyles}
                     id="email"
@@ -418,18 +418,18 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor>Ihre Nachricht</label>
+                  <label htmlFor="message">Ihre Nachricht</label>
                   <textarea css={textareaStyles} id="message" name="message" />
                 </div>
                 <button css={buttonStylesBlue}>Senden</button>
               </form>
               <div css={portraitContainer}>
                 <Image
-                  src={Portrait}
-                  width="400"
-                  height="400"
+                  src={'/images/portrait_neu.png'}
+                  width={400}
+                  height={400}
                   alt="Portrait von Marlies Theres Brunner"
-                ></Image>
+                />
               </div>
               <p>
                 <i>
@@ -443,10 +443,8 @@ export default function Contact() {
                 Danke für Ihre Nachricht. <br />
                 Ich melde mich so bald wie möglich bei Ihnen!{' '}
               </span>
-              <Link href="/contact/">
-                <a css={buttonStylesMessage} onClick={() => setLoading(false)}>
+              <Link href="/contact/" css={buttonStylesMessage} onClick={() => setLoading(false)}>
                   Neue Nachricht
-                </a>
               </Link>
             </div>
           )}
@@ -469,7 +467,7 @@ export default function Contact() {
               <div css={horizontalLine} />
               <div css={contactInfosTextStyles}>
                 <Link href="mailto:info@mt-brunner.at">
-                  <a>info@mt-brunner.at</a>
+                  info@mt-brunner.at
                 </Link>
               </div>
             </div>

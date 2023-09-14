@@ -73,34 +73,22 @@ export default function HeaderRightNav(props) {
   return (
     <ul css={navBarContainer(props.open)}>
       <Link href="/">
-        <a>
           <li>Home</li>
-        </a>
       </Link>
       <Link href="/about">
-        <a>
           <li>Über mich</li>
-        </a>
       </Link>
       <Link href="/women">
-        <a>
           <li>Für Frauen</li>
-        </a>
       </Link>
       <Link href="/men">
-        <a>
           <li>Für Männer</li>
-        </a>
       </Link>
       <Link href="/press">
-        <a>
           <li>Presse</li>
-        </a>
       </Link>
       <Link href="/contact">
-        <a>
           <li>Kontakt</li>
-        </a>
       </Link>
     </ul>
   );

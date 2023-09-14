@@ -1,6 +1,10 @@
 const path = require('path');
 
-module.exports = {
+/**
+ * @type {import('next').NextConfig}
+ */
+const nextConfig =
+ {
   webpack: (config) => {
     config.module.rules.push({
       test: /\.pdf/,
@@ -13,17 +17,6 @@ module.exports = {
     return config;
   },
   reactStrictMode: true,
-  module: {
-    rules: [
-      {
-        test: /\.(png|svg|jpg|gif|pdf)$/,
-        use: [
-          {
-            loader: 'file-loader',
-          },
-        ],
-        output: { path: path.resolve(__dirname, 'static') },
-      },
-    ],
-  },
 };
+
+module.exports = nextConfig

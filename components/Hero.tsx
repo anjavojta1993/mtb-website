@@ -264,18 +264,20 @@ export default function Hero() {
             Ihres Berufslebens!
           </div>
 
-          <Link href="/offer/">
-            <a css={buttonStylesBlue}>Mein Angebot</a>
+          <Link href="/offer/" css={buttonStylesBlue}>
+            Mein Angebot
           </Link>
-          <Link href="/contact">
-            <a css={buttonStylesLight}>Infogespräch</a>
+          <Link href="/contact" css={buttonStylesLight}>
+            Infogespräch
           </Link>
 
           <div css={signatureStyles}>
             <Image
-              src={Signature}
+              src={'/images/signature.png'}
               alt="Unterschrift von Marlies Theres Brunner"
-            ></Image>
+              width={397}
+              height={120}
+            />
           </div>
         </div>
       </div>
