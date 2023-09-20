@@ -30,6 +30,7 @@ function MyApp({ Component, pageProps }) {
         ></meta>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1"></meta>
         <meta name="HandheldFriendly" content="true"></meta>
+        <meta property="og:type" content="website" />
         <meta
           property="og:title"
           content="Business- und Karrierecoaching"
