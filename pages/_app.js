@@ -1,6 +1,6 @@
 import { css, Global } from '@emotion/react';
 import Head from 'next/head';
-import DisplayPhoto from '../public/images/about_me.png';
+import DisplayPhoto from '../public/images/title_photo_blue.png';
 
 const contentWrapper = css`
   padding-bottom: 2.5rem;

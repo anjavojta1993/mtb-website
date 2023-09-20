@@ -244,11 +244,6 @@ export default function Hero() {
     <>
       <Head>
         <title>Business- und Karrierecoaching</title>
-        <meta
-          name="description"
-          content="Einstieg – Aufstieg – Orientierung – Veränderung – Neustart. Beratung und Begleitung in jeder Phase
-            Ihres Berufslebens!"
-        ></meta>
       </Head>
       <div css={pageContainer}>
         <div css={heroContainer}>
