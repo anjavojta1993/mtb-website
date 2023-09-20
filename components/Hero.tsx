@@ -244,6 +244,23 @@ export default function Hero() {
     <>
       <Head>
         <title>Business- und Karrierecoaching</title>
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Business- und Karrierecoaching"
+          key="ogtitle"
+        />
+        <meta property="og:image" content={DisplayPhoto} key="ogimage" />
+        <meta
+          property="og:description"
+          content="Beratung und Begleitung in jeder Phase Ihres Berufslebens!"
+          key="ogdesc"
+        />
+        <meta
+          property="og:url"
+          content="https://marliestheresbrunner.at"
+          key="ogurl"
+        />
       </Head>
       <div css={pageContainer}>
         <div css={heroContainer}>
