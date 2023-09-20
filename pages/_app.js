@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:image" content={DisplayPhoto} key="ogimage" />
         <meta
           property="og:description"
-          content="Einstieg - Aufstieg - Orientierung - Veränderung - Neustart. Beratung und Begleitung in jeder Phase Ihres Berufslebens!"
+          content="Beratung und Begleitung in jeder Phase Ihres Berufslebens!"
           key="ogdesc"
         />
         <meta
