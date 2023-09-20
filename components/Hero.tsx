@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Signature from '../public/images/signature.png';
+import DisplayPhoto from '../public/images/title_photo_blue.png';
 import {
   darkBlue,
   h1,
