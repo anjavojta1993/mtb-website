@@ -251,7 +251,11 @@ export default function Hero() {
           content="Business- und Karrierecoaching"
           key="ogtitle"
         />
-        <meta property="og:image" content={DisplayPhoto} key="ogimage" />
+        <meta
+          property="og:image"
+          content="../public/images/title_photo_blue.png"
+          key="ogimage"
+        />
         <meta
           property="og:description"
           content="Beratung und Begleitung in jeder Phase Ihres Berufslebens!"
