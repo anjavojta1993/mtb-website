@@ -15,7 +15,7 @@ export default function Home() {
           />
           <meta
             property="og:image"
-            content="../public/images/title_photo_blue.png"
+            content="https://anjavojta.com/wp-content/uploads/2023/10/title_photo_blue.png"
           />
           <meta property="og:url" content="https://marliestheresbrunner.at" />
         </Head>
