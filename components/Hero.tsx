@@ -247,7 +247,7 @@ export default function Hero() {
         <div css={heroContainer}>
           <div css={heroHeadingContainer}>
             Business- <br />
-            und Karrierecoaching
+            und Karrierecoaching TEST
           </div>
           <div css={heroSubheadingContainerItalic}>
             <i>Einstieg – Aufstieg – Orientierung – Veränderung – Neustart</i>
