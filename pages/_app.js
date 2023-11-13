@@ -8,6 +8,26 @@ const contentWrapper = css`
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      <Head>
+        <title>Business - und Karrierecoaching</title>
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Business - und Karrierecoaching" />
+        <meta
+          property="og:description"
+          content="Beratung und Begleitung in jeder Phase Ihres Berufslebens!"
+        />
+        <meta
+          property="og:image"
+          content="https://anjavojta.com/wp-content/uploads/2023/10/title_photo_blue.png"
+        />
+        <meta property="og:url" content="https://marliestheresbrunner.at" />
+        <meta
+          name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+        ></meta>
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1"></meta>
+        <meta name="HandheldFriendly" content="true"></meta>
+      </Head>
       <Global
         styles={css`
           *,
@@ -22,14 +42,6 @@ function MyApp({ Component, pageProps }) {
           }
         `}
       />
-      <Head>
-        <meta
-          name="viewport"
-          content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
-        ></meta>
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1"></meta>
-        <meta name="HandheldFriendly" content="true"></meta>
-      </Head>
       <Component css={contentWrapper} {...pageProps} />
     </>
   );

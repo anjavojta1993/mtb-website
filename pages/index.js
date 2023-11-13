@@ -6,19 +6,6 @@ export default function Home() {
   return (
     <>
       <Layout>
-        <Head>
-          <meta property="og:type" content="website" />
-          <meta property="og:title" content="Business- und Karrierecoaching" />
-          <meta
-            property="og:description"
-            content="Beratung und Begleitung in jeder Phase Ihres Berufslebens!"
-          />
-          <meta
-            property="og:image"
-            content="https://anjavojta.com/wp-content/uploads/2023/10/title_photo_blue.png"
-          />
-          <meta property="og:url" content="https://marliestheresbrunner.at" />
-        </Head>
         <Hero />
       </Layout>
     </>

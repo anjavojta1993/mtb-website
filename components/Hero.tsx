@@ -243,9 +243,6 @@ const buttonStylesLight = css`
 export default function Hero() {
   return (
     <>
-      <Head>
-        <title>Business- und Karrierecoaching</title>
-      </Head>
       <div css={pageContainer}>
         <div css={heroContainer}>
           <div css={heroHeadingContainer}>
