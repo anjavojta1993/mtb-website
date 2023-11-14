@@ -16,8 +16,9 @@ import {
 
 const pageContainer = css`
   position: relative;
+  overflow: hidden;
   //margin-top: 120px;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   align-items: center;
   justify-content: center;
@@ -247,7 +248,7 @@ export default function Hero() {
         <div css={heroContainer}>
           <div css={heroHeadingContainer}>
             Business- <br />
-            und Karrierecoaching TEST
+            und Karrierecoaching
           </div>
           <div css={heroSubheadingContainerItalic}>
             <i>Einstieg – Aufstieg – Orientierung – Veränderung – Neustart</i>

@@ -9,9 +9,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>TEST</title>
+        <title>Business - und Karrierecoaching</title>
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="TEST" />
+        <meta property="og:title" content="Business - und Karrierecoaching" />
         <meta
           property="og:description"
           content="Beratung und Begleitung in jeder Phase Ihres Berufslebens!"
@@ -39,6 +39,21 @@ function MyApp({ Component, pageProps }) {
             margin: 0;
             font-family: 'Spartan', sans-serif;
             color: black;
+            width: 100%;
+            padding: 0;
+            overflow-x: hidden;
+            a:link {
+              text-decoration: none;
+            }
+            a:visited {
+              text-decoration: none;
+            }
+            a:hover {
+              text-decoration: none;
+            }
+            a:active {
+              text-decoration: none;
+            }
           }
         `}
       />
