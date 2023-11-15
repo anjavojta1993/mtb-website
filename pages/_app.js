@@ -40,7 +40,6 @@ function MyApp({ Component, pageProps }) {
             font-family: 'Spartan', sans-serif;
             color: black;
             width: 100%;
-            padding: 0;
             overflow-x: hidden;
             a:link {
               text-decoration: none;

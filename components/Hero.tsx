@@ -67,7 +67,7 @@ const heroContainer = css`
   @media (max-width: 540px) {
     position: absolute;
     text-align: center;
-    top: 40%;
+    top: 36%;
     left: 0%;
     padding-left: 20px;
     padding-right: 20px;
@@ -103,8 +103,6 @@ const heroSubheadingContainer = css`
   font-size: ${largeText};
   font-weight: 400;
   margin-top: 40px;
-
-  //background-color: red;
   line-height: 1.5;
 
   @media (max-width: 768px) {
@@ -117,6 +115,8 @@ const heroSubheadingContainer = css`
     font-weight: 500;
     margin-top: 0px;
     padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     padding-bottom: 10px;
     background-color: rgba(255, 255, 255, 0.5);
   }
@@ -140,14 +140,20 @@ const heroSubheadingContainerItalic = css`
 `;
 
 const signatureStyles = css`
-  display: block;
+  display: flex;
   margin-top: 60px;
 
   @media (max-width: 540px) {
     margin: auto;
-    margin-top: 20px;
-    width: 50%;
-    height: 120px;
+    margin-top: 15px;
+    justify-content: center;
+    width: 200px:
+    height: auto;
+
+    img {
+    width: 200px;
+    height: auto;
+  }
   }
 `;
 
@@ -247,8 +253,8 @@ export default function Hero() {
       <div css={pageContainer}>
         <div css={heroContainer}>
           <div css={heroHeadingContainer}>
-            Business- <br />
-            und Karrierecoaching
+            Business- und <br />
+            Karrierecoaching
           </div>
           <div css={heroSubheadingContainerItalic}>
             <i>Einstieg – Aufstieg – Orientierung – Veränderung – Neustart</i>
@@ -266,11 +272,9 @@ export default function Hero() {
           </Link>
 
           <div css={signatureStyles}>
-            <Image
-              src={'/images/signature.png'}
+            <img
+              src="/images/signature.png"
               alt="Unterschrift von Marlies Theres Brunner"
-              width={397}
-              height={120}
             />
           </div>
         </div>
