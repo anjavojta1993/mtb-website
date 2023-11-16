@@ -10,6 +10,12 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Business - und Karrierecoaching</title>
+        <meta
+          name="Business - und Karrierecoaching"
+          content="Beratung und Begleitung in jeder Phase Ihres Berufslebens!
+          Einstieg – Aufstieg – Orientierung – Veränderung – Neustart"
+          key="desc"
+        />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Business - und Karrierecoaching" />
         <meta
@@ -27,7 +33,6 @@ function MyApp({ Component, pageProps }) {
           content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
         ></meta>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1"></meta>
-        <meta name="HandheldFriendly" content="true"></meta>
       </Head>
       <Global
         styles={css`
