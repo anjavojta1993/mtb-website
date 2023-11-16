@@ -59,7 +59,16 @@ const aboutContainer = css`
   //background-color: red;
 
   @media (max-width: 1024px) {
+    //position: relative;
     flex-direction: column;
+    padding-top: 0px;
+    //padding-bottom: 0px;
+    //justify-content: center;
+    //align-items: center;
+  }
+
+  @media (max-width: 780px) {
+    padding-top: 0px;
   }
 `;
 
@@ -117,14 +126,19 @@ const rightContainer = css`
     margin-bottom: 10px;
   }
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1400px) {
     width: 100%;
     margin-top: 0px;
+    margin-bottom: 0px;
+    flex-direction: column;
+    align-items: center;
   }
 
-  @media (max-width: 780px) {
+  @media (max-width: 700px) {
     font-size: 0.75rem;
     margin-bottom: 0px;
+    align-items: center;
+    flex-direction: row;
   }
 `;
 
@@ -157,6 +171,7 @@ const containerLeftUpperCorner = css`
   @media (max-width: 780px) {
     font-size: 0.75rem;
     margin-bottom: 0px;
+    padding-right: 20px;
   }
 `;
 
@@ -187,6 +202,7 @@ const containerRightUpperCorner = css`
   @media (max-width: 780px) {
     font-size: 0.75rem;
     margin-bottom: 0px;
+    padding-right: 20px;
   }
 `;
 
@@ -219,6 +235,7 @@ const containerRightBottomCorner = css`
   @media (max-width: 780px) {
     font-size: 0.75rem;
     margin-bottom: 0px;
+    padding-right: 20px;
   }
 `;
 
@@ -250,6 +267,7 @@ const containerLeftBottomCorner = css`
   @media (max-width: 780px) {
     font-size: 0.75rem;
     margin-bottom: 0px;
+    padding-right: 20px;
   }
 `;
 
@@ -466,11 +484,19 @@ const aboutPortraitContainer = css`
   top: 30%;
   z-index: 1;
   //background-color: green;
+
+  img {
+    width: 400px;
+    height: 400px;
+  }
   @media (max-width: 1024px) {
-    width: 200px;
-    height: 200px;
     position: relative;
     top: 0;
+
+    img {
+      width: 200px;
+      height: 200px;
+    }
   }
 `;
 
@@ -530,10 +556,8 @@ export default function About() {
               <br /> BRUNNER, MTD
             </div>
             <div css={aboutPortraitContainer}>
-              <Image
+              <img
                 src={'/images/about_portrait_new.png'}
-                width={400}
-                height={400}
                 alt="Portrait von Marlies Theres Brunner"
               />
             </div>

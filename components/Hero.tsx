@@ -108,6 +108,7 @@ const heroSubheadingContainer = css`
   @media (max-width: 768px) {
     font-size: 1rem;
     margin-top: 20px;
+    justify-content: center;
   }
 
   @media (max-width: 540px) {
