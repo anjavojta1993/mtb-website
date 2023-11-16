@@ -275,7 +275,7 @@ export default function Hero() {
           <div css={signatureStyles}>
             <img
               src="/images/signature.png"
-              alt="Unterschrift von Marlies Theres Brunner"
+              alt="Unterschrift von Marlies Theres Brunner, MTD"
             />
           </div>
         </div>
