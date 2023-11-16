@@ -37,6 +37,17 @@ const portraitContainer = css`
   margin-top: 10px;
   //background-color: yellow;
   justify-content: center;
+
+  img {
+    width: 400px;
+    height: 400px;
+  }
+  @media (max-width: 780px) {
+    img {
+      width: 300px;
+      height: 300px;
+    }
+  }
 `;
 
 const heroContainer = css`
@@ -424,10 +435,8 @@ export default function Contact() {
                 <button css={buttonStylesBlue}>Senden</button>
               </form>
               <div css={portraitContainer}>
-                <Image
-                  src={'/images/portrait_neu.png'}
-                  width={400}
-                  height={400}
+                <img
+                  src="/images/portrait_neu.png"
                   alt="Portrait von Marlies Theres Brunner"
                 />
               </div>
@@ -443,8 +452,12 @@ export default function Contact() {
                 Danke für Ihre Nachricht. <br />
                 Ich melde mich so bald wie möglich bei Ihnen!{' '}
               </span>
-              <Link href="/contact/" css={buttonStylesMessage} onClick={() => setLoading(false)}>
-                  Neue Nachricht
+              <Link
+                href="/contact/"
+                css={buttonStylesMessage}
+                onClick={() => setLoading(false)}
+              >
+                Neue Nachricht
               </Link>
             </div>
           )}
@@ -466,9 +479,7 @@ export default function Contact() {
               </div>
               <div css={horizontalLine} />
               <div css={contactInfosTextStyles}>
-                <Link href="mailto:info@mt-brunner.at">
-                  info@mt-brunner.at
-                </Link>
+                <Link href="mailto:info@mt-brunner.at">info@mt-brunner.at</Link>
               </div>
             </div>
             <div css={contactInfosContainer}>
