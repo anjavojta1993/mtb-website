@@ -14,11 +14,12 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:title" content="Business - und Karrierecoaching" />
         <meta
           property="og:description"
-          content="Beratung und Begleitung in jeder Phase Ihres Berufslebens!"
+          content="Beratung und Begleitung in jeder Phase Ihres Berufslebens!
+          Einstieg – Aufstieg – Orientierung – Veränderung – Neustart"
         />
         <meta
           property="og:image"
-          content="https://anjavojta.com/wp-content/uploads/2023/10/title_photo_blue.png"
+          content="../public/images/title_photo_blue.png"
         />
         <meta property="og:url" content="https://marliestheresbrunner.at" />
         <meta
