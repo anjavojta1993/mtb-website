@@ -521,7 +521,7 @@ export default function About() {
             <div css={containerLeftUpperCorner}>
               <div css={aboutHeadingDarkBlue}>Wer bin ich - beruflich?</div>
               <ul>
-                <li>IBWL Studium in Wien – Schwerpunkt Human Resources</li>
+                <li>IBWL Studium in Wien - Schwerpunkt Human Resources</li>
                 <li>Masterstudium in Salzburg- HR Training und Entwicklung</li>
                 <li>Zertifizierter Systemischer Coach</li>
                 <li>
