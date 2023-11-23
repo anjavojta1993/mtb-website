@@ -532,7 +532,7 @@ export default function About() {
                 <li>
                   Mentorin bei der{' '}
                   <Link href="https://www.frauenfachakademie.at" target="blank">
-                    Frauen:Fachakademie Schloss Mondsee .
+                    Frauen:Fachakademie Schloss Mondsee.
                   </Link>
                 </li>
                 <li>
