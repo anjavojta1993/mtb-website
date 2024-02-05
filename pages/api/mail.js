@@ -16,7 +16,7 @@ export default async function sendMail(req, res) {
     .send({
       to: 'm.brunner@pendlpiswanger.at',
       from: 'info@mt-brunner.at',
-      subject: 'Neue Nachricht Systemischer Coach!',
+      subject: 'Neue Nachricht Systemischer Coach',
       text: message,
       html: message.replace(/\r\n/g, '<br>'),
     })
